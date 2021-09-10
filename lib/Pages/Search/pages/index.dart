@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/Controllers/AllVacController.dart';
-import 'package:gromada/Pages/Vacancy/VacDetail.dart';
-import 'package:gromada/Pages/services/ApiProviderVac.dart';
-
+import 'package:gromada/Controllers/all_vac_controller.dart';
+import 'package:gromada/Pages/Load/loading.dart';
+import 'package:gromada/generated/l10n.dart';
 import '../models/vac.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -27,9 +26,9 @@ class _IndexPageState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Text('Онлайн помічник'),
+          title: Text(S.of(context).app_barr_title),
         ),
         body: Obx(
           () => !controller.isLoading.value
@@ -49,38 +48,14 @@ class _IndexPageState extends State<IndexPage> {
                             : buildListView()),
                   )
                 ])
-              : Container(
-                  decoration: BoxDecoration(
-                    color: HexColor("#005BAA"),
-                  ),
-                  child: Center(
-                    child: Container(
-                      margin: EdgeInsets.only(top: 40.0.h),
-                      child: Column(children: [
-                        CircularProgressIndicator(
-                          backgroundColor: HexColor('#FFD947'),
-                        ),
-                        Text(
-                          "Зачекайте,завантажуємо дані",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            decoration: TextDecoration.none,
-                            fontFamily: "Helvetica",
-                            fontSize: 20.sp,
-                            color: HexColor('#FFD947'),
-                          ),
-                        ),
-                      ]),
-                    ),
-                  ),
-                ),
+              : Loading(),
         ));
   }
 
   TextField buildTextField() {
     return TextField(
       decoration: InputDecoration(
-          icon: Icon(Icons.search), hintText: 'Пошук за посадою або з/п'),
+          icon: Icon(Icons.search), hintText: 'Пошук за посадою '),
       onChanged: (value) {
         setState(() {
           filteredUsers = controller.vacancy
@@ -270,6 +245,4 @@ class _IndexPageState extends State<IndexPage> {
       },
     );
   }
-
-
 }

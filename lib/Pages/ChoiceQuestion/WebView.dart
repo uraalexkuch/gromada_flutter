@@ -1,35 +1,33 @@
 import 'dart:async';
 
 import 'package:get/get.dart';
+import 'package:gromada/Pages/Load/loading.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-
 class WebViewTrue extends StatefulWidget {
-
+  dynamic src = Get.arguments!;
   @override
   _WebViewExampleState createState() => _WebViewExampleState();
 }
 
 class _WebViewExampleState extends State<WebViewTrue> {
-
   final Completer<WebViewController> _controller =
-  Completer<WebViewController>();
+      Completer<WebViewController>();
   bool isLoading = true;
-
 
   @override
   void initState() {
     super.initState();
-    dynamic src=Get.arguments!;
+    dynamic src = Get.arguments!;
     print(src);
   }
 
   @override
   Widget build(BuildContext context) {
-    dynamic src=Get.arguments!;
+    dynamic src = Get.arguments!;
     print(src);
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return Scaffold(
@@ -44,20 +42,18 @@ class _WebViewExampleState extends State<WebViewTrue> {
         // to allow calling Scaffold.of(context) so we can show a snackbar.
         body: Stack(children: <Widget>[
           WebView(
-            initialUrl:src,
+            initialUrl: src,
             javascriptMode: JavascriptMode.unrestricted,
             onWebViewCreated: (WebViewController webViewController) {
               _controller.complete(webViewController);
             },
             onProgress: (int progress) {
-
               print("WebView is loading (progress : $progress%)");
             },
             javascriptChannels: <JavascriptChannel>{
               _toasterJavascriptChannel(context),
             },
             onPageStarted: (String url) {
-
               print('Page started loading: $url');
             },
             onPageFinished: (finish) {
@@ -68,36 +64,7 @@ class _WebViewExampleState extends State<WebViewTrue> {
             },
             gestureNavigationEnabled: true,
           ),
-          isLoading
-              ? Center(
-            child: Container(
-              decoration: BoxDecoration(
-                color: HexColor("#005BAA"),
-              ),
-              child: Center(
-                child: Container(
-                  margin: EdgeInsets.only(top: 40.0.h),
-                  child: Column(children: [
-
-                    CircularProgressIndicator(
-                      backgroundColor: HexColor('#FFD947'),
-                    ),
-                    Text(
-                      "Зачекайте,завантажуємо дані",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        fontFamily: "Helvetica",
-                        fontSize: 20.sp,
-                        color: HexColor('#FFD947'),
-                      ),
-                    ),
-                  ]),
-                ),
-              ),
-            ),
-          )
-              : Stack(),
+          isLoading ? Loading() : Stack(),
         ]),
       );
     });
@@ -114,10 +81,6 @@ class _WebViewExampleState extends State<WebViewTrue> {
         });
   }
 }
-
-
-
-
 
 class NavigationControls extends StatelessWidget {
   const NavigationControls(this._webViewControllerFuture)
@@ -141,8 +104,8 @@ class NavigationControls extends StatelessWidget {
               onPressed: !webViewReady
                   ? null
                   : () {
-                controller!.reload();
-              },
+                      controller!.reload();
+                    },
             ),
           ],
         );

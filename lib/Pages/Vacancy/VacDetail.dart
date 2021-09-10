@@ -4,14 +4,13 @@ import 'package:gromada/Pages/Search/models/vac.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-
 class VacDetail extends StatelessWidget {
-    @override
-   dynamic value = Get.arguments!;
+  @override
+  dynamic value = Get.arguments!;
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         appBar: new AppBar(title: new Text('Картка вакансії')),
         body: new Container(
             height: 100.h,
@@ -349,8 +348,37 @@ class VacDetail extends StatelessWidget {
                                       fontSize: 16.sp,
                                     ),
                                     softWrap: true,
-                                  ))
+                                  )),
                             ]),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                      width: 30.w,
+                                      child: Text(
+                                        "Телефон для зв'язку:",
+                                        style: TextStyle(
+                                          color: Colors.indigo,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.sp,
+                                        ),
+                                        softWrap: true,
+                                      )),
+                                ),
+                                Container(
+                                    width: 54.w,
+                                    child: Text(
+                                      ' ${value.tel}',
+                                      style: TextStyle(
+                                        color: Colors.indigo,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.sp,
+                                      ),
+                                      softWrap: true,
+                                    ))
+                              ],
+                            ),
                           ],
                         ),
                       ),

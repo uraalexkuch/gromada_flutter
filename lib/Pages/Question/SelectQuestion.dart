@@ -1,11 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/Pages/Question/Calculator.dart';
-import 'package:gromada/Pages/Question/ShablonAnswer.dart';
+import 'package:gromada/call_center_button.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:flick_video_player/flick_video_player.dart';
 
 class SelectQuestion extends StatefulWidget {
   @override
@@ -27,7 +25,19 @@ class _SelectQuestionState extends State<SelectQuestion> {
         ),
         body: Container(
             decoration: BoxDecoration(
-              color: HexColor("#005BAA"),
+              gradient: LinearGradient(
+                tileMode: TileMode.mirror,
+                begin: Alignment(0.0, -0.3),
+                end: Alignment(1.0, 0.1),
+                colors: [
+                  Color(0xff100b63),
+                  Color(0xff2196f3),
+                ],
+                stops: [
+                  0,
+                  1,
+                ],
+              ),
             ),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -37,7 +47,6 @@ class _SelectQuestionState extends State<SelectQuestion> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      // height: 95.h,
                       width: 100.w,
                       child: SingleChildScrollView(
                         child: Padding(
@@ -46,10 +55,18 @@ class _SelectQuestionState extends State<SelectQuestion> {
                             child: Column(
                               children: [
                                 Container(
-                                    height: 15.h,
+                                    height: 14.h,
                                     child: Image(
                                         image:
                                             AssetImage('image/logodon.webp'))),
+                                Device.screenType.toString() ==
+                                        'ScreenType.tablet'
+                                    ? SizedBox(
+                                        height: 4.h,
+                                      )
+                                    : SizedBox(
+                                        height: 1.h,
+                                      ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(
@@ -61,9 +78,9 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             arguments: '1');
                                       },
                                       child: Text(
-                                        'ПІДХОДЯЩА РОБОТА',
+                                        'ЯКА РОБОТА ВВАЖАЄТЬСЯ ПІДХОДЯЩОЮ?',
                                         style: TextStyle(
-                                            color: HexColor('#FFD947'),
+                                            color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,
                                             fontWeight: FontWeight.bold),
                                         textAlign: TextAlign.center,
@@ -74,7 +91,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             Radius.circular(35.0)),
                                         side: BorderSide(
                                             color: HexColor('#FFD947'),
-                                            width: 5),
+                                            width: 3),
                                       ),
                                       color: HexColor("#005BAA"),
                                       focusColor: HexColor('#FFD947'),
@@ -82,6 +99,14 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                     ),
                                   ),
                                 ),
+                                Device.screenType.toString() ==
+                                        'ScreenType.tablet'
+                                    ? SizedBox(
+                                        height: 4.h,
+                                      )
+                                    : SizedBox(
+                                        height: 1.h,
+                                      ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(
@@ -93,9 +118,9 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             arguments: '2');
                                       },
                                       child: Text(
-                                        'ТЕРМІН ЗВЕРНЕННЯ ПІСЛЯ ЗВІЛЬНЕННЯ',
+                                        'ЯКИЙ ТЕРМІН ЗВЕРНЕННЯ ПІСЛЯ ЗВІЛЬНЕННЯ?',
                                         style: TextStyle(
-                                            color: HexColor('#FFD947'),
+                                            color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,
                                             fontWeight: FontWeight.bold),
                                         textAlign: TextAlign.center,
@@ -106,7 +131,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             Radius.circular(35.0)),
                                         side: BorderSide(
                                             color: HexColor('#FFD947'),
-                                            width: 5),
+                                            width: 3),
                                       ),
                                       color: HexColor("#005BAA"),
                                       focusColor: HexColor('#FFD947'),
@@ -114,6 +139,14 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                     ),
                                   ),
                                 ),
+                                Device.screenType.toString() ==
+                                        'ScreenType.tablet'
+                                    ? SizedBox(
+                                        height: 4.h,
+                                      )
+                                    : SizedBox(
+                                        height: 1.h,
+                                      ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(
@@ -125,9 +158,9 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             arguments: '3');
                                       },
                                       child: Text(
-                                        'ДОКУМЕНТИ ДЛЯ РЕЄСТРАЦІЇ',
+                                        'ЯКІ ДОКУМЕНТИ НЕОБХІДНІ ДЛЯ РЕЄСТРАЦІЇ? ',
                                         style: TextStyle(
-                                            color: HexColor('#FFD947'),
+                                            color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,
                                             fontWeight: FontWeight.bold),
                                         textAlign: TextAlign.center,
@@ -138,7 +171,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             Radius.circular(35.0)),
                                         side: BorderSide(
                                             color: HexColor('#FFD947'),
-                                            width: 5),
+                                            width: 3),
                                       ),
                                       color: HexColor("#005BAA"),
                                       focusColor: HexColor('#FFD947'),
@@ -146,6 +179,14 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                     ),
                                   ),
                                 ),
+                                Device.screenType.toString() ==
+                                        'ScreenType.tablet'
+                                    ? SizedBox(
+                                        height: 4.h,
+                                      )
+                                    : SizedBox(
+                                        height: 1.h,
+                                      ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(
@@ -157,9 +198,9 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             arguments: '4');
                                       },
                                       child: Text(
-                                        'РОЗМІР ДОПОМОГИ',
+                                        'ЯК ПРИЗНАЧАЄТЬСЯ ДОПОМОГА ПО БЕЗРОБІТТЮ?',
                                         style: TextStyle(
-                                            color: HexColor('#FFD947'),
+                                            color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,
                                             fontWeight: FontWeight.bold),
                                         textAlign: TextAlign.center,
@@ -170,7 +211,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             Radius.circular(35.0)),
                                         side: BorderSide(
                                             color: HexColor('#FFD947'),
-                                            width: 5),
+                                            width: 3),
                                       ),
                                       color: HexColor("#005BAA"),
                                       focusColor: HexColor('#FFD947'),
@@ -178,37 +219,14 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    width: 100.w,
-                                    child: RaisedButton(
-                                      elevation: 10.0,
-                                      onPressed: () {
-                                        Get.toNamed('/choicegromad/answer',
-                                            arguments: '5');
-                                      },
-                                      child: Text(
-                                        'ПОРЯДОК ВИПЛАТИ',
-                                        style: TextStyle(
-                                            color: HexColor('#FFD947'),
-                                            fontSize: 16.sp,
-                                            fontWeight: FontWeight.bold),
+                                Device.screenType.toString() ==
+                                        'ScreenType.tablet'
+                                    ? SizedBox(
+                                        height: 4.h,
+                                      )
+                                    : SizedBox(
+                                        height: 1.h,
                                       ),
-                                      padding: const EdgeInsets.all(15),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(35.0)),
-                                        side: BorderSide(
-                                            color: HexColor('#FFD947'),
-                                            width: 5),
-                                      ),
-                                      color: HexColor("#005BAA"),
-                                      focusColor: HexColor('#FFD947'),
-                                      splashColor: HexColor('#FFD947'),
-                                    ),
-                                  ),
-                                ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(
@@ -219,9 +237,48 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                         Get.toNamed('/choicegromad/calculator');
                                       },
                                       child: Text(
-                                        'КАЛЬКУЛЯТОР ДОПОМОГИ',
+                                        'КАЛЬКУЛЯТОР ДОПОМОГИ ПО БЕЗРОБІТТЮ',
                                         style: TextStyle(
+                                            color: HexColor('#FFFFFF'),
+                                            fontSize: 16.sp,
+                                            fontWeight: FontWeight.bold),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      padding: const EdgeInsets.all(15),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(35.0)),
+                                        side: BorderSide(
                                             color: HexColor('#FFD947'),
+                                            width: 3),
+                                      ),
+                                      color: HexColor("#005BAA"),
+                                      focusColor: HexColor('#FFD947'),
+                                      splashColor: HexColor('#FFD947'),
+                                    ),
+                                  ),
+                                ),
+                                Device.screenType.toString() ==
+                                        'ScreenType.tablet'
+                                    ? SizedBox(
+                                        height: 4.h,
+                                      )
+                                    : SizedBox(
+                                        height: 1.h,
+                                      ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    width: 100.w,
+                                    child: RaisedButton(
+                                      elevation: 10.0,
+                                      onPressed: () {
+                                        Get.toNamed('/choicegromad/callcenter');
+                                      },
+                                      child: Text(
+                                        'ЗАЛИШИЛИСЯ ПИТАННЯ?',
+                                        style: TextStyle(
+                                            color: HexColor('#005BAA'),
                                             fontSize: 16.sp,
                                             fontWeight: FontWeight.bold),
                                       ),
@@ -230,20 +287,20 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(35.0)),
                                         side: BorderSide(
-                                            color: HexColor('#FFD947'),
-                                            width: 5),
+                                            color: HexColor('#FFFFFF'),
+                                            width: 3),
                                       ),
-                                      color: HexColor("#005BAA"),
-                                      focusColor: HexColor('#FFD947'),
-                                      splashColor: HexColor('#FFD947'),
+                                      color: HexColor("#FFD947"),
+                                      focusColor: HexColor('#005BAA'),
+                                      splashColor: HexColor('#005BAA'),
                                     ),
                                   ),
-                                )
+                                ),
                               ],
                             )),
                       ),
                     ),
-                  )
+                  ),
                 ])),
       );
     });
