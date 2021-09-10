@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/Controllers/PasportControlller.dart';
+import 'package:gromada/Controllers/pasport_controlller.dart';
+import 'package:gromada/Pages/Load/loading.dart';
 
 import 'package:gromada/Pages/Search/models/pasport.dart';
 
@@ -13,7 +14,6 @@ class ListPasport extends StatefulWidget {
 }
 
 class _ListPasportState extends State<ListPasport> {
-
   List filteredPassport = <Passport>[];
 
   PasportController controller = PasportController();
@@ -27,16 +27,12 @@ class _ListPasportState extends State<ListPasport> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           title: Text('Онлайн помічник'),
         ),
-        body:SafeArea(
-        left: true,
-        top: true,
-        right: true,
-        bottom: true,
-        child: Obx(
+        body: SafeArea(
+            child: Obx(
           () => !controller.isLoading.value
               ? Column(children: [
                   Padding(
@@ -46,7 +42,19 @@ class _ListPasportState extends State<ListPasport> {
                   Expanded(
                     child: Container(
                         decoration: BoxDecoration(
-                          color: HexColor("#005BAA"),
+                          gradient: LinearGradient(
+                            tileMode: TileMode.mirror,
+                            begin: Alignment(0.0, -0.3),
+                            end: Alignment(1.0, 0.1),
+                            colors: [
+                              Color(0xff100b63),
+                              Color(0xff2196f3),
+                            ],
+                            stops: [
+                              0,
+                              1,
+                            ],
+                          ),
                         ),
                         width: 100.w,
                         child: filteredPassport.length != 0
@@ -54,31 +62,7 @@ class _ListPasportState extends State<ListPasport> {
                             : buildListView()),
                   )
                 ])
-              : Container(
-                  decoration: BoxDecoration(
-                    color: HexColor("#005BAA"),
-                  ),
-                  child: Center(
-                    child: Container(
-                      margin: EdgeInsets.only(top: 40.0.h),
-                      child: Column(children: [
-                        CircularProgressIndicator(
-                          backgroundColor: HexColor('#FFD947'),
-                        ),
-                        Text(
-                          "Зачекайте,завантажуємо дані",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            decoration: TextDecoration.none,
-                            fontFamily: "Helvetica",
-                            fontSize: 20.sp,
-                            color: HexColor('#FFD947'),
-                          ),
-                        ),
-                      ]),
-                    ),
-                  ),
-                ),
+              : Loading(),
         )));
   }
 
@@ -217,6 +201,4 @@ class _ListPasportState extends State<ListPasport> {
       },
     );
   }
-
-
 }

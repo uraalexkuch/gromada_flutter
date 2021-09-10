@@ -13,6 +13,7 @@ class Vac {
   final characteristicsvac;
   final conditionsvac;
   final salaryvac;
+  final tel;
 
   // Constructor
 
@@ -30,24 +31,31 @@ class Vac {
     required this.characteristicsvac,
     required this.conditionsvac,
     required this.salaryvac,
+    required this.tel,
   });
 
   // convert Json to an car object object
   factory Vac.fromJson(Map<String, dynamic> json) {
     return Vac(
       numbervac: json["Номер вакансії / Оперативні вакансії"].toString(),
-      dateregvac:json["Дата реєстрації вакансії / Оперативні вакансії"].toString(),
+      dateregvac:
+          json["Дата реєстрації вакансії / Оперативні вакансії"].toString(),
       posadavac: json["Посада (назва) / Характеристика вакансії"].toString(),
       osvitavac: json["Освітній рівень / Вимоги до працівника"].toString(),
       specvac: json["Спеціальність (назва) / Вимоги до працівника"].toString(),
       stagvac: json["Стаж / Характеристика вакансії"].toString(),
-      taskvac:  json["Завдання та обов'язки / Характеристика вакансії"].toString(),
-      skilsvac: json["Навики, характеристики особи / Вимоги до працівника"]       .toString(),
+      taskvac:
+          json["Завдання та обов'язки / Характеристика вакансії"].toString(),
+      skilsvac: json["Навики, характеристики особи / Вимоги до працівника"]
+          .toString(),
       placevac: json["Місце проведення робіт / Оперативні вакансії"].toString(),
       operatinvac: json["Режими роботи / Характеристика вакансії"].toString(),
-      characteristicsvac: json["Характеристики робіт / Характеристика вакансії"].toString(),
+      characteristicsvac:
+          json["Характеристики робіт / Характеристика вакансії"].toString(),
       conditionsvac: json["Умови праці  / Характеристика вакансії"].toString(),
       salaryvac: json["Заробітна плата / Оперативні вакансії"].toString(),
+      tel: json["Телефон (для вакансій на сайті) / Оперативні вакансії"]
+          .toString(),
     );
   }
 }

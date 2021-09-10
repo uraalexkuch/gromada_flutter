@@ -21,6 +21,8 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  flutter_localizations:
+    sdk: flutter
   flutter:
     sdk: flutter
   # The following adds the Cupertino Icons font to your application.
@@ -35,6 +37,17 @@ dependencies:
   webview_flutter: ^2.0.10
   get: ^4.2.3
   pie_chart: ^5.0.0
+  adaptive_theme: ^2.2.0
+  intl: ^0.17.0
+  font_awesome_flutter: ^9.1.0
+  marquee: ^2.2.0
+  timeline_tile: ^2.0.0
+  flutter_speed_dial: ^4.3.0
+  spring: ^2.0.2
+  getwidget: ^2.0.4
+  flutter_phone_direct_caller: ^2.0.0
+  flutter_linkify: ^5.0.2
+  url_launcher: ^6.0.10
 
 
 dev_dependencies:
@@ -56,9 +69,25 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+
+        - image/crp.mp4
+        - image/cp.mp4
         - image/logodon.webp
-        - image/info.mp4
-  #   - images/a_dot_ham.jpeg
+        - image/diya.mp4
+        - image/youtube.png
+        - image/telegram.png
+        - image/web.png
+        - image/fb.png
+        - image/callcenter.png
+        - image/intronew.mp4
+
+
+
+
+
+
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -88,3 +117,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true
