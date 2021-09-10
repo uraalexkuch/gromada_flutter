@@ -56,7 +56,7 @@ class StartWork extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
                             child: Text(
-                              ' Якщо Ви шукаєте роботу – зверніться до державної служби  зайнятості,яка стане Вашим особистим консультантом та надійним помічником у її пошуку.\n  У  центрі  зайнятості Ви можете самостійно отримати корисну та цікаву для Вас інформацію',
+                              '      Якщо Ви шукаєте роботу – зверніться до державної служби  зайнятості,яка стане Вашим особистим консультантом та надійним помічником у її пошуку.\n        У  центрі  зайнятості Ви можете самостійно отримати корисну та цікаву для Вас інформацію.',
                               style: TextStyle(
                                   decoration: TextDecoration.none,
                                   color: HexColor('#005BAA'),
@@ -194,7 +194,7 @@ class StartWork extends StatelessWidget {
                                               '/choicegromad/vacancy/pasport');
                                         },
                                         child: Text(
-                                            'ІНФОРМАЦІЯ ПРО ПІДПРИЄМСТВА РАЙОНУ',
+                                            'ІНФОРМАЦІЯ ПРО РОБОТОДАВЦІВ РАЙОНУ',
                                             style: TextStyle(
                                                 color: HexColor('#FFFFFF'),
                                                 fontSize: 16.sp,
