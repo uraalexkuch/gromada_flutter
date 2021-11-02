@@ -1,8 +1,7 @@
-import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:get/get.dart';
-import 'package:gromada/Pages/Navch/time_line_vaucher.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -86,13 +85,7 @@ class _ProforienAnswerState extends State<ProfNavchAnswer> {
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Text(
-                      '     Професійне навчання здійснюється у закладах професійної (професійно-технічної), фахової передвищої та вищої освіти, у тому числі у центрах професійно-технічної освіти державної служби зайнятості,  на підприємствах, в установах та організаціях незалежно від форми власності, виду діяльності та господарювання або безпосередньо у роботодавців - замовників кадрів.'
-                              '\n' +
-                          '\n' +
-                          '     Для організації професійного навчання  зареєстрованих безробітних та (або) їх проживання в період такого навчання центр зайнятості здійснює відбір закладів освіти.'
-                              '\n' +
-                          '\n' +
-                          '     За додатковою інформацією звертайтесь до найближчого центру зайнятості',
+                      S.of(context).navch,
                       style: TextStyle(
                           decoration: TextDecoration.none,
                           color: HexColor('#005BAA'),
@@ -109,7 +102,7 @@ class _ProforienAnswerState extends State<ProfNavchAnswer> {
       ),
       floatingActionButton: SpeedDial(
           label: Text(
-            "Посилання",
+            S.of(context).navch0,
             style: TextStyle(
               decoration: TextDecoration.none,
               fontFamily: "Helvetica",
@@ -128,7 +121,7 @@ class _ProforienAnswerState extends State<ProfNavchAnswer> {
                 fontSize: 16.sp,
                 color: HexColor('#005BAA'),
               ),
-              label: "Перелік закладів освіти",
+              label: S.of(context).navch1,
               backgroundColor: Colors.amberAccent,
               onTap: () {
                 Get.toNamed('/choicegromad/web',
@@ -144,8 +137,7 @@ class _ProforienAnswerState extends State<ProfNavchAnswer> {
                 fontSize: 16.sp,
                 color: HexColor('#005BAA'),
               ),
-              label:
-                  'Перелік центрів професійно-технічної\n освіти державної служби зайнятості ',
+              label: S.of(context).navch2,
               backgroundColor: Colors.amberAccent,
               onTap: () {
                 Get.toNamed('/choicegromad/web',

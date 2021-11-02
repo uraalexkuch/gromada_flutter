@@ -1,10 +1,11 @@
+import 'dart:convert';
+
 import 'package:gromada/Pages/Search/models/pasport.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 class ApiProviderPassport {
   static const String url =
-      'https://donocz.gov.ua/recruting/gromada/pasport/pasport.json';
+      'https://volnovcz.pp.ua/gromada/pasport/pasport.json';
   static Future<List<Passport>> fetchAll() async {
     //  String url = Uri.encodeFull("https://donocz.gov.ua/gromada/vac/vac.json");
     final response = await http.get(

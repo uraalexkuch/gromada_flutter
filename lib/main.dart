@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
 import 'package:gromada/Controllers/all_vac_controller.dart';
 import 'package:gromada/Controllers/char_controller.dart';
 import 'package:gromada/Controllers/choice_controller.dart';
@@ -7,15 +9,13 @@ import 'package:gromada/Pages/AboutUS.dart';
 import 'package:gromada/Pages/Callcenter/call_center.dart';
 import 'package:gromada/Pages/Charts/labour_market.dart';
 import 'package:gromada/Pages/Choice.dart';
-
-import 'package:get/get.dart';
 import 'package:gromada/Pages/ChoiceQuestion/PageQuestion.dart';
 import 'package:gromada/Pages/ChoiceQuestion/WebView.dart';
 import 'package:gromada/Pages/ChoiceSearch/ChoiceSearch.dart';
-import 'package:gromada/Pages/Pasports/ListPasport.dart';
-import 'package:gromada/Pages/Pasports/PasportDetail.dart';
 import 'package:gromada/Pages/Navch/navch_answre.dart';
 import 'package:gromada/Pages/Navch/select_question_navch.dart';
+import 'package:gromada/Pages/Pasports/ListPasport.dart';
+import 'package:gromada/Pages/Pasports/PasportDetail.dart';
 import 'package:gromada/Pages/Profnavch/profnavch_answre.dart';
 import 'package:gromada/Pages/Proforiention/proforient_answre.dart';
 import 'package:gromada/Pages/Proforiention/select_question_prof.dart';
@@ -25,11 +25,11 @@ import 'package:gromada/Pages/Question/ShablonAnswer.dart';
 import 'package:gromada/Pages/Search/pages/index.dart';
 import 'package:gromada/Pages/Vacancy/VacDetail.dart';
 import 'package:gromada/Pages/Work/StartWork.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'Controllers/choice_search_controller.dart';
 import 'Pages/StartPage.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart';
 
 void main() {
@@ -47,6 +47,18 @@ class MyApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
+        builder: (context, widget) => ResponsiveWrapper.builder(
+            BouncingScrollWrapper.builder(context, widget!),
+            maxWidth: 1200,
+            minWidth: 450,
+            defaultScale: true,
+            breakpoints: [
+              ResponsiveBreakpoint.resize(450, name: MOBILE),
+              ResponsiveBreakpoint.autoScale(800, name: TABLET),
+              ResponsiveBreakpoint.autoScale(1000, name: TABLET),
+              ResponsiveBreakpoint.resize(1200, name: DESKTOP),
+              ResponsiveBreakpoint.autoScale(2460, name: "4K"),
+            ]),
         supportedLocales: S.delegate.supportedLocales,
         home: StartPage(),
         initialRoute: '/',

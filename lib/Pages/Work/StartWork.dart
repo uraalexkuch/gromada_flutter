@@ -4,8 +4,6 @@ import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import '../../call_center_button.dart';
-
 class StartWork extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -56,7 +54,7 @@ class StartWork extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
                             child: Text(
-                              '      Якщо Ви шукаєте роботу – зверніться до державної служби  зайнятості, яка стане Вашим особистим консультантом та надійним помічником у її пошуку.\n        У  центрі  зайнятості Ви можете самостійно отримати корисну та цікаву для Вас інформацію.',
+                              S.of(context).welcome_work,
                               style: TextStyle(
                                   decoration: TextDecoration.none,
                                   color: HexColor('#005BAA'),
@@ -90,7 +88,7 @@ class StartWork extends StatelessWidget {
                                                   "https://www.dcz.gov.ua/userSearch/vacancy");
                                         },
                                         child: Text(
-                                            'ПЕРЕГЛЯНУТИ ВАКАНСІЇ ПО УКРАЇНІ',
+                                            S.of(context).work_buttton_choice_0,
                                             style: TextStyle(
                                                 color: HexColor('#FFFFFF'),
                                                 fontSize: 16.sp,
@@ -124,7 +122,7 @@ class StartWork extends StatelessWidget {
                                               '/choicegromad/vacancy/rayon');
                                         },
                                         child: Text(
-                                            'ПЕРЕГЛЯНУТИ ВАКАНСІЇ  ПО РАЙОНУ',
+                                            S.of(context).work_buttton_choice_1,
                                             style: TextStyle(
                                                 color: HexColor('#FFFFFF'),
                                                 fontSize: 16.sp,
@@ -159,7 +157,7 @@ class StartWork extends StatelessWidget {
                                               arguments: value);
                                         },
                                         child: Text(
-                                          'ПЕРЕГЛЯНУТИ ВАКАНСІЇ  ПО ГРОМАДІ',
+                                          S.of(context).work_buttton_choice_2,
                                           style: TextStyle(
                                               color: HexColor('#FFFFFF'),
                                               fontSize: 16.sp,
@@ -194,7 +192,7 @@ class StartWork extends StatelessWidget {
                                               '/choicegromad/vacancy/pasport');
                                         },
                                         child: Text(
-                                            'ІНФОРМАЦІЯ ПРО РОБОТОДАВЦІВ РАЙОНУ',
+                                            S.of(context).work_buttton_choice_3,
                                             style: TextStyle(
                                                 color: HexColor('#FFFFFF'),
                                                 fontSize: 16.sp,

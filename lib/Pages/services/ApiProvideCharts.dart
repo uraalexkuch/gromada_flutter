@@ -1,10 +1,10 @@
-import 'package:gromada/Pages/Search/models/charts.dart';
-import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:gromada/Pages/Search/models/charts.dart';
+import 'package:http/http.dart' as http;
+
 class ApiProviderCharts {
-  static const String url =
-      'https://donocz.gov.ua/recruting/gromada/stat/stat.json';
+  static const String url = 'https://volnovcz.pp.ua/gromada/stat/stat.json';
   static Future<List<Charts>> fetchAll() async {
     //  String url = Uri.encodeFull("https://donocz.gov.ua/gromada/vac/vac.json");
     final response = await http.get(

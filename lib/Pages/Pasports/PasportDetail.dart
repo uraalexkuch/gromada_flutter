@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/Pages/ChoiceQuestion/WebView.dart';
-import 'package:gromada/Pages/Search/models/pasport.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -13,7 +12,7 @@ class PassportDetail extends StatelessWidget {
     print(value.map);
     return new Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: new AppBar(title: new Text('Картка роботодавця')),
+        appBar: new AppBar(title: new Text(S.of(context).pasport_title)),
         body: new Container(
             height: 100.h,
             decoration: BoxDecoration(
@@ -55,7 +54,7 @@ class PassportDetail extends StatelessWidget {
                                   child: Container(
                                       width: 30.w,
                                       child: Text(
-                                        "Номер вакансії:",
+                                        S.of(context).pasport,
                                         style: TextStyle(
                                           color: Colors.indigo,
                                           fontWeight: FontWeight.bold,
@@ -86,7 +85,7 @@ class PassportDetail extends StatelessWidget {
                                   ),
                                   child: Center(
                                     child: Text(
-                                      'Основні вимоги до кандидата',
+                                      S.of(context).pasport0,
                                       style: TextStyle(
                                         color: HexColor('#FFD947'),
                                         fontWeight: FontWeight.bold,
@@ -102,7 +101,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Вид економічної діяльності",
+                                      S.of(context).pasport1,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -130,7 +129,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Юридична адреса ПОУ",
+                                      S.of(context).pasport2,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -158,7 +157,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Фактична адреса ПОУ",
+                                      S.of(context).pasport3,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -186,7 +185,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Основний професійний склад працівників",
+                                      S.of(context).pasport4,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -213,7 +212,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Чисельність працівників",
+                                      S.of(context).pasport5,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -242,7 +241,7 @@ class PassportDetail extends StatelessWidget {
                                   ),
                                   child: Center(
                                     child: Text(
-                                      'Умови праці',
+                                      S.of(context).pasport6,
                                       style: TextStyle(
                                         color: HexColor('#FFD947'),
                                         fontWeight: FontWeight.bold,
@@ -258,7 +257,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Режим роботи, змінність",
+                                      S.of(context).pasport7,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -285,7 +284,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Ринкоутворююче",
+                                      S.of(context).pasport8,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -312,7 +311,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Транспортна доступність",
+                                      S.of(context).pasport9,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -339,7 +338,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "ПІБ керівника",
+                                      S.of(context).pasport10,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -366,7 +365,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Наявність гуртожитку, житла",
+                                      S.of(context).pasport11,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -393,7 +392,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Телефон відділу кадрів",
+                                      S.of(context).pasport12,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -420,7 +419,7 @@ class PassportDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Телефон рекрутера",
+                                      S.of(context).pasport13,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -454,7 +453,7 @@ class PassportDetail extends StatelessWidget {
                                           print(value.map);
                                         },
                                         child: Text(
-                                          "переглянути на карті",
+                                          S.of(context).pasport14,
                                           style: TextStyle(
                                             color: Colors.indigo,
                                             fontWeight: FontWeight.bold,

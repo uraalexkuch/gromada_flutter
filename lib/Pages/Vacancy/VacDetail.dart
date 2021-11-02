@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/Pages/Search/models/vac.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -11,7 +11,7 @@ class VacDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: new AppBar(title: new Text('Картка вакансії')),
+        appBar: new AppBar(title: new Text(S.of(context).app_barr_vac_detail)),
         body: new Container(
             height: 100.h,
             decoration: BoxDecoration(
@@ -41,7 +41,7 @@ class VacDetail extends StatelessWidget {
                                   child: Container(
                                       width: 30.w,
                                       child: Text(
-                                        "Номер вакансії:",
+                                        S.of(context).vac_detail_number,
                                         style: TextStyle(
                                           color: Colors.indigo,
                                           fontWeight: FontWeight.bold,
@@ -72,7 +72,7 @@ class VacDetail extends StatelessWidget {
                                   ),
                                   child: Center(
                                     child: Text(
-                                      'Основні вимоги до кандидата',
+                                      S.of(context).vac_detail_vumog,
                                       style: TextStyle(
                                         color: HexColor('#FFD947'),
                                         fontWeight: FontWeight.bold,
@@ -88,7 +88,7 @@ class VacDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Посада:",
+                                      S.of(context).vac_detail_posad,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -116,7 +116,7 @@ class VacDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Освітній рівень:",
+                                      S.of(context).vac_detail_osvit,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -145,7 +145,7 @@ class VacDetail extends StatelessWidget {
                                       child: Container(
                                           width: 30.w,
                                           child: Text(
-                                            "Спеціальність (назва):",
+                                            S.of(context).vac_detail_spec,
                                             style: TextStyle(
                                               color: Colors.indigo,
                                               fontWeight: FontWeight.bold,
@@ -176,7 +176,7 @@ class VacDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Завдання та обов'язки:",
+                                      S.of(context).vac_detail_responsibility,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -203,7 +203,7 @@ class VacDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Місце проведення робіт:",
+                                      S.of(context).vac_detail_placework,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -232,7 +232,7 @@ class VacDetail extends StatelessWidget {
                                   ),
                                   child: Center(
                                     child: Text(
-                                      'Умови праці',
+                                      S.of(context).vac_detail_conditions,
                                       style: TextStyle(
                                         color: HexColor('#FFD947'),
                                         fontWeight: FontWeight.bold,
@@ -248,7 +248,7 @@ class VacDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Режими роботи:",
+                                      S.of(context).vac_detail_operating_modes,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -275,7 +275,7 @@ class VacDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Характеристики робіт:",
+                                      S.of(context).vac_detail_characteristics,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -302,7 +302,7 @@ class VacDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Умови праці:",
+                                      S.of(context).vac_detail_conditions,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -329,7 +329,7 @@ class VacDetail extends StatelessWidget {
                                 child: Container(
                                     width: 30.w,
                                     child: Text(
-                                      "Заробітна плата:",
+                                      S.of(context).vac_detail_salary,
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
@@ -357,7 +357,7 @@ class VacDetail extends StatelessWidget {
                                   child: Container(
                                       width: 30.w,
                                       child: Text(
-                                        "Телефон для зв'язку:",
+                                        S.of(context).vac_detail_tel,
                                         style: TextStyle(
                                           color: Colors.indigo,
                                           fontWeight: FontWeight.bold,
