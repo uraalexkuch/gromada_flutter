@@ -1,12 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
-import 'package:get/get.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-
 import 'package:timeline_tile/timeline_tile.dart';
 
 class SuccessTimeline extends StatefulWidget {
@@ -97,7 +94,7 @@ class _SuccessTimelineState extends State<SuccessTimeline> {
         step: 5,
         title: 'ОТРИМАННЯ ВАУЧЕРА',
         message:
-            'Протягом  5-ти робочих днів з дня надходження позитивного рішення  зверніться в центр зайнятості ізаберіть ваучер',
+            'Протягом  5-ти робочих днів з дня надходження позитивного рішення  зверніться в центр зайнятості і заберіть ваучер',
       ),
       const Step(
         step: 6,
@@ -263,7 +260,7 @@ class _Header extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Text(
-              'ЯК ОТРИМАТИ ВАУЧЕР?',
+              S.of(context).vaucher,
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: HexColor("#005BAA"),

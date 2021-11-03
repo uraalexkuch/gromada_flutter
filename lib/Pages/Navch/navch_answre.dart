@@ -90,7 +90,7 @@ class _ProforienAnswerState extends State<NavchAnswer> {
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
-                  'Ваучер - документ встановленого зразка, що дає особі право на перепідготовку або підготовку  за іншою спеціальністю, підготовку на наступному рівні освіти, спеціалізацію, підвищення кваліфікації у закладах освіти чи у роботодавця.',
+                  '     Ваучер - документ встановленого зразка, що дає особі право на перепідготовку або підготовку  за іншою спеціальністю, підготовку на наступному рівні освіти, спеціалізацію, підвищення кваліфікації у закладах освіти чи у роботодавця.',
                   style: TextStyle(
                       decoration: TextDecoration.none,
                       color: HexColor('#005BAA'),
@@ -117,7 +117,7 @@ class _ProforienAnswerState extends State<NavchAnswer> {
         margin: new EdgeInsets.only(bottom: 7.h),
         child: SpeedDial(
             elevation: 10.sp,
-            buttonSize: 25.0.sp,
+            buttonSize: 30.0.sp,
             label: Text(
               "Посилання",
               style: TextStyle(

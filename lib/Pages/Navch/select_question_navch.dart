@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gromada/call_center_button.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -21,8 +22,7 @@ class _SelectQuestionState extends State<SelectQuestionNavch> {
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return Scaffold(
           appBar: AppBar(
-            title: Text('Онлайн помічник'),
-          ),
+            title: Text(S.of(context).pasport_title) ),
           body: Container(
             width: 100.w,
             decoration: BoxDecoration(

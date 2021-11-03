@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gromada/Controllers/pasport_controlller.dart';
 import 'package:gromada/Pages/Load/loading.dart';
-
 import 'package:gromada/Pages/Search/models/pasport.dart';
-
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -29,7 +28,7 @@ class _ListPasportState extends State<ListPasport> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Text('Онлайн помічник'),
+          title: Text(S.of(context).app_barr_title),
         ),
         body: SafeArea(
             child: Obx(
@@ -69,7 +68,9 @@ class _ListPasportState extends State<ListPasport> {
   TextField buildTextField() {
     return TextField(
       decoration: InputDecoration(
-          icon: Icon(Icons.search), hintText: 'Пошук за назвою'),
+        icon: Icon(Icons.search),
+        hintText: S.of(context).pasport_list,
+      ),
       onChanged: (value) {
         setState(() {
           filteredPassport = controller.pasport
@@ -110,7 +111,7 @@ class _ListPasportState extends State<ListPasport> {
                             child: Container(
                                 width: 28.w,
                                 child: Text(
-                                  "Роботодавець (назва):",
+                                  S.of(context).pasport_list0,
                                   style: TextStyle(
                                     color: Colors.indigo,
                                     fontWeight: FontWeight.bold,
@@ -170,7 +171,7 @@ class _ListPasportState extends State<ListPasport> {
                             child: Container(
                                 width: 28.w,
                                 child: Text(
-                                  "Роботодавець (назва):",
+                                  S.of(context).pasport_list0,
                                   style: TextStyle(
                                     color: Colors.indigo,
                                     fontWeight: FontWeight.bold,
