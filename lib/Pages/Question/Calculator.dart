@@ -449,7 +449,7 @@ class _CalculatorState extends State<Calculator> {
                 fontSize: 16.sp,
                 fontWeight: FontWeight.bold),
             // textAlign: TextAlign.justify,
-            hintText: ' Вкажіть розмір з/п'),
+            hintText: S.of(context).calc15),
         onChanged: (value) {
           setState(
             () {
