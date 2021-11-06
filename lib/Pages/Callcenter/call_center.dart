@@ -57,8 +57,7 @@ class CallCenter extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Center(
                         child: Container(
-                          child: Text(
-                              "Донецький обласний центр зайнятості\n\nМи відкриті для спілкування у зручний для Вас спосіб !",
+                          child: Text(S.of(context).call_center,
                               style: TextStyle(
                                 decoration: TextDecoration.none,
                                 fontSize: 16.sp,
@@ -111,7 +110,7 @@ class CallCenter extends StatelessWidget {
                                   fontWeight: FontWeight.bold),
                               children: <TextSpan>[
                                 TextSpan(
-                                  text: '0 800 33 61 67\n',
+                                  text: S.of(context).call_center1,
                                   style: TextStyle(
                                     decoration: TextDecoration.none,
                                     fontSize: 20.sp,
@@ -120,14 +119,13 @@ class CallCenter extends StatelessWidget {
                                   ),
                                 ),
                                 TextSpan(
-                                  text:
-                                      "Call-центр Донецького  обласного  центру  зайнятості. ",
+                                  text: S.of(context).call_center2,
                                   style: TextStyle(
                                       color: HexColor('#FFD947'),
                                       fontSize: 16.sp),
                                 ),
                                 TextSpan(
-                                  text: "\nБЕЗКОШТОВНО! ",
+                                  text: S.of(context).call_center3,
                                   style: TextStyle(
                                       color: HexColor('#FFD947'),
                                       fontSize: 16.sp),
@@ -180,7 +178,7 @@ class CallCenter extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: Container(
                             child: Text(
-                              "Офіційна сторінка у Facebook",
+                              S.of(context).call_center4,
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 decoration: TextDecoration.none,
@@ -223,7 +221,7 @@ class CallCenter extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
                               child: Text(
-                                "Офіційний канал на YouTube",
+                                S.of(context).call_center5,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   decoration: TextDecoration.none,
@@ -265,7 +263,7 @@ class CallCenter extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
                               child: Text(
-                                "Telegram чат-бот",
+                                S.of(context).call_center6,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   decoration: TextDecoration.none,

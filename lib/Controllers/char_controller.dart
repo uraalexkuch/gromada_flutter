@@ -2,8 +2,6 @@ import 'package:get/get.dart';
 import 'package:gromada/Pages/Search/models/charts.dart';
 import 'package:gromada/Pages/services/ChartsDepository.dart';
 
-import 'package:gromada/Pages/services/VacDepository.dart';
-
 List data55900 = [
   '55900',
   '10',
@@ -12,7 +10,7 @@ List data55900 = [
   "26391",
   "10197",
   " Волноваха",
-  "сільске господарство, тогівля та сфера послуг, залізничний транспорт"
+  "сільське господарство, тогівля та сфера послуг, залізничний транспорт"
 ];
 
 List data55901 = [
@@ -23,7 +21,7 @@ List data55901 = [
   "17305",
   "2190",
   "Ольгинка",
-  "сільске господарство, добувна промисловість"
+  "сільське господарство, добувна промисловість"
 ];
 List data55902 = [
   '55902',
@@ -33,7 +31,7 @@ List data55902 = [
   "0",
   "012382",
   "Хлібодарівка",
-  "сільске господарство, добувна промисловість "
+  "сільське господарство, добувна промисловість "
 ];
 List data55903 = [
   '55903',
@@ -43,7 +41,7 @@ List data55903 = [
   "4261",
   "7743",
   "Мирне",
-  "сільске господарство"
+  "сільське господарство"
 ];
 
 class ChartController extends GetxController {

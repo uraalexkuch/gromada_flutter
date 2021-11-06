@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/call_center_button.dart';
 import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -21,8 +20,7 @@ class _SelectQuestionState extends State<SelectQuestionNavch> {
   Widget build(BuildContext context) {
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return Scaffold(
-          appBar: AppBar(
-            title: Text(S.of(context).pasport_title) ),
+          appBar: AppBar(title: Text(S.of(context).app_barr_title)),
           body: Container(
             width: 100.w,
             decoration: BoxDecoration(
@@ -72,7 +70,7 @@ class _SelectQuestionState extends State<SelectQuestionNavch> {
                                           arguments: '1');
                                     },
                                     child: Text(
-                                      'ПРОФЕСІЙНЕ НАВЧАННЯ',
+                                      S.of(context).navch_title,
                                       style: TextStyle(
                                           color: HexColor('#FFFFFF'),
                                           fontSize: 16.sp,
@@ -104,7 +102,7 @@ class _SelectQuestionState extends State<SelectQuestionNavch> {
                                           arguments: '2');
                                     },
                                     child: Text(
-                                      'НАВЧАННЯ ЗА РАХУНОК ВАУЧЕРІВ',
+                                      S.of(context).vaucher_title,
                                       style: TextStyle(
                                           color: HexColor('FFFFFF'),
                                           fontSize: 16.sp,

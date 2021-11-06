@@ -26,6 +26,43 @@ class MessageLookup extends MessageLookupByLibrary {
         "app_barr_vac_detail":
             MessageLookupByLibrary.simpleMessage("Картка вакансії"),
         "button_start": MessageLookupByLibrary.simpleMessage(" Розпочати"),
+        "calc": MessageLookupByLibrary.simpleMessage(
+            " Калькулятор допомоги по безробіттю\n"),
+        "calc1": MessageLookupByLibrary.simpleMessage("Увага!\n"),
+        "calc10":
+            MessageLookupByLibrary.simpleMessage(" п.2. Вкажіть розмір з/п*"),
+        "calc11": MessageLookupByLibrary.simpleMessage(
+            " *(нарахована офіційна середньомісячна заробітна плата за останні 12 місяців)"),
+        "calc12": MessageLookupByLibrary.simpleMessage(
+            "Перші 90 днів\n(в розрахунку за місяць),грн"),
+        "calc13": MessageLookupByLibrary.simpleMessage(
+            "Наступні 90 днів\n(в розрахунку за місяць),грн"),
+        "calc14": MessageLookupByLibrary.simpleMessage(
+            "Залишок днів\\n(в розрахунку за місяць),грн"),
+        "calc2": MessageLookupByLibrary.simpleMessage(
+            " Розрахунок необхідний, якщо Ви протягом року,  що передував реєстрації в  \" +\n                                          \"службі зайнятості,  мали страховий стаж не менше 6 місяців\n"),
+        "calc3": MessageLookupByLibrary.simpleMessage(
+            "\n\" +\n                                          \"ВСІ ДАНІ ДОВІДКОВІ\n\"\n                                              \" ТА НЕ Є ПІДСТАВОЮ ДЛЯ НАРАХУВАННЯ ДОПОМОГИ ПО БЕЗРОБІТТЮ!"),
+        "calc4": MessageLookupByLibrary.simpleMessage("п.1. Оберіть стаж"),
+        "calc5": MessageLookupByLibrary.simpleMessage("до 2- років"),
+        "calc6": MessageLookupByLibrary.simpleMessage("від 2-х до 6 років"),
+        "calc7":
+            MessageLookupByLibrary.simpleMessage("від 6 років до 10 років"),
+        "calc8": MessageLookupByLibrary.simpleMessage("більше 10 років"),
+        "calc9": MessageLookupByLibrary.simpleMessage(" Оберіть стаж"),
+        "call_center": MessageLookupByLibrary.simpleMessage(
+            "Донецький обласний центр зайнятості\n\nМи відкриті для спілкування у зручний для Вас спосіб !"),
+        "call_center1":
+            MessageLookupByLibrary.simpleMessage("0 800 33 61 67\n"),
+        "call_center2": MessageLookupByLibrary.simpleMessage(
+            "Call-центр Донецького  обласного  центру  зайнятості."),
+        "call_center3": MessageLookupByLibrary.simpleMessage("\nБЕЗКОШТОВНО! "),
+        "call_center4": MessageLookupByLibrary.simpleMessage(
+            "Офіційна сторінка у Facebook"),
+        "call_center5":
+            MessageLookupByLibrary.simpleMessage("Офіційний канал на YouTube"),
+        "call_center6":
+            MessageLookupByLibrary.simpleMessage("Telegram чат-бот"),
         "center_mape": MessageLookupByLibrary.simpleMessage("Ми на карті"),
         "center_name": MessageLookupByLibrary.simpleMessage(
             "Волноваський районний центр зайнятості"),
@@ -35,15 +72,60 @@ class MessageLookup extends MessageLookupByLibrary {
             "Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n"),
         "choice_gromad":
             MessageLookupByLibrary.simpleMessage(" Оберіть відповідну громаду"),
+        "labour": MessageLookupByLibrary.simpleMessage(
+            "ЗАГАЛЬНА ІНФОРМАЦІЯ ПО ГРОМАДІ"),
+        "labour1": MessageLookupByLibrary.simpleMessage("Центр \n громади"),
+        "labour10": MessageLookupByLibrary.simpleMessage(
+            "НАДАННЯ  ПОСЛУГ  СЛУЖБОЮ  ЗАЙНЯТОСТІ"),
+        "labour11":
+            MessageLookupByLibrary.simpleMessage("Мали статус безробітного "),
+        "labour12":
+            MessageLookupByLibrary.simpleMessage("Кількість   вакансій"),
+        "labour13": MessageLookupByLibrary.simpleMessage(
+            "ЗА  СПРИЯННЯ  СЛУЖБИ  ЗАЙНЯТОСТІ"),
+        "labour14": MessageLookupByLibrary.simpleMessage("Отримали роботу"),
+        "labour15": MessageLookupByLibrary.simpleMessage("Проходили навчання"),
+        "labour16":
+            MessageLookupByLibrary.simpleMessage("Участь у гром./тим. роботах"),
+        "labour2": MessageLookupByLibrary.simpleMessage(
+            "Кількість рад, що об\\\'єдналися"),
+        "labour3": MessageLookupByLibrary.simpleMessage("Площа  громади"),
+        "labour4": MessageLookupByLibrary.simpleMessage(
+            "Чисельність населення громади"),
+        "labour5": MessageLookupByLibrary.simpleMessage("Міське населення"),
+        "labour6": MessageLookupByLibrary.simpleMessage("Сільське населення"),
+        "labour7": MessageLookupByLibrary.simpleMessage(
+            "Кількість підприємств,\n юридичні особи"),
+        "labour8": MessageLookupByLibrary.simpleMessage(
+            "Кількість підприємців,\n фізичні особи"),
+        "labour9":
+            MessageLookupByLibrary.simpleMessage("Провідні галузі економіки"),
         "loading":
             MessageLookupByLibrary.simpleMessage("Зачекайте,завантажуємо дані"),
+        "main_choice":
+            MessageLookupByLibrary.simpleMessage("СТАН РИНКУ ПРАЦІ ГРОМАДИ"),
+        "main_choice1": MessageLookupByLibrary.simpleMessage("ПОШУК РОБОТИ"),
+        "main_choice2":
+            MessageLookupByLibrary.simpleMessage("ПРОФЕСІЙНА ОРІЄНТАЦІЯ"),
+        "main_choice3":
+            MessageLookupByLibrary.simpleMessage("ОТРИМАТИ НОВУ ПРОФЕСІЮ"),
+        "main_choice4": MessageLookupByLibrary.simpleMessage(
+            "ЗАПИСАТИСЯ НА ВІДВІДУВАННЯ ЦЗ"),
+        "main_choice5":
+            MessageLookupByLibrary.simpleMessage("ЕЛЕКТРОННИЙ КАБІНЕТ ШУКАЧА "),
+        "main_choice6":
+            MessageLookupByLibrary.simpleMessage("ПОШИРЕНІ ПИТАННЯ"),
+        "main_choice7":
+            MessageLookupByLibrary.simpleMessage("КОНТАКТИ ЦЕНТРУ ЗАЙНЯТОСТІ"),
         "navch": MessageLookupByLibrary.simpleMessage(
             "     Професійне навчання здійснюється у закладах професійної (професійно-технічної), фахової передвищої та вищої освіти, у тому числі у центрах професійно-технічної освіти державної служби зайнятості,  на підприємствах, в установах та організаціях незалежно від форми власності, виду діяльності та господарювання або безпосередньо у роботодавців - замовників кадрів.\n     Для організації професійного навчання  зареєстрованих безробітних та (або) їх проживання в період такого навчання центр зайнятості здійснює відбір закладів освіти.\n     За додатковою інформацією звертайтесь до найближчого центру зайнятості"),
         "navch0": MessageLookupByLibrary.simpleMessage("Посилання"),
         "navch1":
             MessageLookupByLibrary.simpleMessage("Перелік закладів освіти"),
         "navch2": MessageLookupByLibrary.simpleMessage(
-            "Перелік центрів професійно-технічної\\n освіти державної служби зайнятості "),
+            "Перелік центрів професійно-технічної\n освіти державної служби зайнятості "),
+        "navch_title":
+            MessageLookupByLibrary.simpleMessage("ПРОФЕСІЙНЕ НАВЧАННЯ"),
         "pasport": MessageLookupByLibrary.simpleMessage("Номер вакансії:"),
         "pasport0":
             MessageLookupByLibrary.simpleMessage("Основні вимоги до кандидата"),
@@ -74,6 +156,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Роботодавець (назва):"),
         "pasport_title":
             MessageLookupByLibrary.simpleMessage("Картка роботодавця"),
+        "profnavch": MessageLookupByLibrary.simpleMessage(
+            "     Якщо Ви бажаєте отримати гідну роботу та досягти успіху – скористайтеся можливістю пройти професійне навчання шляхом:\' +\n                          \'\\n\' +\n                          \'\\n\' +\n                          \"•\tпрофесійної підготовки\" +\n                          \'\\n\' +\n                          \"•\tперепідготовки\" +\n                          \'\\n\' +\n                          \"•\tпідвищення кваліфікації"),
+        "proforient":
+            MessageLookupByLibrary.simpleMessage("ПЛАНУЙ МАЙБУТНЄ ЗАРАЗ"),
+        "proforient1": MessageLookupByLibrary.simpleMessage(
+            "РОЗВИТОК ПІДПРИЄМНИЦТВА - ШЛЯХ ДО УСПІХУ ГРОМАДИ"),
+        "proforient2":
+            MessageLookupByLibrary.simpleMessage("ЦИФРОВА ГРАМОТНІСТЬ"),
+        "search": MessageLookupByLibrary.simpleMessage("Пошук за посадою "),
         "vac_detail_characteristics":
             MessageLookupByLibrary.simpleMessage("Характеристики робіт:"),
         "vac_detail_conditions":
@@ -103,6 +194,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "vaucher": MessageLookupByLibrary.simpleMessage("ЯК ОТРИМАТИ ВАУЧЕР?"),
         "vaucher0": MessageLookupByLibrary.simpleMessage(
             "Оберіть необхідну професію або спеціальність з переліку"),
+        "vaucher_title": MessageLookupByLibrary.simpleMessage(
+            "НАВЧАННЯ ЗА РАХУНОК ВАУЧЕРІВ"),
         "welcome": MessageLookupByLibrary.simpleMessage("Вітаємо!"),
         "welcome_two": MessageLookupByLibrary.simpleMessage(
             "     До  Ваших послуг онлайн помічник з питань зайнятості !"),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gromada/Controllers/calc_controlller.dart';
 import 'package:gromada/Pages/Load/loading.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -29,7 +30,8 @@ class _CalculatorState extends State<Calculator> {
       return Scaffold(
           resizeToAvoidBottomInset: false,
           appBar: AppBar(
-            title: const Text('Онлайн помічник', textAlign: TextAlign.center),
+            title:
+                Text(S.of(context).app_barr_title, textAlign: TextAlign.center),
           ),
           body: SafeArea(
               child: Obx(
@@ -70,8 +72,7 @@ class _CalculatorState extends State<Calculator> {
                                       fontWeight: FontWeight.bold),
                                   children: <TextSpan>[
                                     TextSpan(
-                                      text:
-                                          ' Калькулятор допомоги по безробіттю\n',
+                                      text: S.of(context).calc,
                                       style: TextStyle(
                                         decoration: TextDecoration.none,
                                         fontSize: 18.sp,
@@ -80,22 +81,19 @@ class _CalculatorState extends State<Calculator> {
                                       ),
                                     ),
                                     TextSpan(
-                                      text: "Увага!\n",
+                                      text: S.of(context).calc1,
                                       style: TextStyle(
                                           color: HexColor('#FFD947'),
                                           fontSize: 18.sp),
                                     ),
                                     TextSpan(
-                                      text: " Розрахунок необхідний, якщо Ви протягом року,  що передував реєстрації в  " +
-                                          "службі зайнятості,  мали страховий стаж не менше 6 місяців\n",
+                                      text: S.of(context).calc2,
                                       style: TextStyle(
                                           color: HexColor('#FFFFFF'),
                                           fontSize: 16.sp),
                                     ),
                                     TextSpan(
-                                      text: "\n" +
-                                          "ВСІ ДАНІ ДОВІДКОВІ\n"
-                                              " ТА НЕ Є ПІДСТАВОЮ ДЛЯ НАРАХУВАННЯ ДОПОМОГИ ПО БЕЗРОБІТТЮ!",
+                                      text: S.of(context).calc3,
                                       style: TextStyle(
                                           color: HexColor('#FFD947'),
                                           fontSize: 16.sp),
@@ -108,7 +106,7 @@ class _CalculatorState extends State<Calculator> {
                             Padding(
                                 padding: const EdgeInsets.only(
                                     left: 8.0, right: 8.0),
-                                child: Text("п.1. Оберіть стаж",
+                                child: Text(S.of(context).calc4,
                                     style: TextStyle(
                                       decoration: TextDecoration.none,
                                       fontSize: 16.sp,
@@ -137,7 +135,7 @@ class _CalculatorState extends State<Calculator> {
                                         style: TextStyle(color: Colors.black),
                                         items: [
                                           DropdownMenuItem(
-                                            child: Text("до 2- років",
+                                            child: Text(S.of(context).calc5,
                                                 style: TextStyle(
                                                     decoration:
                                                         TextDecoration.none,
@@ -149,7 +147,7 @@ class _CalculatorState extends State<Calculator> {
                                             value: '0.5',
                                           ),
                                           DropdownMenuItem(
-                                            child: Text("від 2-х до 6 років",
+                                            child: Text(S.of(context).calc6,
                                                 style: TextStyle(
                                                     decoration:
                                                         TextDecoration.none,
@@ -162,7 +160,7 @@ class _CalculatorState extends State<Calculator> {
                                           ),
                                           DropdownMenuItem(
                                             child: Text(
-                                              "від 6 років до 10 років",
+                                              S.of(context).calc7,
                                               style: TextStyle(
                                                   decoration:
                                                       TextDecoration.none,
@@ -174,7 +172,7 @@ class _CalculatorState extends State<Calculator> {
                                             value: '0.6',
                                           ),
                                           DropdownMenuItem(
-                                            child: Text("більше 10 років",
+                                            child: Text(S.of(context).calc8,
                                                 style: TextStyle(
                                                     decoration:
                                                         TextDecoration.none,
@@ -186,7 +184,7 @@ class _CalculatorState extends State<Calculator> {
                                             value: '0.7',
                                           ),
                                         ],
-                                        hint: Text(" Оберіть стаж",
+                                        hint: Text(S.of(context).calc9,
                                             style: TextStyle(
                                                 decoration: TextDecoration.none,
                                                 color: HexColor('#005BAA'),
@@ -209,7 +207,7 @@ class _CalculatorState extends State<Calculator> {
                             Padding(
                                 padding: const EdgeInsets.only(
                                     left: 8.0, right: 8.0),
-                                child: Text(" п.2. Вкажіть розмір з/п*",
+                                child: Text(S.of(context).calc10,
                                     style: TextStyle(
                                       decoration: TextDecoration.none,
                                       fontSize: 16.sp,
@@ -239,8 +237,7 @@ class _CalculatorState extends State<Calculator> {
                                 padding: const EdgeInsets.only(
                                     left: 8.0, right: 8.0),
                                 child: Center(
-                                  child: Text(
-                                      " *(нарахована офіційна середньомісячна заробітна плата за останні 12 місяців)",
+                                  child: Text(S.of(context).calc11,
                                       style: TextStyle(
                                         decoration: TextDecoration.none,
                                         fontSize: 16.sp,
@@ -265,8 +262,7 @@ class _CalculatorState extends State<Calculator> {
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             left: 8.0, right: 8.0, bottom: 2.0),
-                                        child: Text(
-                                            'Перші 90 днів\n(в розрахунку за місяць),грн',
+                                        child: Text(S.of(context).calc12,
                                             style: TextStyle(
                                                 decoration: TextDecoration.none,
                                                 color: HexColor('#005BAA'),
@@ -328,8 +324,7 @@ class _CalculatorState extends State<Calculator> {
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             left: 8.0, right: 8.0, bottom: 2.0),
-                                        child: Text(
-                                            'Наступні 90 днів\n(в розрахунку за місяць),грн',
+                                        child: Text(S.of(context).calc13,
                                             style: TextStyle(
                                                 decoration: TextDecoration.none,
                                                 color: HexColor('#005BAA'),
@@ -391,8 +386,7 @@ class _CalculatorState extends State<Calculator> {
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             left: 8.0, right: 8.0, bottom: 2.0),
-                                        child: Text(
-                                            'Залишок днів\n(в розрахунку за місяць),грн',
+                                        child: Text(S.of(context).calc14,
                                             style: TextStyle(
                                                 decoration: TextDecoration.none,
                                                 color: HexColor('#005BAA'),
