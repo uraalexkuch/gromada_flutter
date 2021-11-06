@@ -54,14 +54,7 @@ class _ProforienAnswerState extends State<ProfNavchAnswer> {
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Text(
-                      '     Якщо Ви бажаєте отримати гідну роботу та досягти успіху – скористайтеся можливістю пройти професійне навчання шляхом:' +
-                          '\n' +
-                          '\n' +
-                          "•	професійної підготовки" +
-                          '\n' +
-                          "•	перепідготовки" +
-                          '\n' +
-                          "•	підвищення кваліфікації",
+                      S.of(context).profnavch,
                       style: TextStyle(
                           decoration: TextDecoration.none,
                           color: HexColor('#005BAA'),

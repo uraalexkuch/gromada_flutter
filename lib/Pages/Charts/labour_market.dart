@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gromada/Controllers/char_controller.dart';
 import 'package:gromada/Pages/Load/loading.dart';
-import 'package:pie_chart/pie_chart.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -29,7 +29,7 @@ class _LabourMarketState extends State<LabourMarket> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Text('Онлайн помічник'),
+          title: Text(S.of(context).app_barr_title),
         ),
         body: Obx(
           () => !controller.isLoading.value
@@ -62,7 +62,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                     padding: const EdgeInsets.all(8.0),
                                     child: Center(
                                       child: Text(
-                                        'ЗАГАЛЬНА ІНФОРМАЦІЯ ПО ГРОМАДІ',
+                                        S.of(context).labour,
                                         style: TextStyle(
                                             decoration: TextDecoration.none,
                                             color: HexColor('#FFFFFF'),
@@ -96,7 +96,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    'Центр \n громади',
+                                                    S.of(context).labour1,
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
@@ -149,7 +149,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    'Кількість рад, що об\'єдналися',
+                                                    S.of(context).labour2,
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
@@ -202,7 +202,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    'Площа  громади',
+                                                    S.of(context).labour3,
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
@@ -265,7 +265,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    'Чисельність населення громади',
+                                                    S.of(context).labour4,
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
@@ -318,7 +318,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    'Міське населення',
+                                                    S.of(context).labour5,
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
@@ -371,7 +371,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    'Сільське населення',
+                                                    S.of(context).labour6,
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
@@ -432,7 +432,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 padding:
                                                     const EdgeInsets.all(5.0),
                                                 child: Text(
-                                                  'Кількість підприємств,\n юридичні особи',
+                                                  S.of(context).labour7,
                                                   style: TextStyle(
                                                       decoration:
                                                           TextDecoration.none,
@@ -485,7 +485,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 padding:
                                                     const EdgeInsets.all(5.0),
                                                 child: Text(
-                                                  'Кількість підприємців,\n фізичні особи',
+                                                  S.of(context).labour8,
                                                   style: TextStyle(
                                                       decoration:
                                                           TextDecoration.none,
@@ -547,7 +547,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    'Провідні галузі економіки',
+                                                    S.of(context).labour9,
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
@@ -584,7 +584,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                     padding: const EdgeInsets.all(8.0),
                                     child: Center(
                                       child: Text(
-                                        "НАДАННЯ  ПОСЛУГ  СЛУЖБОЮ  ЗАЙНЯТОСТІ" +
+                                        S.of(context).labour9 +
                                             "\n" +
                                             "за  ${controller.bezrab[0].period} ",
                                         style: TextStyle(
@@ -604,8 +604,9 @@ class _LabourMarketState extends State<LabourMarket> {
                                             padding: const EdgeInsets.only(
                                                 bottom: 8.0),
                                             child: Row(
-                                              mainAxisAlignment: MainAxisAlignment
-                                                  .spaceAround, // use whichever suits your need
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              // use whichever suits your need
                                               children: [
                                                 SizedBox(width: 10.w),
                                                 Container(
@@ -631,7 +632,9 @@ class _LabourMarketState extends State<LabourMarket> {
                                                               const EdgeInsets
                                                                   .all(5.0),
                                                           child: Text(
-                                                            'Мали статус безробітного ',
+                                                            S
+                                                                .of(context)
+                                                                .labour11,
                                                             style: TextStyle(
                                                                 decoration:
                                                                     TextDecoration
@@ -696,7 +699,9 @@ class _LabourMarketState extends State<LabourMarket> {
                                                               const EdgeInsets
                                                                   .all(5.0),
                                                           child: Text(
-                                                            'Кількість   вакансій',
+                                                            S
+                                                                .of(context)
+                                                                .labour12,
                                                             style: TextStyle(
                                                                 decoration:
                                                                     TextDecoration
@@ -748,7 +753,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                     padding: const EdgeInsets.all(8.0),
                                     child: Center(
                                       child: Text(
-                                        "ЗА  СПРИЯННЯ  СЛУЖБИ  ЗАЙНЯТОСТІ",
+                                        S.of(context).labour13,
                                         style: TextStyle(
                                             decoration: TextDecoration.none,
                                             color: HexColor('#FFFFFF'),
@@ -786,7 +791,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    'Отримали роботу',
+                                                    S.of(context).labour14,
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
@@ -839,7 +844,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    'Проходили навчання',
+                                                    S.of(context).labour15,
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
@@ -894,7 +899,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                           left: 5.0,
                                                           right: 5.0),
                                                   child: Text(
-                                                    'Участь у гром./тим. роботах',
+                                                    S.of(context).labour16,
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/call_center_button.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -21,7 +21,7 @@ class _SelectQuestionState extends State<SelectQuestionProf> {
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return Scaffold(
         appBar: AppBar(
-          title: Text('Онлайн помічник'),
+          title: Text(S.of(context).app_barr_title),
         ),
         body: Container(
             decoration: BoxDecoration(
@@ -72,7 +72,7 @@ class _SelectQuestionState extends State<SelectQuestionProf> {
                                             arguments: '1');
                                       },
                                       child: Text(
-                                        'ПЛАНУЙ МАЙБУТНЄ ЗАРАЗ',
+                                        S.of(context).proforient,
                                         style: TextStyle(
                                             color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,
@@ -105,7 +105,7 @@ class _SelectQuestionState extends State<SelectQuestionProf> {
                                             arguments: '2');
                                       },
                                       child: Text(
-                                        'РОЗВИТОК ПІДПРИЄМНИЦТВА - ШЛЯХ ДО УСПІХУ ГРОМАДИ',
+                                        S.of(context).proforient1,
                                         style: TextStyle(
                                             color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,
@@ -138,7 +138,7 @@ class _SelectQuestionState extends State<SelectQuestionProf> {
                                             arguments: '3');
                                       },
                                       child: Text(
-                                        'ЦИФРОВА ГРАМОТНІСТЬ',
+                                        S.of(context).proforient2,
                                         style: TextStyle(
                                             color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,

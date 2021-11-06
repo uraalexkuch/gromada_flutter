@@ -1,6 +1,7 @@
 import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 //import 'package:responsive_sizer/responsive_sizer.dart';
@@ -71,7 +72,7 @@ class _ProforienAnswerState extends State<ProforienAnswer> {
       return SafeArea(
           child: Scaffold(
               appBar: AppBar(
-                title: Text('Онлайн помічник'),
+                title: Text(S.of(context).app_barr_title),
               ),
               body: Container(
                 decoration: BoxDecoration(
