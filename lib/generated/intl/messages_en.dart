@@ -166,6 +166,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "proforient2":
             MessageLookupByLibrary.simpleMessage("ЦИФРОВА ГРАМОТНІСТЬ"),
         "search": MessageLookupByLibrary.simpleMessage("Пошук за посадою "),
+        "select_question": MessageLookupByLibrary.simpleMessage(
+            "ЯКА РОБОТА ВВАЖАЄТЬСЯ ПІДХОДЯЩОЮ?"),
+        "select_question1": MessageLookupByLibrary.simpleMessage(
+            "ЯКИЙ ТЕРМІН ЗВЕРНЕННЯ ПІСЛЯ ЗВІЛЬНЕННЯ?"),
+        "select_question2": MessageLookupByLibrary.simpleMessage(
+            "ЯКІ ДОКУМЕНТИ НЕОБХІДНІ ДЛЯ РЕЄСТРАЦІЇ? "),
+        "select_question3": MessageLookupByLibrary.simpleMessage(
+            "ЯК ПРИЗНАЧАЄТЬСЯ ДОПОМОГА ПО БЕЗРОБІТТЮ?"),
+        "select_question4": MessageLookupByLibrary.simpleMessage(
+            "КАЛЬКУЛЯТОР ДОПОМОГИ ПО БЕЗРОБІТТЮ"),
         "vac_detail_characteristics":
             MessageLookupByLibrary.simpleMessage("Характеристики робіт:"),
         "vac_detail_conditions":

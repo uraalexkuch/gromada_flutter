@@ -930,6 +930,58 @@ class S {
     );
   }
 
+  /// `ЯКА РОБОТА ВВАЖАЄТЬСЯ ПІДХОДЯЩОЮ?`
+  String get select_question {
+    return Intl.message(
+      'ЯКА РОБОТА ВВАЖАЄТЬСЯ ПІДХОДЯЩОЮ?',
+      name: 'select_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ЯКИЙ ТЕРМІН ЗВЕРНЕННЯ ПІСЛЯ ЗВІЛЬНЕННЯ?`
+  String get select_question1 {
+    return Intl.message(
+      'ЯКИЙ ТЕРМІН ЗВЕРНЕННЯ ПІСЛЯ ЗВІЛЬНЕННЯ?',
+      name: 'select_question1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ЯКІ ДОКУМЕНТИ НЕОБХІДНІ ДЛЯ РЕЄСТРАЦІЇ? `
+  String get select_question2 {
+    return Intl.message(
+      'ЯКІ ДОКУМЕНТИ НЕОБХІДНІ ДЛЯ РЕЄСТРАЦІЇ? ',
+      name: 'select_question2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ЯК ПРИЗНАЧАЄТЬСЯ ДОПОМОГА ПО БЕЗРОБІТТЮ?`
+  String get select_question3 {
+    return Intl.message(
+      'ЯК ПРИЗНАЧАЄТЬСЯ ДОПОМОГА ПО БЕЗРОБІТТЮ?',
+      name: 'select_question3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `КАЛЬКУЛЯТОР ДОПОМОГИ ПО БЕЗРОБІТТЮ`
+  String get select_question4 {
+    return Intl.message(
+      'КАЛЬКУЛЯТОР ДОПОМОГИ ПО БЕЗРОБІТТЮ',
+      name: 'select_question4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'select-question5' key
+
   /// `НАВЧАННЯ ЗА РАХУНОК ВАУЧЕРІВ`
   String get vaucher_title {
     return Intl.message(

@@ -50,6 +50,7 @@ dependencies:
   flutter_linkify: ^5.0.2
   url_launcher: ^6.0.12
   responsive_framework: ^0.1.4
+  flutter_local_notifications: ^9.0.2
 
 
 dev_dependencies:

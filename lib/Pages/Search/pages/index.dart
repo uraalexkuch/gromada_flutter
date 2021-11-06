@@ -3,9 +3,10 @@ import 'package:get/get.dart';
 import 'package:gromada/Controllers/all_vac_controller.dart';
 import 'package:gromada/Pages/Load/loading.dart';
 import 'package:gromada/generated/l10n.dart';
-import '../models/vac.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+
+import '../models/vac.dart';
 
 class IndexPage extends StatefulWidget {
   @override
@@ -55,7 +56,7 @@ class _IndexPageState extends State<IndexPage> {
   TextField buildTextField() {
     return TextField(
       decoration: InputDecoration(
-          icon: Icon(Icons.search), hintText: 'Пошук за посадою '),
+          icon: Icon(Icons.search), hintText: S.of(context).search),
       onChanged: (value) {
         setState(() {
           filteredUsers = controller.vacancy
@@ -98,7 +99,7 @@ class _IndexPageState extends State<IndexPage> {
                               child: Container(
                                   width: 28.w,
                                   child: Text(
-                                    "Посада:",
+                                    S.of(context).vacancy_posad,
                                     style: TextStyle(
                                       color: Colors.indigo,
                                       fontWeight: FontWeight.bold,
@@ -126,7 +127,7 @@ class _IndexPageState extends State<IndexPage> {
                               child: Container(
                                   width: 28.w,
                                   child: Text(
-                                    'Заробітна плата',
+                                    S.of(context).vacancy_salary,
                                     style: TextStyle(
                                       color: Colors.indigo,
                                       fontWeight: FontWeight.bold,
@@ -185,7 +186,7 @@ class _IndexPageState extends State<IndexPage> {
                           child: Container(
                               width: 28.w,
                               child: Text(
-                                "Посада:",
+                                S.of(context).vacancy_posad,
                                 style: TextStyle(
                                   color: Colors.indigo,
                                   fontWeight: FontWeight.bold,
@@ -213,7 +214,7 @@ class _IndexPageState extends State<IndexPage> {
                           child: Container(
                               width: 28.w,
                               child: Text(
-                                'Заробітна плата',
+                                S.of(context).vacancy_salary,
                                 style: TextStyle(
                                   color: Colors.indigo,
                                   fontWeight: FontWeight.bold,
