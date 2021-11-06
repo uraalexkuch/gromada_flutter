@@ -1139,6 +1139,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Вкажіть розмір з/п`
+  String get calc15 {
+    return Intl.message(
+      'Вкажіть розмір з/п',
+      name: 'calc15',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

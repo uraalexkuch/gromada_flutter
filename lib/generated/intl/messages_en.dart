@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Наступні 90 днів\n(в розрахунку за місяць),грн"),
         "calc14": MessageLookupByLibrary.simpleMessage(
             "Залишок днів\\n(в розрахунку за місяць),грн"),
+        "calc15": MessageLookupByLibrary.simpleMessage("Вкажіть розмір з/п"),
         "calc2": MessageLookupByLibrary.simpleMessage(
             " Розрахунок необхідний, якщо Ви протягом року,  що передував реєстрації в  \" +\n                                          \"службі зайнятості,  мали страховий стаж не менше 6 місяців\n"),
         "calc3": MessageLookupByLibrary.simpleMessage(
