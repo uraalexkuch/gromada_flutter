@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:gromada/Controllers/choice_search_controller.dart';
 import 'package:gromada/Pages/Load/loading.dart';
 import 'package:gromada/Pages/Search/models/vac.dart';
-import 'package:gromada/Pages/Vacancy/VacDetail.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -28,7 +28,7 @@ class _ChoiceSearchState extends State<ChoiceSearch> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Text('Онлайн помічник'),
+          title: Text(S.of(context).app_barr_title),
         ),
         body: Obx(
           () => controller.isLoading.value
@@ -59,7 +59,7 @@ class _ChoiceSearchState extends State<ChoiceSearch> {
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(25.0))),
             prefixIcon: Icon(Icons.search),
-            hintText: 'Пошук за посадою '),
+            hintText: S.of(context).search),
         onChanged: (value) => //controller.filteredVacancy(value),
             setState(() {
               //print(controller.vacancy.length);
@@ -101,7 +101,7 @@ class _ChoiceSearchState extends State<ChoiceSearch> {
                               child: Container(
                                   width: 28.w,
                                   child: Text(
-                                    "Посада:",
+                                    S.of(context).vacancy_posad,
                                     style: TextStyle(
                                       color: Colors.indigo,
                                       fontWeight: FontWeight.bold,
@@ -129,7 +129,7 @@ class _ChoiceSearchState extends State<ChoiceSearch> {
                               child: Container(
                                   width: 28.w,
                                   child: Text(
-                                    'Заробітна плата',
+                                    S.of(context).vac_detail_salary,
                                     style: TextStyle(
                                       color: Colors.indigo,
                                       fontWeight: FontWeight.bold,
@@ -193,7 +193,7 @@ class _ChoiceSearchState extends State<ChoiceSearch> {
                             child: Container(
                                 width: 28.w,
                                 child: Text(
-                                  "Посада:",
+                                  S.of(context).vacancy_posad,
                                   style: TextStyle(
                                     color: Colors.indigo,
                                     fontWeight: FontWeight.bold,
@@ -221,7 +221,7 @@ class _ChoiceSearchState extends State<ChoiceSearch> {
                             child: Container(
                                 width: 28.w,
                                 child: Text(
-                                  'Заробітна плата',
+                                  S.of(context).vacancy_salary,
                                   style: TextStyle(
                                     color: Colors.indigo,
                                     fontWeight: FontWeight.bold,

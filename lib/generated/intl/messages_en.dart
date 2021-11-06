@@ -35,8 +35,24 @@ class MessageLookup extends MessageLookupByLibrary {
             "Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n"),
         "choice_gromad":
             MessageLookupByLibrary.simpleMessage(" Оберіть відповідну громаду"),
+        "labour_title": MessageLookupByLibrary.simpleMessage(""),
         "loading":
             MessageLookupByLibrary.simpleMessage("Зачекайте,завантажуємо дані"),
+        "main_choice":
+            MessageLookupByLibrary.simpleMessage("СТАН РИНКУ ПРАЦІ ГРОМАДИ"),
+        "main_choice1": MessageLookupByLibrary.simpleMessage("ПОШУК РОБОТИ"),
+        "main_choice2":
+            MessageLookupByLibrary.simpleMessage("ПРОФЕСІЙНА ОРІЄНТАЦІЯ"),
+        "main_choice3":
+            MessageLookupByLibrary.simpleMessage("ОТРИМАТИ НОВУ ПРОФЕСІЮ"),
+        "main_choice4": MessageLookupByLibrary.simpleMessage(
+            "ЗАПИСАТИСЯ НА ВІДВІДУВАННЯ ЦЗ"),
+        "main_choice5":
+            MessageLookupByLibrary.simpleMessage("ЕЛЕКТРОННИЙ КАБІНЕТ ШУКАЧА "),
+        "main_choice6":
+            MessageLookupByLibrary.simpleMessage("ПОШИРЕНІ ПИТАННЯ"),
+        "main_choice7":
+            MessageLookupByLibrary.simpleMessage("КОНТАКТИ ЦЕНТРУ ЗАЙНЯТОСТІ"),
         "navch": MessageLookupByLibrary.simpleMessage(
             "     Професійне навчання здійснюється у закладах професійної (професійно-технічної), фахової передвищої та вищої освіти, у тому числі у центрах професійно-технічної освіти державної служби зайнятості,  на підприємствах, в установах та організаціях незалежно від форми власності, виду діяльності та господарювання або безпосередньо у роботодавців - замовників кадрів.\n     Для організації професійного навчання  зареєстрованих безробітних та (або) їх проживання в період такого навчання центр зайнятості здійснює відбір закладів освіти.\n     За додатковою інформацією звертайтесь до найближчого центру зайнятості"),
         "navch0": MessageLookupByLibrary.simpleMessage("Посилання"),
@@ -44,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Перелік закладів освіти"),
         "navch2": MessageLookupByLibrary.simpleMessage(
             "Перелік центрів професійно-технічної\\n освіти державної служби зайнятості "),
+        "navch_title":
+            MessageLookupByLibrary.simpleMessage("ПРОФЕСІЙНЕ НАВЧАННЯ"),
         "pasport": MessageLookupByLibrary.simpleMessage("Номер вакансії:"),
         "pasport0":
             MessageLookupByLibrary.simpleMessage("Основні вимоги до кандидата"),
@@ -74,6 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Роботодавець (назва):"),
         "pasport_title":
             MessageLookupByLibrary.simpleMessage("Картка роботодавця"),
+        "search": MessageLookupByLibrary.simpleMessage("Пошук за посадою "),
         "vac_detail_characteristics":
             MessageLookupByLibrary.simpleMessage("Характеристики робіт:"),
         "vac_detail_conditions":
@@ -103,6 +122,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "vaucher": MessageLookupByLibrary.simpleMessage("ЯК ОТРИМАТИ ВАУЧЕР?"),
         "vaucher0": MessageLookupByLibrary.simpleMessage(
             "Оберіть необхідну професію або спеціальність з переліку"),
+        "vaucher_title": MessageLookupByLibrary.simpleMessage(
+            "НАВЧАННЯ ЗА РАХУНОК ВАУЧЕРІВ"),
         "welcome": MessageLookupByLibrary.simpleMessage("Вітаємо!"),
         "welcome_two": MessageLookupByLibrary.simpleMessage(
             "     До  Ваших послуг онлайн помічник з питань зайнятості !"),

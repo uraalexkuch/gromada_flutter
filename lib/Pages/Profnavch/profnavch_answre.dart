@@ -18,7 +18,7 @@ class _ProforienAnswerState extends State<ProfNavchAnswer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Онлайн помічник'),
+        title: Text(S.of(context).app_barr_title),
       ),
       body: Container(
         height: 100.h,

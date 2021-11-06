@@ -110,6 +110,106 @@ class S {
     );
   }
 
+  /// `Пошук за посадою `
+  String get search {
+    return Intl.message(
+      'Пошук за посадою ',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `СТАН РИНКУ ПРАЦІ ГРОМАДИ`
+  String get main_choice {
+    return Intl.message(
+      'СТАН РИНКУ ПРАЦІ ГРОМАДИ',
+      name: 'main_choice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ПОШУК РОБОТИ`
+  String get main_choice1 {
+    return Intl.message(
+      'ПОШУК РОБОТИ',
+      name: 'main_choice1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ПРОФЕСІЙНА ОРІЄНТАЦІЯ`
+  String get main_choice2 {
+    return Intl.message(
+      'ПРОФЕСІЙНА ОРІЄНТАЦІЯ',
+      name: 'main_choice2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ОТРИМАТИ НОВУ ПРОФЕСІЮ`
+  String get main_choice3 {
+    return Intl.message(
+      'ОТРИМАТИ НОВУ ПРОФЕСІЮ',
+      name: 'main_choice3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ЗАПИСАТИСЯ НА ВІДВІДУВАННЯ ЦЗ`
+  String get main_choice4 {
+    return Intl.message(
+      'ЗАПИСАТИСЯ НА ВІДВІДУВАННЯ ЦЗ',
+      name: 'main_choice4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ЕЛЕКТРОННИЙ КАБІНЕТ ШУКАЧА `
+  String get main_choice5 {
+    return Intl.message(
+      'ЕЛЕКТРОННИЙ КАБІНЕТ ШУКАЧА ',
+      name: 'main_choice5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ПОШИРЕНІ ПИТАННЯ`
+  String get main_choice6 {
+    return Intl.message(
+      'ПОШИРЕНІ ПИТАННЯ',
+      name: 'main_choice6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `КОНТАКТИ ЦЕНТРУ ЗАЙНЯТОСТІ`
+  String get main_choice7 {
+    return Intl.message(
+      'КОНТАКТИ ЦЕНТРУ ЗАЙНЯТОСТІ',
+      name: 'main_choice7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get labour_title {
+    return Intl.message(
+      '',
+      name: 'labour_title',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Посада:`
   String get vacancy_posad {
     return Intl.message(
@@ -390,6 +490,16 @@ class S {
     );
   }
 
+  /// `ПРОФЕСІЙНЕ НАВЧАННЯ`
+  String get navch_title {
+    return Intl.message(
+      'ПРОФЕСІЙНЕ НАВЧАННЯ',
+      name: 'navch_title',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Картка роботодавця`
   String get pasport_title {
     return Intl.message(
@@ -575,6 +685,16 @@ class S {
     return Intl.message(
       'Роботодавець (назва):',
       name: 'pasport_list0',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `НАВЧАННЯ ЗА РАХУНОК ВАУЧЕРІВ`
+  String get vaucher_title {
+    return Intl.message(
+      'НАВЧАННЯ ЗА РАХУНОК ВАУЧЕРІВ',
+      name: 'vaucher_title',
       desc: '',
       args: [],
     );

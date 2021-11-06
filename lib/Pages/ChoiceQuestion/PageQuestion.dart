@@ -1,16 +1,12 @@
+import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gromada/Controllers/char_controller.dart';
 import 'package:gromada/Pages/ChoiceQuestion/FlickPortraitControls.dart';
-import 'package:gromada/Pages/ChoiceSearch/ChoiceSearch.dart';
-import 'package:gromada/Pages/services/ChartsDepository.dart';
-import 'package:gromada/Pages/services/PasportDepository.dart';
-import 'package:gromada/Pages/services/VacDepository.dart';
-import 'package:gromada/call_center_button.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:flick_video_player/flick_video_player.dart';
 import 'package:spring/spring.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
@@ -46,7 +42,8 @@ class _PageQuestionState extends State<PageQuestion> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: const Text('Онлайн помічник', textAlign: TextAlign.center),
+          title:
+              Text(S.of(context).app_barr_title, textAlign: TextAlign.center),
         ),
         body: ResponsiveSizer(builder: (context, orientation, deviceType) {
           return SafeArea(
@@ -151,7 +148,7 @@ class _PageQuestionState extends State<PageQuestion> {
                                       },
                                       child: Center(
                                         child: Text(
-                                          'СТАН РИНКУ ПРАЦІ ГРОМАДИ',
+                                          S.of(context).main_choice,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                             color: HexColor('#FFFFFF'),
@@ -187,7 +184,7 @@ class _PageQuestionState extends State<PageQuestion> {
                                       },
                                       child: Center(
                                         child: Text(
-                                          'ПОШУК РОБОТИ',
+                                          S.of(context).main_choice1,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               color: HexColor('#FFFFFF'),
@@ -223,7 +220,7 @@ class _PageQuestionState extends State<PageQuestion> {
                                       },
                                       child: Center(
                                         child: Text(
-                                          'ПРОФЕСІЙНА ОРІЄНТАЦІЯ',
+                                          S.of(context).main_choice2,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               color: HexColor('#FFFFFF'),
@@ -259,7 +256,7 @@ class _PageQuestionState extends State<PageQuestion> {
                                       },
                                       child: Center(
                                         child: Text(
-                                          'ОТРИМАТИ НОВУ ПРОФЕСІЮ',
+                                          S.of(context).main_choice3,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               color: HexColor('#FFFFFF'),
@@ -295,7 +292,7 @@ class _PageQuestionState extends State<PageQuestion> {
                                       },
                                       child: Center(
                                         child: Text(
-                                          'ЗАПИСАТИСЯ НА ВІДВІДУВАННЯ ЦЗ',
+                                          S.of(context).main_choice4,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               color: HexColor('#FFFFFF'),
@@ -331,7 +328,7 @@ class _PageQuestionState extends State<PageQuestion> {
                                       },
                                       child: Center(
                                         child: Text(
-                                          'ЕЛЕКТРОННИЙ КАБІНЕТ ШУКАЧА ',
+                                          S.of(context).main_choice5,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               color: HexColor('#FFFFFF'),
@@ -364,7 +361,7 @@ class _PageQuestionState extends State<PageQuestion> {
                                       },
                                       child: Center(
                                         child: Text(
-                                          'ПОШИРЕНІ ПИТАННЯ',
+                                          S.of(context).main_choice6,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               color: HexColor('#FFFFFF'),
@@ -397,7 +394,7 @@ class _PageQuestionState extends State<PageQuestion> {
                                       },
                                       child: Center(
                                         child: Text(
-                                          'КОНТАКТИ ЦЕНТРУ ЗАЙНЯТОСТІ',
+                                          S.of(context).main_choice7,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                               color: HexColor('#FFFFFF'),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -33,7 +33,7 @@ class Loading extends StatelessWidget {
                 backgroundColor: HexColor('#FFD947'),
               ),
               Text(
-                "Зачекайте,  завантажуємо дані",
+                S.of(context).loading,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   decoration: TextDecoration.none,
