@@ -90,6 +90,16 @@ class S {
     );
   }
 
+  /// ` Оберіть відповідний район `
+  String get choice_rayon {
+    return Intl.message(
+      ' Оберіть відповідний район ',
+      name: 'choice_rayon',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// ` Оберіть відповідну громаду`
   String get choice_gromad {
     return Intl.message(
@@ -980,7 +990,15 @@ class S {
     );
   }
 
-  // skipped getter for the 'select-question5' key
+  /// `ЗАЛИШИЛИСЯ ПИТАННЯ?`
+  String get select_question5 {
+    return Intl.message(
+      'ЗАЛИШИЛИСЯ ПИТАННЯ?',
+      name: 'select_question5',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `НАВЧАННЯ ЗА РАХУНОК ВАУЧЕРІВ`
   String get vaucher_title {

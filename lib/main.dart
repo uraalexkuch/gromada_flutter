@@ -25,6 +25,7 @@ import 'package:gromada/Pages/Question/ShablonAnswer.dart';
 import 'package:gromada/Pages/Search/pages/index.dart';
 import 'package:gromada/Pages/Vacancy/VacDetail.dart';
 import 'package:gromada/Pages/Work/StartWork.dart';
+import 'package:gromada/Pages/choice_rayon.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -66,6 +67,13 @@ class MyApp extends StatelessWidget {
         getPages: [
           GetPage(name: '/Home', page: () => StartPage()),
           GetPage(name: '/Home/about', page: () => AboutUS()),
+          GetPage(
+            name: '/Home/choicerayon',
+            page: () => ChoiceRayon(),
+            binding: BindingsBuilder(() {
+              Get.lazyPut<ChoiceController>(() => ChoiceController());
+            }),
+          ),
           GetPage(
             name: '/Home/choice',
             page: () => Choice(),

@@ -4,7 +4,9 @@ import 'package:gromada/Pages/Search/models/vac.dart';
 import 'package:http/http.dart' as http;
 
 class ApiProvider {
-  static const String url = 'https://volnovcz.pp.ua/gromada/vac/vac.json';
+  static const String url =
+      'https://donocz.gov.ua/recruting/gromada/vac/vac.json';
+  //https://volnovcz.pp.ua/gromada/vac/vac.json';
   static Future<List<Vac>> fetchAll() async {
     //  String url = Uri.encodeFull("https://donocz.gov.ua/gromada/vac/vac.json");
     final response = await http.get(

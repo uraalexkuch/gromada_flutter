@@ -8,6 +8,7 @@
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
 // ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
+// ignore_for_file:unnecessary_string_interpolations, unnecessary_string_escapes
 
 import 'package:intl/intl.dart';
 import 'package:intl/message_lookup_by_library.dart';
@@ -73,6 +74,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n"),
         "choice_gromad":
             MessageLookupByLibrary.simpleMessage(" Оберіть відповідну громаду"),
+        "choice_rayon":
+            MessageLookupByLibrary.simpleMessage(" Оберіть відповідний район "),
         "labour": MessageLookupByLibrary.simpleMessage(
             "ЗАГАЛЬНА ІНФОРМАЦІЯ ПО ГРОМАДІ"),
         "labour1": MessageLookupByLibrary.simpleMessage("Центр \n громади"),
@@ -176,6 +179,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "ЯК ПРИЗНАЧАЄТЬСЯ ДОПОМОГА ПО БЕЗРОБІТТЮ?"),
         "select_question4": MessageLookupByLibrary.simpleMessage(
             "КАЛЬКУЛЯТОР ДОПОМОГИ ПО БЕЗРОБІТТЮ"),
+        "select_question5":
+            MessageLookupByLibrary.simpleMessage("ЗАЛИШИЛИСЯ ПИТАННЯ?"),
         "vac_detail_characteristics":
             MessageLookupByLibrary.simpleMessage("Характеристики робіт:"),
         "vac_detail_conditions":

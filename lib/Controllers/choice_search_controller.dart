@@ -211,14 +211,12 @@ class ChoiceSearchController extends GetxController {
   void fetchVac() async {
     try {
       vacancy0 = (await VacRepository.getAllVac());
-      if (vacancy0 != null) {
-        vacancy0.forEach((item) {
-          for (int i = 0; i < gromada.length; i++)
-            if (item.placevac == gromada[i]) {
-              vacancy.add(item);
-            }
-        });
-      }
+      vacancy0.forEach((item) {
+        for (int i = 0; i < gromada.length; i++)
+          if (item.placevac == gromada[i]) {
+            vacancy.add(item);
+          }
+      });
     } finally {
       isLoading.value = false;
     }

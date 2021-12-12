@@ -88,8 +88,8 @@ class ChartController extends GetxController {
     int? b = int.tryParse(bezrab[0].gromadwork);
 
     int? d;
-    d = (a! + b!) as int?;
-    return d!.toStringAsFixed(0);
+    d = (a! + b!);
+    return d.toStringAsFixed(0);
   }
 
   Map<String, double> data = new Map();

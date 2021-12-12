@@ -276,7 +276,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                         Get.toNamed('/choicegromad/callcenter');
                                       },
                                       child: Text(
-                                        S.of(context).select_question4,
+                                        S.of(context).select_question5,
                                         style: TextStyle(
                                             color: HexColor('#005BAA'),
                                             fontSize: 16.sp,
