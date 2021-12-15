@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gromada/Controllers/choice_contact_controller.dart';
 import 'package:gromada/generated/l10n.dart';
-
-import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class AboutUS extends StatelessWidget {
-  @override
+  ChoiceContactController controller = ChoiceContactController();
   Widget build(BuildContext context) {
+    print(controller.listType[3].toString());
+    controller.onInit();
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
@@ -53,7 +55,8 @@ class AboutUS extends StatelessWidget {
                             height: 15.h,
                             child: Center(
                               child: Text(
-                                S.of(context).center_name,
+                                controller.listType[0],
+                                //S.of(context).center_name,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   decoration: TextDecoration.none,
@@ -68,7 +71,7 @@ class AboutUS extends StatelessWidget {
                           Container(
                             margin: const EdgeInsets.only(bottom: 20.0),
                             child: Text(
-                              S.of(context).center_place,
+                              controller.listType[1],
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 decoration: TextDecoration.none,
@@ -89,7 +92,7 @@ class AboutUS extends StatelessWidget {
                               color: HexColor("#FFFFFF"),
                             ),
                             child: Text(
-                              S.of(context).center_time_work,
+                              controller.listType[2],
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 decoration: TextDecoration.none,
@@ -109,8 +112,8 @@ class AboutUS extends StatelessWidget {
                                       elevation: 10.0,
                                       onPressed: () {
                                         Get.toNamed('/choicegromad/web',
-                                            arguments:
-                                                "https://goo.gl/maps/bcnYv9VwfQqymm9r5");
+                                            arguments: controller.listType[3]
+                                                .toString());
                                       },
                                       padding: const EdgeInsets.all(15),
                                       shape: RoundedRectangleBorder(

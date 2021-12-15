@@ -470,31 +470,671 @@ class S {
     );
   }
 
-  /// `Волноваський районний центр зайнятості`
-  String get center_name {
+  /// `Авдіївський міський центр зайнятості`
+  String get center_name503 {
     return Intl.message(
-      'Волноваський районний центр зайнятості',
-      name: 'center_name',
+      'Авдіївський міський центр зайнятості',
+      name: 'center_name503',
       desc: '',
       args: [],
     );
   }
 
-  /// `85700, м. Волноваха,  вул. Обручева, 17 \n тел. "гарячої лінії": \n (095)186-59-25,\n (06244)4-19-38, \n e-mail: volnovah.trud@donocz.gov.ua`
-  String get center_place {
+  /// `86060, м. Авдіївка, Покровський р-н,  вул. Комунальна, 4, \n тел.:  \n (050)-852-79-67, \n e-mail: avdeevgcz@donocz.gov.ua`
+  String get center_place503 {
     return Intl.message(
-      '85700, м. Волноваха,  вул. Обручева, 17 \n тел. "гарячої лінії": \n (095)186-59-25,\n (06244)4-19-38, \n e-mail: volnovah.trud@donocz.gov.ua',
-      name: 'center_place',
+      '86060, м. Авдіївка, Покровський р-н,  вул. Комунальна, 4, \n тел.:  \n (050)-852-79-67, \n e-mail: avdeevgcz@donocz.gov.ua',
+      name: 'center_place503',
       desc: '',
       args: [],
     );
   }
 
   /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
-  String get center_time_work {
+  String get center_time_work503 {
     return Intl.message(
       'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
-      name: 'center_time_work',
+      name: 'center_time_work503',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/kvT3bUbDGSUe5UDL8`
+  String get center_to_map503 {
+    return Intl.message(
+      'https://goo.gl/maps/kvT3bUbDGSUe5UDL8',
+      name: 'center_to_map503',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Бахмутський міський центр зайнятості`
+  String get center_name505 {
+    return Intl.message(
+      'Бахмутський міський центр зайнятості',
+      name: 'center_name505',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `84506, м. Бахмут, Бахмутський р-н,   вул. Захисників України, 13, \n тел.:  \n (06274) 8-25-01, \n e-mail: artemcz@donocz.gov.ua`
+  String get center_place505 {
+    return Intl.message(
+      '84506, м. Бахмут, Бахмутський р-н,   вул. Захисників України, 13, \n тел.:  \n (06274) 8-25-01, \n e-mail: artemcz@donocz.gov.ua',
+      name: 'center_place505',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work505 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work505',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/xvZVeT9KDqgvkQRB9`
+  String get center_to_map505 {
+    return Intl.message(
+      'https://goo.gl/maps/xvZVeT9KDqgvkQRB9',
+      name: 'center_to_map505',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Торецький міський центр зайнятості`
+  String get center_name511 {
+    return Intl.message(
+      'Торецький міський центр зайнятості',
+      name: 'center_name511',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85200, м. Торецьк, Бахмутський р-н,   вул. Володимирська, 28, \n тел.:  \n (06243) 2-14-00, \n e-mail: dzerjcz@donocz.gov.ua`
+  String get center_place511 {
+    return Intl.message(
+      '85200, м. Торецьк, Бахмутський р-н,   вул. Володимирська, 28, \n тел.:  \n (06243) 2-14-00, \n e-mail: dzerjcz@donocz.gov.ua',
+      name: 'center_place511',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work511 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work511',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/LefmLPJfSrZf75xf6`
+  String get center_to_map511 {
+    return Intl.message(
+      'https://goo.gl/maps/LefmLPJfSrZf75xf6',
+      name: 'center_to_map511',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Мирноградський міський центр зайнятості`
+  String get center_name513 {
+    return Intl.message(
+      'Мирноградський міський центр зайнятості',
+      name: 'center_name513',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85327, м. Мирноград, Покровський р-н,  м-н Молодіжний, 37Б, \n тел.:  \n (06239) 7-60-11, \n e-mail: mirnogradcz@donocz.gov.ua`
+  String get center_place513 {
+    return Intl.message(
+      '85327, м. Мирноград, Покровський р-н,  м-н Молодіжний, 37Б, \n тел.:  \n (06239) 7-60-11, \n e-mail: mirnogradcz@donocz.gov.ua',
+      name: 'center_place513',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work513 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work513',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/8vhvk9b8xy3tJzD18`
+  String get center_to_map513 {
+    return Intl.message(
+      'https://goo.gl/maps/8vhvk9b8xy3tJzD18',
+      name: 'center_to_map513',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Добропільський міський центр зайнятості`
+  String get center_name515 {
+    return Intl.message(
+      'Добропільський міський центр зайнятості',
+      name: 'center_name515',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85004, м. Добропілля, Покровський р-н,  вул. Банкова ,39, \n тел.:  \n (06277) 2-88-40, \n e-mail: dobropolcz@donocz.gov.ua`
+  String get center_place515 {
+    return Intl.message(
+      '85004, м. Добропілля, Покровський р-н,  вул. Банкова ,39, \n тел.:  \n (06277) 2-88-40, \n e-mail: dobropolcz@donocz.gov.ua',
+      name: 'center_place515',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work515 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work515',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/GNhyd7fXBmFh7bxK8`
+  String get center_to_map515 {
+    return Intl.message(
+      'https://goo.gl/maps/GNhyd7fXBmFh7bxK8',
+      name: 'center_to_map515',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Дружківський міський центр зайнятості`
+  String get center_name517 {
+    return Intl.message(
+      'Дружківський міський центр зайнятості',
+      name: 'center_name517',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85004, м. Дружківка, Краматорський р-н, вул. К. Маркса, 42, \n тел.:  \n (06267) 4-40-66, \n e-mail: drujcz@donocz.gov.ua`
+  String get center_place517 {
+    return Intl.message(
+      '85004, м. Дружківка, Краматорський р-н, вул. К. Маркса, 42, \n тел.:  \n (06267) 4-40-66, \n e-mail: drujcz@donocz.gov.ua',
+      name: 'center_place517',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work517 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work517',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/bSHjwVBVrdZEahct7`
+  String get center_to_map517 {
+    return Intl.message(
+      'https://goo.gl/maps/bSHjwVBVrdZEahct7',
+      name: 'center_to_map517',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Костянтинівський міський центр зайнятості`
+  String get center_name523 {
+    return Intl.message(
+      'Костянтинівський міський центр зайнятості',
+      name: 'center_name523',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85110, м. Костянтинівка, Краматорський р-н, пл. Перемоги, 8, \n тел.:  \n(06272) 6-11-03, \n e-mail: konstancz@donocz.gov.ua`
+  String get center_place523 {
+    return Intl.message(
+      '85110, м. Костянтинівка, Краматорський р-н, пл. Перемоги, 8, \n тел.:  \n(06272) 6-11-03, \n e-mail: konstancz@donocz.gov.ua',
+      name: 'center_place523',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work523 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work523',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/ZYEZAMzrcU9RRBncA`
+  String get center_to_map523 {
+    return Intl.message(
+      'https://goo.gl/maps/ZYEZAMzrcU9RRBncA',
+      name: 'center_to_map523',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Краматорський міський центр зайнятості`
+  String get center_name525 {
+    return Intl.message(
+      'Краматорський міський центр зайнятості',
+      name: 'center_name525',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `84333, м. Краматорськ, Краматорський р-н, вул. Рум’янцева, 4, \n тел.:  \n(06264) 6-01-64,\n(06264) 6-76-99, \n e-mail: kramatcz@donocz.gov.ua`
+  String get center_place525 {
+    return Intl.message(
+      '84333, м. Краматорськ, Краматорський р-н, вул. Рум’янцева, 4, \n тел.:  \n(06264) 6-01-64,\n(06264) 6-76-99, \n e-mail: kramatcz@donocz.gov.ua',
+      name: 'center_place525',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work525 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work525',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://g.page/krammcz?share`
+  String get center_to_map525 {
+    return Intl.message(
+      'https://g.page/krammcz?share',
+      name: 'center_to_map525',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Покровський міський центр зайнятості`
+  String get center_name527 {
+    return Intl.message(
+      'Покровський міський центр зайнятості',
+      name: 'center_name527',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85300, м. Покровськ, Покровський р-н, вул. Поштова, 3, \n тел.:  \n(0623) 52-13-37,\n(0623) 52-19-29, \n e-mail: pokrovskcz@donocz.gov.ua`
+  String get center_place527 {
+    return Intl.message(
+      '85300, м. Покровськ, Покровський р-н, вул. Поштова, 3, \n тел.:  \n(0623) 52-13-37,\n(0623) 52-19-29, \n e-mail: pokrovskcz@donocz.gov.ua',
+      name: 'center_place527',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work527 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work527',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/JjxfbZZN97Txxy8y7`
+  String get center_to_map527 {
+    return Intl.message(
+      'https://goo.gl/maps/JjxfbZZN97Txxy8y7',
+      name: 'center_to_map527',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Лиманський міський центр зайнятості`
+  String get center_name529 {
+    return Intl.message(
+      'Лиманський міський центр зайнятості',
+      name: 'center_name529',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `84404, м. Лиман, Краматорський р-н, вул. Івана Лейко,2, \n тел.:  \n(06261) 2-70-89, \n e-mail: krlimcz@donocz.gov.ua`
+  String get center_place529 {
+    return Intl.message(
+      '84404, м. Лиман, Краматорський р-н, вул. Івана Лейко,2, \n тел.:  \n(06261) 2-70-89, \n e-mail: krlimcz@donocz.gov.ua',
+      name: 'center_place529',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work529 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work529',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/mZ7xUKyFGH4QF7cCA`
+  String get center_to_map529 {
+    return Intl.message(
+      'https://goo.gl/maps/mZ7xUKyFGH4QF7cCA',
+      name: 'center_to_map529',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Маріупольський  міський центр зайнятості`
+  String get center_name533 {
+    return Intl.message(
+      'Маріупольський  міський центр зайнятості',
+      name: 'center_name533',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `87539, м. Маріуполь, Маріупольський р-н, пр. Металургів, 84б, \n тел.:  \n(068)617-00-43,\n(067)894-55-05,\n(068)669-27-47, \n e-mail: mariupolcz@donocz.gov.ua`
+  String get center_place533 {
+    return Intl.message(
+      '87539, м. Маріуполь, Маріупольський р-н, пр. Металургів, 84б, \n тел.:  \n(068)617-00-43,\n(067)894-55-05,\n(068)669-27-47, \n e-mail: mariupolcz@donocz.gov.ua',
+      name: 'center_place533',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work533 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work533',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/W5eemmusTRUHYjYYA`
+  String get center_to_map533 {
+    return Intl.message(
+      'https://goo.gl/maps/W5eemmusTRUHYjYYA',
+      name: 'center_to_map533',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Селидівський міський центр зайнятості`
+  String get center_name535 {
+    return Intl.message(
+      'Селидівський міський центр зайнятості',
+      name: 'center_name535',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85400, м. Селидове, Покровський р-н, вул. К.Маркса, 41а,\n тел.:  \n(068)617-00-43,\n(067)894-55-05,\n(068)669-27-47, \n e-mail:selidcz@donocz.gov.ua`
+  String get center_place535 {
+    return Intl.message(
+      '85400, м. Селидове, Покровський р-н, вул. К.Маркса, 41а,\n тел.:  \n(068)617-00-43,\n(067)894-55-05,\n(068)669-27-47, \n e-mail:selidcz@donocz.gov.ua',
+      name: 'center_place535',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work535 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work535',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/3LZ8MXiPmCaSaUN49`
+  String get center_to_map535 {
+    return Intl.message(
+      'https://goo.gl/maps/3LZ8MXiPmCaSaUN49',
+      name: 'center_to_map535',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Слов\'янський міський центр зайнятості`
+  String get center_name537 {
+    return Intl.message(
+      'Слов\\\'янський міський центр зайнятості',
+      name: 'center_name537',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` 84122, м. Слов’янськ,  Краматорський р-н, пл. Соборна, 3,\n тел.:  \n(06262) 2-19-00, \n e-mail: slavcz@donocz.gov.ua`
+  String get center_place537 {
+    return Intl.message(
+      ' 84122, м. Слов’янськ,  Краматорський р-н, пл. Соборна, 3,\n тел.:  \n(06262) 2-19-00, \n e-mail: slavcz@donocz.gov.ua',
+      name: 'center_place537',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 16.00\n без перерви\n`
+  String get center_time_work537 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 16.00\n без перерви\n',
+      name: 'center_time_work537',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/1JDbH8M2Vka6LMcn7`
+  String get center_to_map537 {
+    return Intl.message(
+      'https://goo.gl/maps/1JDbH8M2Vka6LMcn7',
+      name: 'center_to_map537',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Вугледарський міський центр зайнятості`
+  String get center_name543 {
+    return Intl.message(
+      'Вугледарський міський центр зайнятості',
+      name: 'center_name543',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85670, м. Вугледар,  Волноваський р-н, вул. Шахтарська, 16а,\n тел.:  \n(06273) 6-44-88, \n e-mail: ugledarcz@donocz.gov.ua`
+  String get center_place543 {
+    return Intl.message(
+      '85670, м. Вугледар,  Волноваський р-н, вул. Шахтарська, 16а,\n тел.:  \n(06273) 6-44-88, \n e-mail: ugledarcz@donocz.gov.ua',
+      name: 'center_place543',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work543 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work543',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/mPLifanM2Xmc3yxV7`
+  String get center_to_map543 {
+    return Intl.message(
+      'https://goo.gl/maps/mPLifanM2Xmc3yxV7',
+      name: 'center_to_map543',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Олександрівський районний центр зайнятості`
+  String get center_name551 {
+    return Intl.message(
+      'Олександрівський районний центр зайнятості',
+      name: 'center_name551',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `84000, смт. Олександрівка,  Краматорський р-н, пл. Олександра Невського, 2,\n тел.:  \n(06269) 2-15-89 \n e-mail:alexandcz@donocz.gov.ua`
+  String get center_place551 {
+    return Intl.message(
+      '84000, смт. Олександрівка,  Краматорський р-н, пл. Олександра Невського, 2,\n тел.:  \n(06269) 2-15-89 \n e-mail:alexandcz@donocz.gov.ua',
+      name: 'center_place551',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work551 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work551',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/9nUSfMJ5kieLSYEv5`
+  String get center_to_map551 {
+    return Intl.message(
+      'https://goo.gl/maps/9nUSfMJ5kieLSYEv5',
+      name: 'center_to_map551',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Великоновосілківський районний центр зайнятості`
+  String get center_name557 {
+    return Intl.message(
+      'Великоновосілківський районний центр зайнятості',
+      name: 'center_name557',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85500, смт. Велика Новосілка, Волноваський р-н, вул. Центральна, 103,\n тел.:  \n(06243) 2-14-00 \n e-mail: velnovcz@donocz.gov.ua`
+  String get center_place557 {
+    return Intl.message(
+      '85500, смт. Велика Новосілка, Волноваський р-н, вул. Центральна, 103,\n тел.:  \n(06243) 2-14-00 \n e-mail: velnovcz@donocz.gov.ua',
+      name: 'center_place557',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work557 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work557',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/iXT2JmBcUGB8t4vm8`
+  String get center_to_map557 {
+    return Intl.message(
+      'https://goo.gl/maps/iXT2JmBcUGB8t4vm8',
+      name: 'center_to_map557',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Волноваський районний центр зайнятості`
+  String get center_name559 {
+    return Intl.message(
+      'Волноваський районний центр зайнятості',
+      name: 'center_name559',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85700, м. Волноваха, Волноваський р-н,  вул. Обручева, 17 \n тел.: "гарячої лінії": \n (095)186-59-25,\n (06244)4-19-38, \n e-mail: volnovah.trud@donocz.gov.ua`
+  String get center_place559 {
+    return Intl.message(
+      '85700, м. Волноваха, Волноваський р-н,  вул. Обручева, 17 \n тел.: "гарячої лінії": \n (095)186-59-25,\n (06244)4-19-38, \n e-mail: volnovah.trud@donocz.gov.ua',
+      name: 'center_place559',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work559 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work559',
       desc: '',
       args: [],
     );
@@ -505,6 +1145,176 @@ class S {
     return Intl.message(
       'Ми на карті',
       name: 'center_mape',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/bcnYv9VwfQqymm9r5`
+  String get center_to_map559 {
+    return Intl.message(
+      'https://goo.gl/maps/bcnYv9VwfQqymm9r5',
+      name: 'center_to_map559',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Нікольський районний центр зайнятості`
+  String get center_name561 {
+    return Intl.message(
+      'Нікольський районний центр зайнятості',
+      name: 'center_name561',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `87000 смт. Нікольське,  Волноваський р-н, вул. Паркова, 25, \n тел.: \n(06246) 2-04-87, \n e-mail: nikolcz@donocz.gov.ua`
+  String get center_place561 {
+    return Intl.message(
+      '87000 смт. Нікольське,  Волноваський р-н, вул. Паркова, 25, \n тел.: \n(06246) 2-04-87, \n e-mail: nikolcz@donocz.gov.ua',
+      name: 'center_place561',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work561 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work561',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/mx5G5j5x8s5nQMzh6`
+  String get center_to_map561 {
+    return Intl.message(
+      'https://goo.gl/maps/mx5G5j5x8s5nQMzh6',
+      name: 'center_to_map561',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Мар\'їнський районний центр зайнятості`
+  String get center_name569 {
+    return Intl.message(
+      'Мар\\\'їнський районний центр зайнятості',
+      name: 'center_name569',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85600 м. Мар'їнка, Покровський р-н, вул. Сергія Прокоф'єва,6, \n тел.: \n(095) 068-01-86, \n e-mail: marincz@donocz.gov.ua`
+  String get center_place569 {
+    return Intl.message(
+      '85600 м. Мар\'їнка, Покровський р-н, вул. Сергія Прокоф\'єва,6, \n тел.: \n(095) 068-01-86, \n e-mail: marincz@donocz.gov.ua',
+      name: 'center_place569',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work569 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work569',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/9QQsTm4oxRKcvjpx7`
+  String get center_to_map569 {
+    return Intl.message(
+      'https://goo.gl/maps/9QQsTm4oxRKcvjpx7',
+      name: 'center_to_map569',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Мангушський районний центр зайнятості`
+  String get center_name573 {
+    return Intl.message(
+      'Мангушський районний центр зайнятості',
+      name: 'center_name573',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `87400, смт. Мангуш, Маріупольський р-н, вул. Титова, 49а, \n тел.: \n(06297) 2-36-42, \n e-mail: pershotravcz@donocz.gov.ua`
+  String get center_place573 {
+    return Intl.message(
+      '87400, смт. Мангуш, Маріупольський р-н, вул. Титова, 49а, \n тел.: \n(06297) 2-36-42, \n e-mail: pershotravcz@donocz.gov.ua',
+      name: 'center_place573',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work573 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work573',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://www.google.com/maps/dir/47.5922432,37.4996992/47.066468,37.3147631/@47.3286099,37.2201128,10z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0`
+  String get center_to_map573 {
+    return Intl.message(
+      'https://www.google.com/maps/dir/47.5922432,37.4996992/47.066468,37.3147631/@47.3286099,37.2201128,10z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0',
+      name: 'center_to_map573',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Новогродівський міський центр зайнятості`
+  String get center_name585 {
+    return Intl.message(
+      'Новогродівський міський центр зайнятості',
+      name: 'center_name585',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `85483, м. Новогродівка,  Покровський р-н, вул. Молодіжна, 1, \n тел.: \n(06237) 3-44-90б \n e-mail: novogrodcz@donocz.gov.ua`
+  String get center_place585 {
+    return Intl.message(
+      '85483, м. Новогродівка,  Покровський р-н, вул. Молодіжна, 1, \n тел.: \n(06237) 3-44-90б \n e-mail: novogrodcz@donocz.gov.ua',
+      name: 'center_place585',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П'ятниця: 8.00 - 15.45\n без перерви\n`
+  String get center_time_work585 {
+    return Intl.message(
+      'Режим роботи:\n Понеділок - Четвер:\n 8.00-17.00\n без перерви\n П\'ятниця: 8.00 - 15.45\n без перерви\n',
+      name: 'center_time_work585',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://goo.gl/maps/mwXr4cBvbsi21bUe8`
+  String get center_to_map585 {
+    return Intl.message(
+      'https://goo.gl/maps/mwXr4cBvbsi21bUe8',
+      name: 'center_to_map585',
       desc: '',
       args: [],
     );

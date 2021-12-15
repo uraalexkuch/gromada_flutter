@@ -390,7 +390,8 @@ class _PageQuestionState extends State<PageQuestion> {
                                     child: RaisedButton(
                                       elevation: 10.0,
                                       onPressed: () {
-                                        Get.toNamed('/Home/about');
+                                        Get.toNamed('/Home/about',
+                                            arguments: value);
                                       },
                                       child: Center(
                                         child: Text(
