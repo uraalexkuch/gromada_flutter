@@ -1062,9 +1062,7 @@ class ChoiceSearchController extends GetxController {
                                                                                                                                                                                                             ? grom58500
                                                                                                                                                                                                             : [];
     fetchVac();
-    //print(gromada.length);
-    //print(value);
-    //print(gromada);
+
     super.onInit();
   }
 

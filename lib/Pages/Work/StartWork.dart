@@ -119,7 +119,8 @@ class StartWork extends StatelessWidget {
                                         elevation: 10.0,
                                         onPressed: () {
                                           Get.toNamed(
-                                              '/choicegromad/vacancy/rayon');
+                                              '/choicegromad/vacancy/rayon',
+                                              arguments: value);
                                         },
                                         child: Text(
                                             S.of(context).work_buttton_choice_1,
