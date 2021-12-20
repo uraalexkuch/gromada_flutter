@@ -26,7 +26,7 @@ class _IndexPageState extends State<IndexPage> {
 
   @override
   Widget build(BuildContext context) {
-    print(controller.vacancy0.map((item) => item.numbervac));
+    // print(controller.vacancy0.map((item) => item.numbervac));
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(

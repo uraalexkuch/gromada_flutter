@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:gromada/Pages/services/VacDepository.dart';
+import 'package:gromada/local_datastore/hive_service.dart';
+import 'package:hive/hive.dart';
 
 const rayon01 = ["505", "511"];
 const rayon02 = ["559", "543", "557"];
@@ -10,13 +12,14 @@ const rayon05 = ["503", "513", "515", "527", "535", "569", "585"];
 class AllVacController extends GetxController {
   List vacancy = [].obs;
   List vacancy0 = [].obs;
+  List vacancy00 = [].obs;
+  List vacancy01 = [].obs;
   RxBool isLoading = true.obs;
-
+  final HiveService hiveService = HiveService();
   List gromada = [].obs;
 
-  //late List gromada = [].obs;
   @override
-  void onInit() {
+  Future<void> onInit() async {
     gromada = int.parse(Get.arguments) == 55900 ||
             int.parse(Get.arguments) == 55901 ||
             int.parse(Get.arguments) == 55902 ||
@@ -69,13 +72,41 @@ class AllVacController extends GetxController {
                             int.parse(Get.arguments) == 55101
                         ? rayon03
                         : [];
+    vacancy00 = await hiveService.getBoxes("vacancy");
+    print("Getting init ${vacancy00.length}");
     fetchVac();
+
     super.onInit();
+  }
+
+  void saveLocal() async {
+    await Hive.openBox("vacancy");
+    Hive.box('vacancy').clear();
+    vacancy00 = (await VacRepository.getAllVac());
+    hiveService.addBoxes(vacancy00, "vacancy");
+    print("Getting vac ${vacancy00.length}");
+    getLocal();
+  }
+
+  getLocal() async {
+    vacancy01 == null;
+    vacancy01 = await hiveService.getBoxes("vacancy");
+    vacancy01.length != null ? isLoading.value = false : isLoading.value = true;
+    print("Getting data from Hive");
+    print("Getting vacancy ${vacancy01.length}");
+    fetchVac();
   }
 
   void fetchVac() async {
     try {
-      vacancy = (await VacRepository.getAllVac());
+      if (vacancy00.length != 0) {
+        vacancy = await hiveService.getBoxes("vacancy");
+        print("Getting data from Hive1");
+      } else {
+        vacancy = (await VacRepository.getAllVac());
+        //saveLocal();
+        print("Getting data from API");
+      }
       vacancy.forEach((item) {
         //  print(item.numbervac);
         // print(item.numbervac.substring(1, 4));
@@ -91,6 +122,7 @@ class AllVacController extends GetxController {
     }
     print(vacancy0);
     print(vacancy0.map((item) => item.numbervac));
-    ;
+
+    //getLocal();
   }
 }

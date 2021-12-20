@@ -91,7 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "center_name535": MessageLookupByLibrary.simpleMessage(
             "Селидівський міський центр зайнятості"),
         "center_name537": MessageLookupByLibrary.simpleMessage(
-            "Слов\\\'янський міський центр зайнятості"),
+            "Слов\'янський міський центр зайнятості"),
         "center_name543": MessageLookupByLibrary.simpleMessage(
             "Вугледарський міський центр зайнятості"),
         "center_name551": MessageLookupByLibrary.simpleMessage(

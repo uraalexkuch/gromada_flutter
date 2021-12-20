@@ -22,10 +22,12 @@ import 'package:gromada/Pages/Proforiention/select_question_prof.dart';
 import 'package:gromada/Pages/Question/Calculator.dart';
 import 'package:gromada/Pages/Question/SelectQuestion.dart';
 import 'package:gromada/Pages/Question/ShablonAnswer.dart';
+import 'package:gromada/Pages/Search/models/vac.dart';
 import 'package:gromada/Pages/Search/pages/index.dart';
 import 'package:gromada/Pages/Vacancy/VacDetail.dart';
 import 'package:gromada/Pages/Work/StartWork.dart';
 import 'package:gromada/Pages/choice_rayon.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -33,7 +35,11 @@ import 'Controllers/choice_search_controller.dart';
 import 'Pages/StartPage.dart';
 import 'generated/l10n.dart';
 
-void main() {
+main() async {
+  // Initialize hive
+  await Hive.initFlutter();
+  Hive.registerAdapter(VacAdapter());
+
   runApp(MyApp());
 }
 

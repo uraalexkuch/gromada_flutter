@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:gromada/Pages/Search/models/vac.dart';
 import 'package:gromada/Pages/services/VacDepository.dart';
+import 'package:gromada/local_datastore/hive_service.dart';
 
 const grom55900 = [
   "1421510100, Донецька область, Волноваський район, Волноваха",
@@ -947,128 +948,139 @@ class ChoiceSearchController extends GetxController {
   List<Vac> vacancy = <Vac>[].obs;
   List<Vac> filteredVac = <Vac>[].obs;
   List<Vac> filteredVac0 = <Vac>[].obs;
+
+  List vacancy01 = [].obs;
   RxBool isLoading = true.obs;
   RxBool isLoad = false.obs;
   late dynamic value;
   late List gromada = [].obs;
-
+  final HiveService hiveService = HiveService();
   @override
   void onInit() {
     value = Get.arguments;
-    gromada = int.parse(value) == 55900
-        ? grom55900
-        : int.parse(value) == 55901
-            ? grom55901
-            : int.parse(value) == 55902
-                ? grom55902
-                : int.parse(value) == 55903
-                    ? grom55903
-                    : int.parse(value) == 50300
-                        ? grom50300
-                        : int.parse(value) == 50301
-                            ? grom50301
-                            : int.parse(value) == 50500
-                                ? grom50500
-                                : int.parse(value) == 50501
-                                    ? grom50501
-                                    : int.parse(value) == 50502
-                                        ? grom50502
-                                        : int.parse(value) == 50503
-                                            ? grom50503
-                                            : int.parse(value) == 50504
-                                                ? grom50504
-                                                : int.parse(value) == 50505
-                                                    ? grom50505
-                                                    : int.parse(value) == 51100
-                                                        ? grom51100
+    gromada = int.parse(value) == 50300
+        ? grom50300
+        : int.parse(value) == 50301
+            ? grom50301
+            : int.parse(value) == 50500
+                ? grom50500
+                : int.parse(value) == 50501
+                    ? grom50501
+                    : int.parse(value) == 50502
+                        ? grom50502
+                        : int.parse(value) == 50503
+                            ? grom50503
+                            : int.parse(value) == 50504
+                                ? grom50504
+                                : int.parse(value) == 50505
+                                    ? grom50505
+                                    : int.parse(value) == 51100
+                                        ? grom51100
+                                        : int.parse(value) == 51300
+                                            ? grom51300
+                                            : int.parse(value) == 51500
+                                                ? grom51500
+                                                : int.parse(value) == 51501
+                                                    ? grom51501
+                                                    : int.parse(value) == 51502
+                                                        ? grom51502
                                                         : int.parse(value) ==
-                                                                51300
-                                                            ? grom51300
+                                                                51503
+                                                            ? grom51503
                                                             : int.parse(value) ==
-                                                                    51500
-                                                                ? grom51500
+                                                                    51700
+                                                                ? grom51700
                                                                 : int.parse(value) ==
-                                                                        51501
-                                                                    ? grom51501
+                                                                        52300
+                                                                    ? grom52300
                                                                     : int.parse(value) ==
-                                                                            51502
-                                                                        ? grom51502
+                                                                            52301
+                                                                        ? grom52301
                                                                         : int.parse(value) ==
-                                                                                51503
-                                                                            ? grom51503
-                                                                            : int.parse(value) == 51700
-                                                                                ? grom51700
-                                                                                : int.parse(value) == 52300
-                                                                                    ? grom52300
-                                                                                    : int.parse(value) == 52301
-                                                                                        ? grom52301
-                                                                                        : int.parse(value) == 52500
-                                                                                            ? grom52500
-                                                                                            : int.parse(value) == 52700
-                                                                                                ? grom52700
-                                                                                                : int.parse(value) == 52701
-                                                                                                    ? grom52701
-                                                                                                    : int.parse(value) == 52702
-                                                                                                        ? grom52702
-                                                                                                        : int.parse(value) == 52900
-                                                                                                            ? grom52900
-                                                                                                            : int.parse(value) == 53300
-                                                                                                                ? grom53300
-                                                                                                                : int.parse(value) == 53301
-                                                                                                                    ? grom53301
-                                                                                                                    : int.parse(value) == 53500
-                                                                                                                        ? grom53500
-                                                                                                                        : int.parse(value) == 53700
-                                                                                                                            ? grom53700
-                                                                                                                            : int.parse(value) == 53701
-                                                                                                                                ? grom53701
-                                                                                                                                : int.parse(value) == 53702
-                                                                                                                                    ? grom53702
-                                                                                                                                    : int.parse(value) == 53703
-                                                                                                                                        ? grom53703
-                                                                                                                                        : int.parse(value) == 53704
-                                                                                                                                            ? grom53704
-                                                                                                                                            : int.parse(value) == 54300
-                                                                                                                                                ? grom54300
-                                                                                                                                                : int.parse(value) == 55100
-                                                                                                                                                    ? grom55100
-                                                                                                                                                    : int.parse(value) == 55101
-                                                                                                                                                        ? grom55101
-                                                                                                                                                        : int.parse(value) == 55700
-                                                                                                                                                            ? grom55700
-                                                                                                                                                            : int.parse(value) == 55701
-                                                                                                                                                                ? grom55701
-                                                                                                                                                                : int.parse(value) == 55702
-                                                                                                                                                                    ? grom55702
-                                                                                                                                                                    : int.parse(value) == 55900
-                                                                                                                                                                        ? grom55900
-                                                                                                                                                                        : int.parse(value) == 55901
-                                                                                                                                                                            ? grom55901
-                                                                                                                                                                            : int.parse(value) == 55902
-                                                                                                                                                                                ? grom55902
-                                                                                                                                                                                : int.parse(value) == 55903
-                                                                                                                                                                                    ? grom55903
-                                                                                                                                                                                    : int.parse(value) == 56100
-                                                                                                                                                                                        ? grom56100
-                                                                                                                                                                                        : int.parse(value) == 56101
-                                                                                                                                                                                            ? grom56101
-                                                                                                                                                                                            : int.parse(value) == 56900
-                                                                                                                                                                                                ? grom56900
-                                                                                                                                                                                                : int.parse(value) == 56901
-                                                                                                                                                                                                    ? grom56901
-                                                                                                                                                                                                    : int.parse(value) == 57300
-                                                                                                                                                                                                        ? grom57300
-                                                                                                                                                                                                        : int.parse(value) == 58500
-                                                                                                                                                                                                            ? grom58500
-                                                                                                                                                                                                            : [];
-    fetchVac();
+                                                                                52500
+                                                                            ? grom52500
+                                                                            : int.parse(value) == 52700
+                                                                                ? grom52700
+                                                                                : int.parse(value) == 52701
+                                                                                    ? grom52701
+                                                                                    : int.parse(value) == 52702
+                                                                                        ? grom52702
+                                                                                        : int.parse(value) == 52900
+                                                                                            ? grom52900
+                                                                                            : int.parse(value) == 53300
+                                                                                                ? grom53300
+                                                                                                : int.parse(value) == 53301
+                                                                                                    ? grom53301
+                                                                                                    : int.parse(value) == 53500
+                                                                                                        ? grom53500
+                                                                                                        : int.parse(value) == 53700
+                                                                                                            ? grom53700
+                                                                                                            : int.parse(value) == 53701
+                                                                                                                ? grom53701
+                                                                                                                : int.parse(value) == 53702
+                                                                                                                    ? grom53702
+                                                                                                                    : int.parse(value) == 53703
+                                                                                                                        ? grom53703
+                                                                                                                        : int.parse(value) == 53704
+                                                                                                                            ? grom53704
+                                                                                                                            : int.parse(value) == 54300
+                                                                                                                                ? grom54300
+                                                                                                                                : int.parse(value) == 55100
+                                                                                                                                    ? grom55100
+                                                                                                                                    : int.parse(value) == 55101
+                                                                                                                                        ? grom55101
+                                                                                                                                        : int.parse(value) == 55700
+                                                                                                                                            ? grom55700
+                                                                                                                                            : int.parse(value) == 55701
+                                                                                                                                                ? grom55701
+                                                                                                                                                : int.parse(value) == 55702
+                                                                                                                                                    ? grom55702
+                                                                                                                                                    : int.parse(value) == 55900
+                                                                                                                                                        ? grom55900
+                                                                                                                                                        : int.parse(value) == 55901
+                                                                                                                                                            ? grom55901
+                                                                                                                                                            : int.parse(value) == 55902
+                                                                                                                                                                ? grom55902
+                                                                                                                                                                : int.parse(value) == 55903
+                                                                                                                                                                    ? grom55903
+                                                                                                                                                                    : int.parse(value) == 56100
+                                                                                                                                                                        ? grom56100
+                                                                                                                                                                        : int.parse(value) == 56101
+                                                                                                                                                                            ? grom56101
+                                                                                                                                                                            : int.parse(value) == 56900
+                                                                                                                                                                                ? grom56900
+                                                                                                                                                                                : int.parse(value) == 56901
+                                                                                                                                                                                    ? grom56901
+                                                                                                                                                                                    : int.parse(value) == 57300
+                                                                                                                                                                                        ? grom57300
+                                                                                                                                                                                        : int.parse(value) == 58500
+                                                                                                                                                                                            ? grom58500
+                                                                                                                                                                                            : [];
+    // vacancy00.length != null ? getLocal() :
+    getLocal();
+    // fetchVac();
 
     super.onInit();
   }
 
+  getLocal() async {
+    vacancy01 = await hiveService.getBoxes("vacancy");
+    vacancy01.length != null ? isLoading.value = false : isLoading.value = true;
+    print("Getting data from Hive01");
+    print("Getting vacancygrom ${vacancy01.length}");
+    fetchVac();
+  }
+
   void fetchVac() async {
     try {
-      vacancy0 = (await VacRepository.getAllVac());
+      if (vacancy01.length != null) {
+        vacancy0 = await hiveService.getBoxes("vacancy");
+        print("Getting data from Hive2");
+      } else {
+        vacancy0 = (await VacRepository.getAllVac());
+        print("Getting data from API");
+      }
+      // vacancy0 = (await VacRepository.getAllVac());
       vacancy0.forEach((item) {
         for (int i = 0; i < gromada.length; i++)
           if (item.placevac == gromada[i]) {
