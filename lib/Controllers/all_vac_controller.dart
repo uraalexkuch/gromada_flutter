@@ -4,11 +4,7 @@ import 'package:gromada/Pages/services/VacDepository.dart';
 const rayon01 = ["505", "511"];
 const rayon02 = ["559", "543", "557"];
 const rayon03 = ["551", "537", "525", "517", "529", "523"];
-const rayon04 = [
-  "573",
-  "533",
-  "561",
-];
+const rayon04 = ["573", "533", "561"];
 const rayon05 = ["503", "513", "515", "527", "535", "569", "585"];
 
 class AllVacController extends GetxController {
