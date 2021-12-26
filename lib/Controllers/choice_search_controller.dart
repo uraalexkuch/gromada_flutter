@@ -948,7 +948,7 @@ class ChoiceSearchController extends GetxController {
   List<Vac> vacancy = <Vac>[].obs;
   List<Vac> filteredVac = <Vac>[].obs;
   List<Vac> filteredVac0 = <Vac>[].obs;
-
+  List vacancy00 = [].obs;
   List vacancy01 = [].obs;
   RxBool isLoading = true.obs;
   RxBool isLoad = false.obs;
@@ -956,7 +956,7 @@ class ChoiceSearchController extends GetxController {
   late List gromada = [].obs;
   final HiveService hiveService = HiveService();
   @override
-  void onInit() {
+  Future<void> onInit() async {
     value = Get.arguments;
     gromada = int.parse(value) == 50300
         ? grom50300
@@ -1056,8 +1056,9 @@ class ChoiceSearchController extends GetxController {
                                                                                                                                                                                         : int.parse(value) == 58500
                                                                                                                                                                                             ? grom58500
                                                                                                                                                                                             : [];
-    // vacancy00.length != null ? getLocal() :
-    getLocal();
+    vacancy00 = await hiveService.getBoxes("vacancy");
+    print("Getting vacgrom ${vacancy00.length}");
+    vacancy00.length == 0 ? fetchVac() : getLocal();
     // fetchVac();
 
     super.onInit();
@@ -1073,7 +1074,7 @@ class ChoiceSearchController extends GetxController {
 
   void fetchVac() async {
     try {
-      if (vacancy01.length != null) {
+      if (vacancy00.length != 0) {
         vacancy0 = await hiveService.getBoxes("vacancy");
         print("Getting data from Hive2");
       } else {

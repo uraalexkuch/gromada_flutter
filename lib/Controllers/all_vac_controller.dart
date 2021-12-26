@@ -104,7 +104,8 @@ class AllVacController extends GetxController {
         print("Getting data from Hive1");
       } else {
         vacancy = (await VacRepository.getAllVac());
-        //saveLocal();
+
+        saveLocal();
         print("Getting data from API");
       }
       vacancy.forEach((item) {
