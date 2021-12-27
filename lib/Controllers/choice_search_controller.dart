@@ -1058,19 +1058,21 @@ class ChoiceSearchController extends GetxController {
                                                                                                                                                                                             : [];
     vacancy00 = await hiveService.getBoxes("vacancy");
     print("Getting vacgrom ${vacancy00.length}");
-    vacancy00.length == 0 ? fetchVac() : getLocal();
+    //  vacancy00.length == 0 ?
+    fetchVac();
+    //: getLocal();
     // fetchVac();
 
     super.onInit();
   }
 
-  getLocal() async {
+  /* getLocal() async {
     vacancy01 = await hiveService.getBoxes("vacancy");
     vacancy01.length != null ? isLoading.value = false : isLoading.value = true;
     print("Getting data from Hive01");
     print("Getting vacancygrom ${vacancy01.length}");
     fetchVac();
-  }
+  }*/
 
   void fetchVac() async {
     try {

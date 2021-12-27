@@ -85,17 +85,17 @@ class AllVacController extends GetxController {
     vacancy00 = (await VacRepository.getAllVac());
     hiveService.addBoxes(vacancy00, "vacancy");
     print("Getting vac ${vacancy00.length}");
-    getLocal();
+    // getLocal();
   }
 
-  getLocal() async {
+  /*getLocal() async {
     vacancy01 == null;
     vacancy01 = await hiveService.getBoxes("vacancy");
     vacancy01.length != null ? isLoading.value = false : isLoading.value = true;
     print("Getting data from Hive");
     print("Getting vacancy ${vacancy01.length}");
     fetchVac();
-  }
+  }*/
 
   void fetchVac() async {
     try {
@@ -104,7 +104,6 @@ class AllVacController extends GetxController {
         print("Getting data from Hive1");
       } else {
         vacancy = (await VacRepository.getAllVac());
-
         saveLocal();
         print("Getting data from API");
       }

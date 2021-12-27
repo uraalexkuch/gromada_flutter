@@ -11,7 +11,7 @@ class ApiProvider {
   static Future<List<Vac>> fetchAll() async {
     //String url = Uri.encodeFull("https://donocz.gov.ua/gromada/vac/vac.json");
     final HiveService hiveService = HiveService();
-    List vacancy00 = [];
+
     final response = await http.get(
       Uri.parse(url),
       headers: <String, String>{
@@ -25,11 +25,6 @@ class ApiProvider {
       List list = data;
       final vacancy = list.map((i) => new Vac.fromJson(i));
       print(vacancy);
-      /* await Hive.openBox("vacancy");
-      Hive.box('vacancy').clear();
-      vacancy00 = fetchAll();
-      hiveService.addBoxes(vacancy00, "vacancy");
-      print("Getting vac ${vacancy00.length}");*/
 
       return vacancy.toList();
     } else {
