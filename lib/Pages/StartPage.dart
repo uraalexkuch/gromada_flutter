@@ -7,6 +7,7 @@ import 'package:spring/spring.dart';
 
 class StartPage extends StatelessWidget {
   final SpringController springController = SpringController();
+
   @override
   Widget build(BuildContext context) {
     return ResponsiveSizer(builder: (context, orientation, deviceType) {

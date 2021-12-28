@@ -52,7 +52,7 @@ class Vac {
     required this.salaryvac,
     required this.tel,
   });
-  /* Map<String, dynamic> toMap() {
+  Map<String, dynamic> toMap() {
     return {
       'numbervac': numbervac,
       'dateregvac': dateregvac,
@@ -93,7 +93,24 @@ class Vac {
       tel: json["Телефон (для вакансій на сайті) / Оперативні вакансії"]
           .toString(),
     );
-  }*/
+  }
+
+  Map<String, dynamic> toJson() => {
+        'numbervac': numbervac,
+        'dateregvac': dateregvac,
+        'posadavac': posadavac,
+        'osvitavac': osvitavac,
+        'specvac': specvac,
+        'stagvac': stagvac,
+        'taskvac': taskvac,
+        'skilsvac': skilsvac,
+        'placevac': placevac,
+        'operatinvac': operatinvac,
+        'characteristicsvac': characteristicsvac,
+        'conditionsvac': conditionsvac,
+        'salaryvac': salaryvac,
+        'tel': tel
+      };
 
   // convert Json to an car object object
   factory Vac.fromJson(Map<String, dynamic> json) {

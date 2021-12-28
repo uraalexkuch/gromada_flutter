@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:gromada/Pages/Search/models/vac.dart';
 import 'package:gromada/Pages/services/VacDepository.dart';
 import 'package:gromada/local_datastore/hive_service.dart';
+import 'package:hive/hive.dart';
 
 const grom55900 = [
   "1421510100, Донецька область, Волноваський район, Волноваха",
@@ -957,6 +958,7 @@ class ChoiceSearchController extends GetxController {
   final HiveService hiveService = HiveService();
   @override
   Future<void> onInit() async {
+    await Hive.openBox("vacancy");
     value = Get.arguments;
     gromada = int.parse(value) == 50300
         ? grom50300

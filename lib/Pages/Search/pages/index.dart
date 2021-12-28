@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:gromada/Controllers/all_vac_controller.dart';
 import 'package:gromada/Pages/Load/loading.dart';
 import 'package:gromada/generated/l10n.dart';
+import 'package:gromada/local_datastore/hive_service.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -15,18 +16,18 @@ class IndexPage extends StatefulWidget {
 
 class _IndexPageState extends State<IndexPage> {
   List filteredVac = <Vac>[];
-
+  final HiveService hiveService = HiveService();
   AllVacController controller = AllVacController();
 
   @override
   void initState() {
     controller.onInit();
+
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    // print(controller.vacancy0.map((item) => item.numbervac));
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(

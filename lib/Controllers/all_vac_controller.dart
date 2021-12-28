@@ -1,13 +1,16 @@
 import 'package:get/get.dart';
+import 'package:gromada/Pages/Search/models/vac.dart';
 import 'package:gromada/Pages/services/VacDepository.dart';
 import 'package:gromada/local_datastore/hive_service.dart';
 import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 const rayon01 = ["505", "511"];
 const rayon02 = ["559", "543", "557"];
 const rayon03 = ["551", "537", "525", "517", "529", "523"];
 const rayon04 = ["573", "533", "561"];
 const rayon05 = ["503", "513", "515", "527", "535", "569", "585"];
+const httpSync = "httpSync";
 
 class AllVacController extends GetxController {
   List vacancy = [].obs;
@@ -20,6 +23,14 @@ class AllVacController extends GetxController {
 
   @override
   Future<void> onInit() async {
+    // Hive.registerAdapter(VacAdapter());
+    List vacancy00 = [];
+    await Hive.initFlutter();
+    Hive.registerAdapter(VacAdapter());
+    await Hive.openBox("vacancy");
+    final HiveService hiveService = HiveService();
+    vacancy00 = await hiveService.getBoxes("vacancy");
+    print("Getting loaclstore ${vacancy00.length}");
     gromada = int.parse(Get.arguments) == 55900 ||
             int.parse(Get.arguments) == 55901 ||
             int.parse(Get.arguments) == 55902 ||
@@ -72,45 +83,47 @@ class AllVacController extends GetxController {
                             int.parse(Get.arguments) == 55101
                         ? rayon03
                         : [];
-    vacancy00 = await hiveService.getBoxes("vacancy");
-    print("Getting init ${vacancy00.length}");
+
     fetchVac();
 
     super.onInit();
   }
 
   void saveLocal() async {
+    await Hive.initFlutter();
+    Hive.registerAdapter(VacAdapter());
     await Hive.openBox("vacancy");
+    final HiveService hiveService = HiveService();
     Hive.box('vacancy').clear();
     vacancy00 = (await VacRepository.getAllVac());
     hiveService.addBoxes(vacancy00, "vacancy");
     print("Getting vac ${vacancy00.length}");
-    // getLocal();
+    //getLocal();
   }
 
-  /*getLocal() async {
+  getLocal() async {
     vacancy01 == null;
     vacancy01 = await hiveService.getBoxes("vacancy");
     vacancy01.length != null ? isLoading.value = false : isLoading.value = true;
     print("Getting data from Hive");
-    print("Getting vacancy ${vacancy01.length}");
-    fetchVac();
-  }*/
+    print("Getting vacancy from Hive ${vacancy01.length}");
+    // fetchVac();
+  }
 
-  void fetchVac() async {
+  fetchVac() async {
+    vacancy00 = await hiveService.getBoxes("vacancy");
+    print("Getting loaclstoreInfetch ${vacancy00.length}");
     try {
       if (vacancy00.length != 0) {
         vacancy = await hiveService.getBoxes("vacancy");
+
         print("Getting data from Hive1");
       } else {
         vacancy = (await VacRepository.getAllVac());
-        saveLocal();
+        //saveLocal();
         print("Getting data from API");
       }
       vacancy.forEach((item) {
-        //  print(item.numbervac);
-        // print(item.numbervac.substring(1, 4));
-        // print(gromada[0]);
         for (int i = 0; i < gromada.length; i++)
           // print(gromada.length);
           if (item.numbervac.substring(1, 4) == gromada[i]) {
@@ -121,7 +134,7 @@ class AllVacController extends GetxController {
       isLoading.value = false;
     }
     print(vacancy0);
-    print(vacancy0.map((item) => item.numbervac));
+    //print(vacancy0.map((item) => item.numbervac));
 
     //getLocal();
   }
