@@ -1,12 +1,17 @@
 import 'dart:convert';
 
 import 'package:gromada/Pages/Search/models/vac.dart';
+import 'package:gromada/local_datastore/hive_service.dart';
 import 'package:http/http.dart' as http;
 
 class ApiProvider {
-  static const String url = 'https://volnovcz.pp.ua/gromada/vac/vac.json';
+  static const String url =
+      'https://donocz.gov.ua/recruting/gromada/vac/vac.json';
+
   static Future<List<Vac>> fetchAll() async {
-    //  String url = Uri.encodeFull("https://donocz.gov.ua/gromada/vac/vac.json");
+    //String url = Uri.encodeFull("https://donocz.gov.ua/gromada/vac/vac.json");
+    final HiveService hiveService = HiveService();
+
     final response = await http.get(
       Uri.parse(url),
       headers: <String, String>{
@@ -19,7 +24,8 @@ class ApiProvider {
       var data = json.decode(source);
       List list = data;
       final vacancy = list.map((i) => new Vac.fromJson(i));
-      //print(vacancy);
+      print(vacancy);
+
       return vacancy.toList();
     } else {
       return [];

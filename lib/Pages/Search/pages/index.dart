@@ -3,9 +3,10 @@ import 'package:get/get.dart';
 import 'package:gromada/Controllers/all_vac_controller.dart';
 import 'package:gromada/Pages/Load/loading.dart';
 import 'package:gromada/generated/l10n.dart';
-import '../models/vac.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+
+import '../models/vac.dart';
 
 class IndexPage extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class IndexPage extends StatefulWidget {
 }
 
 class _IndexPageState extends State<IndexPage> {
-  List filteredUsers = <Vac>[];
+  List filteredVac = <Vac>[];
 
   AllVacController controller = AllVacController();
 
@@ -25,6 +26,7 @@ class _IndexPageState extends State<IndexPage> {
 
   @override
   Widget build(BuildContext context) {
+    // print(controller.vacancy0.map((item) => item.numbervac));
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
@@ -43,7 +45,7 @@ class _IndexPageState extends State<IndexPage> {
                           color: HexColor("#005BAA"),
                         ),
                         width: 100.w,
-                        child: filteredUsers.length != 0
+                        child: filteredVac.length != 0
                             ? buildSearchView()
                             : buildListView()),
                   )
@@ -55,10 +57,10 @@ class _IndexPageState extends State<IndexPage> {
   TextField buildTextField() {
     return TextField(
       decoration: InputDecoration(
-          icon: Icon(Icons.search), hintText: 'Пошук за посадою '),
+          icon: Icon(Icons.search), hintText: S.of(context).search),
       onChanged: (value) {
         setState(() {
-          filteredUsers = controller.vacancy
+          filteredVac = controller.vacancy0
               .where((item) => (item.posadavac
                       .toLowerCase()
                       .contains(value.toLowerCase()) ||
@@ -71,7 +73,7 @@ class _IndexPageState extends State<IndexPage> {
 
   ListView buildListView() {
     return ListView.builder(
-      itemCount: controller.vacancy.length,
+      itemCount: controller.vacancy0.length,
       itemBuilder: (context, index) {
         //Vac vac = vacancy[index];
         return Padding(
@@ -85,7 +87,7 @@ class _IndexPageState extends State<IndexPage> {
                 child: GestureDetector(
                   onTap: () {
                     Get.toNamed('/choicegromad/vacancy/detail',
-                        arguments: controller.vacancy[index]);
+                        arguments: controller.vacancy0[index]);
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -98,7 +100,7 @@ class _IndexPageState extends State<IndexPage> {
                               child: Container(
                                   width: 28.w,
                                   child: Text(
-                                    "Посада:",
+                                    S.of(context).vacancy_posad,
                                     style: TextStyle(
                                       color: Colors.indigo,
                                       fontWeight: FontWeight.bold,
@@ -110,7 +112,7 @@ class _IndexPageState extends State<IndexPage> {
                             Container(
                                 width: 52.w,
                                 child: Text(
-                                  controller.vacancy[index].posadavac,
+                                  controller.vacancy0[index].posadavac,
                                   style: TextStyle(
                                     color: Colors.indigo,
                                     fontWeight: FontWeight.bold,
@@ -126,7 +128,7 @@ class _IndexPageState extends State<IndexPage> {
                               child: Container(
                                   width: 28.w,
                                   child: Text(
-                                    'Заробітна плата',
+                                    S.of(context).vacancy_salary,
                                     style: TextStyle(
                                       color: Colors.indigo,
                                       fontWeight: FontWeight.bold,
@@ -138,7 +140,7 @@ class _IndexPageState extends State<IndexPage> {
                             Container(
                                 width: 47.w,
                                 child: Text(
-                                  controller.vacancy[index].salaryvac,
+                                  controller.vacancy0[index].salaryvac,
                                   style: TextStyle(
                                     color: Colors.indigo,
                                     fontWeight: FontWeight.bold,
@@ -161,7 +163,7 @@ class _IndexPageState extends State<IndexPage> {
 
   ListView buildSearchView() {
     return ListView.builder(
-      itemCount: filteredUsers.length,
+      itemCount: filteredVac.length,
       itemBuilder: (BuildContext context, int index) {
         return Card(
             margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
@@ -172,7 +174,7 @@ class _IndexPageState extends State<IndexPage> {
             child: GestureDetector(
               onTap: () {
                 Get.toNamed('/choicegromad/vacancy/detail',
-                    arguments: filteredUsers[index]);
+                    arguments: filteredVac[index]);
               },
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -185,7 +187,7 @@ class _IndexPageState extends State<IndexPage> {
                           child: Container(
                               width: 28.w,
                               child: Text(
-                                "Посада:",
+                                S.of(context).vacancy_posad,
                                 style: TextStyle(
                                   color: Colors.indigo,
                                   fontWeight: FontWeight.bold,
@@ -197,7 +199,7 @@ class _IndexPageState extends State<IndexPage> {
                         Container(
                             width: 52.w,
                             child: Text(
-                              filteredUsers[index].posadavac,
+                              filteredVac[index].posadavac,
                               style: TextStyle(
                                 color: Colors.indigo,
                                 fontWeight: FontWeight.bold,
@@ -213,7 +215,7 @@ class _IndexPageState extends State<IndexPage> {
                           child: Container(
                               width: 28.w,
                               child: Text(
-                                'Заробітна плата',
+                                S.of(context).vacancy_salary,
                                 style: TextStyle(
                                   color: Colors.indigo,
                                   fontWeight: FontWeight.bold,
@@ -225,7 +227,7 @@ class _IndexPageState extends State<IndexPage> {
                         Container(
                             width: 47.w,
                             child: Text(
-                              filteredUsers[index].salaryvac,
+                              filteredVac[index].salaryvac,
                               style: TextStyle(
                                 color: Colors.indigo,
                                 fontWeight: FontWeight.bold,

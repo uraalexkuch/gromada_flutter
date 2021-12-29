@@ -46,14 +46,20 @@ dependencies:
   flutter_speed_dial: ^4.3.0
   spring: ^2.0.2
   getwidget: ^2.0.4
-
+  page_transition: ^2.0.4
   flutter_linkify: ^5.0.2
   url_launcher: ^6.0.12
   responsive_framework: ^0.1.4
-
+  hive: ^2.0.5
+  hive_flutter: ^1.1.0
+  path_provider: ^2.0.8
+  workmanager: ^0.4.1
+  flutter_local_notifications: ^5.0.0
 
 dev_dependencies:
-  build_runner: ^2.0.5
+  build_runner: ^2.0.6
+  hive_generator: ^1.1.0
+
   json_serializable: ^5.0.2
   flutter_test:
     sdk: flutter
@@ -71,17 +77,18 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - image/
 
-        - image/crp.mp4
-        - image/cp.mp4
-        - image/logodon.webp
-        - image/diya.mp4
-        - image/youtube.png
-        - image/telegram.png
-        - image/web.png
-        - image/fb.png
-        - image/callcenter.png
-        - image/intronew.mp4
+    - image/crp.mp4
+    - image/cp.mp4
+    - image/logodon.webp
+    - image/diya.mp4
+    - image/youtube.png
+    - image/telegram.png
+    - image/web.png
+    - image/fb.png
+    - image/callcenter.png
+    - image/intronew.mp4
 
 
 

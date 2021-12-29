@@ -2,8 +2,6 @@ import 'package:get/get.dart';
 import 'package:gromada/Pages/Search/models/charts.dart';
 import 'package:gromada/Pages/services/ChartsDepository.dart';
 
-import 'package:gromada/Pages/services/PasportDepository.dart';
-
 class CalcController extends GetxController {
   List<Charts> bezrab = [];
   late int minimum;

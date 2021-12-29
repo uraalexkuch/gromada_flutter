@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getwidget/components/button/gf_button.dart';
@@ -10,7 +9,6 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CallCenter extends StatelessWidget {
-  @override
   //ChoiceController controller = ChoiceController();
   Future<void> _makePhoneCall(String url) async {
     if (await canLaunch(url)) {

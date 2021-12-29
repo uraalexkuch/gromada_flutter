@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/call_center_button.dart';
 import 'package:gromada/generated/l10n.dart';
-import 'package:marquee/marquee.dart';
-
-import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:spring/spring.dart';
 
 class StartPage extends StatelessWidget {
@@ -77,7 +74,7 @@ class StartPage extends StatelessWidget {
                     child: RaisedButton(
                       elevation: 10.0,
                       onPressed: () {
-                        Get.toNamed('/Home/choice');
+                        Get.toNamed('/Home/choicerayon');
                       },
                       padding: const EdgeInsets.all(15),
                       shape: RoundedRectangleBorder(

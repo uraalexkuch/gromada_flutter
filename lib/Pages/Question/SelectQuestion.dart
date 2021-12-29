@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/call_center_button.dart';
+import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -21,7 +21,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return Scaffold(
         appBar: AppBar(
-          title: Text('Онлайн помічник'),
+          title: Text(S.of(context).app_barr_title),
         ),
         body: Container(
             decoration: BoxDecoration(
@@ -78,7 +78,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             arguments: '1');
                                       },
                                       child: Text(
-                                        'ЯКА РОБОТА ВВАЖАЄТЬСЯ ПІДХОДЯЩОЮ?',
+                                        S.of(context).select_question,
                                         style: TextStyle(
                                             color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,
@@ -118,7 +118,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             arguments: '2');
                                       },
                                       child: Text(
-                                        'ЯКИЙ ТЕРМІН ЗВЕРНЕННЯ ПІСЛЯ ЗВІЛЬНЕННЯ?',
+                                        S.of(context).select_question1,
                                         style: TextStyle(
                                             color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,
@@ -158,7 +158,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             arguments: '3');
                                       },
                                       child: Text(
-                                        'ЯКІ ДОКУМЕНТИ НЕОБХІДНІ ДЛЯ РЕЄСТРАЦІЇ? ',
+                                        S.of(context).select_question2,
                                         style: TextStyle(
                                             color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,
@@ -198,7 +198,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                             arguments: '4');
                                       },
                                       child: Text(
-                                        'ЯК ПРИЗНАЧАЄТЬСЯ ДОПОМОГА ПО БЕЗРОБІТТЮ?',
+                                        S.of(context).select_question3,
                                         style: TextStyle(
                                             color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,
@@ -237,7 +237,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                         Get.toNamed('/choicegromad/calculator');
                                       },
                                       child: Text(
-                                        'КАЛЬКУЛЯТОР ДОПОМОГИ ПО БЕЗРОБІТТЮ',
+                                        S.of(context).select_question4,
                                         style: TextStyle(
                                             color: HexColor('#FFFFFF'),
                                             fontSize: 16.sp,
@@ -276,7 +276,7 @@ class _SelectQuestionState extends State<SelectQuestion> {
                                         Get.toNamed('/choicegromad/callcenter');
                                       },
                                       child: Text(
-                                        'ЗАЛИШИЛИСЯ ПИТАННЯ?',
+                                        S.of(context).select_question5,
                                         style: TextStyle(
                                             color: HexColor('#005BAA'),
                                             fontSize: 16.sp,
