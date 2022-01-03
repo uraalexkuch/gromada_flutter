@@ -38,7 +38,7 @@ class _PageQuestionState extends State<PageQuestion> {
   @override
   Widget build(BuildContext context) {
     dynamic value = Get.arguments!;
-
+    controller.savehash();
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(

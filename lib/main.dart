@@ -1,8 +1,4 @@
-import 'dart:async';
-
-import 'package:computer/computer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:gromada/Controllers/all_vac_controller.dart';
@@ -26,6 +22,7 @@ import 'package:gromada/Pages/Proforiention/select_question_prof.dart';
 import 'package:gromada/Pages/Question/Calculator.dart';
 import 'package:gromada/Pages/Question/SelectQuestion.dart';
 import 'package:gromada/Pages/Question/ShablonAnswer.dart';
+import 'package:gromada/Pages/Search/models/charts.dart';
 import 'package:gromada/Pages/Search/pages/index.dart';
 import 'package:gromada/Pages/Vacancy/VacDetail.dart';
 import 'package:gromada/Pages/Work/StartWork.dart';
@@ -33,81 +30,21 @@ import 'package:gromada/Pages/choice_rayon.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:workmanager/workmanager.dart';
 
 import 'Controllers/choice_search_controller.dart';
 import 'Pages/Search/models/vac.dart';
 import 'Pages/StartPage.dart';
-import 'Pages/services/VacDepository.dart';
 import 'generated/l10n.dart';
-
-void callbackDispatcher() async {
-  Workmanager().executeTask((task, inputData) async {
-    final computer = Computer.shared();
-    AllVacController controller = AllVacController();
-    switch (task) {
-      case httpSync:
-        controller.saveLocal();
-
-        await computer.compute(VacRepository.getAllVac);
-        // await computer.turnOff();
-
-        break;
-    }
-
-    // initialise the plugin of flutterlocalnotifications.
-    FlutterLocalNotificationsPlugin flip =
-        new FlutterLocalNotificationsPlugin();
-    // app_icon needs to be a added as a drawable
-    // resource to the Android head project.
-    var android = new AndroidInitializationSettings('@mipmap/ic_launcher');
-    var IOS = new IOSInitializationSettings();
-    // initialise settings for both Android and iOS device.
-    var settings = new InitializationSettings(android: android, iOS: IOS);
-    flip.initialize(settings);
-    _showNotificationWithDefaultSound(flip);
-
-    return Future.value(true);
-  });
-}
-
-Future _showNotificationWithDefaultSound(flip) async {
-  //AllVacController controller = AllVacController();
-  // Show a notification after every 15 minute with the first
-  // appearance happening a minute after invoking the method
-  var androidPlatformChannelSpecifics = new AndroidNotificationDetails(
-      'your channel id', 'your channel name', 'your channel description',
-      importance: Importance.max, priority: Priority.high);
-  var iOSPlatformChannelSpecifics = new IOSNotificationDetails();
-
-  // initialise channel platform for both Android and iOS device.
-  var platformChannelSpecifics = new NotificationDetails(
-      android: androidPlatformChannelSpecifics,
-      iOS: iOSPlatformChannelSpecifics);
-  await flip.show(0, 'Онлайн помічник', 'Кількість вакансій оновлена ',
-      platformChannelSpecifics,
-      payload: 'Default_Sound');
-}
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   Hive.registerAdapter(VacAdapter());
+  Hive.registerAdapter(ChartsAdapter());
   await Hive.openBox("vacancy");
-  Workmanager().initialize(callbackDispatcher, isInDebugMode: true);
-// Periodic task registration
-  Workmanager().registerPeriodicTask(
-    "2",
-    httpSync,
-    //"simplePeriodicTask",
-    frequency: Duration(minutes: 15),
-  );
-  final computer = Computer.shared();
-  await computer.turnOn(
-    workersCount: 1,
-    verbose: true,
-  );
-
+  await Hive.openBox("stat");
+  await Hive.openBox("vachash");
+  await Hive.openBox("stathash");
   runApp(MyApp());
 }
 

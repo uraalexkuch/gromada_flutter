@@ -1,7 +1,10 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gromada/Pages/Search/models/vac.dart';
 import 'package:gromada/Pages/services/VacDepository.dart';
 import 'package:gromada/local_datastore/hive_service.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -1102,6 +1105,20 @@ class ChoiceSearchController extends GetxController {
       });
     } finally {
       isLoading.value = false;
+      if (vacancy.length == 0) {
+        Get.snackbar(
+          "Онлайн помічник", // title
+          "На жаль,на даний час вакансії  по Вашій громаді відсутні", // message
+          icon: Icon(Icons.alarm),
+          shouldIconPulse: true,
+          colorText: HexColor('#005BAA'),
+          backgroundColor: Colors.amber,
+          barBlur: 20,
+          snackPosition: SnackPosition.TOP,
+          isDismissible: true,
+          duration: Duration(seconds: 3),
+        );
+      }
     }
   }
 

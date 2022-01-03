@@ -1,16 +1,33 @@
+import 'package:hive_flutter/hive_flutter.dart';
+
+part 'charts.g.dart';
+
+@HiveType(typeId: 2)
 class Charts {
   // Attributes
+  @HiveField(0)
   final gromada;
+  @HiveField(1)
   final vacancy;
+  @HiveField(2)
   final period;
+  @HiveField(3)
   final labourmarket;
+  @HiveField(4)
   final uridcompany;
+  @HiveField(5)
   final fop;
+  @HiveField(6)
   final minimum;
+  @HiveField(7)
   final gromadwork;
+  @HiveField(8)
   final temporarywork;
+  @HiveField(9)
   final bezrabnavch;
+  @HiveField(10)
   final bezrabprofor;
+  @HiveField(11)
   final allpraz;
 
   // Constructor

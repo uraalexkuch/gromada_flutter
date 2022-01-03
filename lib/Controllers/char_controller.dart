@@ -1,6 +1,11 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/Pages/Search/models/charts.dart';
+import 'package:gromada/Pages/services/ApiProviderStatHash.dart';
 import 'package:gromada/Pages/services/ChartsDepository.dart';
+import 'package:gromada/local_datastore/hive_service.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 List grom55900 = [
   '55900',
@@ -468,13 +473,16 @@ List grom58500 = [
 
 class ChartController extends GetxController {
   late dynamic value;
+  List stat = [];
   RxBool isLoading = true.obs;
   late List gromada = [].obs;
   List bezrab = [].obs;
-  List<Charts> bezrab0 = [];
-
+  List bezrab0 = [];
+  final HiveService hiveService = HiveService();
   @override
-  void onInit() {
+  Future<void> onInit() async {
+    await Hive.initFlutter();
+    await Hive.openBox("stat");
     value = Get.arguments;
     gromada = int.parse(value) == 50300
         ? grom50300
@@ -582,8 +590,62 @@ class ChartController extends GetxController {
     super.onInit();
   }
 
+  void savehash() async {
+    await Hive.initFlutter();
+    var box = await Hive.openBox("stathash");
+    String? stathash = box.get('hash').toString();
+    print('Getting main ${stathash}');
+    if (stathash != await ApiProviderStatHash.fetchHash()) {
+      String? vachash = (await ApiProviderStatHash.fetchHash());
+      box.put('hash', vachash);
+      saveLocal();
+      print('Getting stathashmain ${box.get('hash').toString()}');
+    } else {
+      print('No update!');
+    }
+  }
+
+  void saveLocal() async {
+    await Hive.initFlutter();
+    var box = await Hive.openBox("stathash");
+    String stathash = (await ApiProviderStatHash.fetchHash());
+    box.put('hash', stathash);
+    print('Getting hashsave ${box.get('hash').toString()}');
+    await Hive.openBox("stat");
+    final HiveService hiveService = HiveService();
+    Hive.box('stat').clear();
+    stat = await ChartsRepository.getAllCharts();
+    hiveService.addBoxes(stat, "stat");
+    Get.snackbar(
+      "Онлайн помічник", // title
+      "Інформація щодо громади оновлено!", // message
+      icon: Icon(Icons.alarm),
+      shouldIconPulse: true,
+      colorText: HexColor('#005BAA'),
+      backgroundColor: Colors.amber,
+      barBlur: 20,
+
+      isDismissible: true,
+      duration: Duration(seconds: 3),
+    );
+    print("Getting vac ${stat.length}");
+  }
+
   void fetchVac() async {
-    bezrab0 = (await ChartsRepository.getAllCharts()).toList();
+    stat = await hiveService.getBoxes("stat");
+    // print("Getting loaclstoreIncharts ${stat.length}");
+    if (stat.length != 0) {
+      // print("Getting  ${await hiveService.getBoxes("stat")}");
+      // print("Getting2  ${(await ChartsRepository.getAllCharts()).toList()}");
+      bezrab0 = await hiveService.getBoxes("stat");
+
+      print("Getting data from HiveCharts");
+    } else {
+      bezrab0 = await ChartsRepository.getAllCharts();
+      //saveLocal();
+      print("Getting data from API");
+    }
+
     //bezrab = bezrab0.where((item) =>(int.tryParse(item.gromada)==int.tryParse(value)) as List<Charts>);
     bezrab = bezrab0
         .where((item) =>
