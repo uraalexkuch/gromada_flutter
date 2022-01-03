@@ -22,7 +22,6 @@ class _IndexPageState extends State<IndexPage> {
   @override
   void initState() {
     controller.onInit();
-
     super.initState();
   }
 

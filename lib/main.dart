@@ -31,6 +31,7 @@ import 'package:gromada/Pages/Search/pages/index.dart';
 import 'package:gromada/Pages/Vacancy/VacDetail.dart';
 import 'package:gromada/Pages/Work/StartWork.dart';
 import 'package:gromada/Pages/choice_rayon.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:workmanager/workmanager.dart';
@@ -39,6 +40,7 @@ import 'Controllers/choice_search_controller.dart';
 import 'Pages/Search/models/vac.dart';
 import 'Pages/StartPage.dart';
 import 'Pages/services/VacDepositorHive.dart';
+import 'Pages/services/VacDepository.dart';
 import 'generated/l10n.dart';
 
 void callbackDispatcher() async {
@@ -47,12 +49,13 @@ void callbackDispatcher() async {
     AllVacController controller = AllVacController();
     switch (task) {
       case httpSync:
+        controller.saveLocal();
         //vacancy00 = await VacRepository.getAllVac();
         //parseInBackground();
-        controller.saveLocal();
-        await computer.compute(VacRepositoryHive.getAllVacHive);
-        print(
-            "Native called background task: ${await computer.compute(VacRepositoryHive.getAllVacHive)}");
+        await computer.compute(VacRepository.getAllVac);
+        //await computer.turnOff();
+        //  print(
+        //    "Native called background task: ${await computer.compute(VacRepositoryHive.getAllVacHive)}");
         //final a = await computer.compute(VacRepositoryHive.getAllVacHive);
         // print("Native called background task: ${a}");
         // await computer.turnOff();
@@ -97,6 +100,7 @@ Future<List<Vac>> parseInBackground() async {
 }
 
 Future _showNotificationWithDefaultSound(flip) async {
+  //AllVacController controller = AllVacController();
   // Show a notification after every 15 minute with the first
   // appearance happening a minute after invoking the method
   var androidPlatformChannelSpecifics = new AndroidNotificationDetails(
@@ -115,9 +119,9 @@ Future _showNotificationWithDefaultSound(flip) async {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //await Hive.initFlutter();
-  //Hive.registerAdapter(VacAdapter());
-  //await Hive.openBox("vacancy");
+  await Hive.initFlutter();
+  Hive.registerAdapter(VacAdapter());
+  await Hive.openBox("vacancy");
   Workmanager().initialize(callbackDispatcher, isInDebugMode: true);
 // Periodic task registration
   Workmanager().registerPeriodicTask(

@@ -24,13 +24,13 @@ class AllVacController extends GetxController {
   @override
   Future<void> onInit() async {
     // Hive.registerAdapter(VacAdapter());
-    List vacancy00 = [];
+    // List vacancy00 = [];
     await Hive.initFlutter();
-    Hive.registerAdapter(VacAdapter());
+
     await Hive.openBox("vacancy");
-    final HiveService hiveService = HiveService();
-    vacancy00 = await hiveService.getBoxes("vacancy");
-    print("Getting loaclstore ${vacancy00.length}");
+    // final HiveService hiveService = HiveService();
+    // vacancy00 = await hiveService.getBoxes("vacancy");
+    //print("Getting loaclstore ${vacancy00.length}");
     gromada = int.parse(Get.arguments) == 55900 ||
             int.parse(Get.arguments) == 55901 ||
             int.parse(Get.arguments) == 55902 ||
@@ -98,7 +98,6 @@ class AllVacController extends GetxController {
     vacancy00 = (await VacRepository.getAllVac());
     hiveService.addBoxes(vacancy00, "vacancy");
     print("Getting vac ${vacancy00.length}");
-    //getLocal();
   }
 
   getLocal() async {
@@ -133,9 +132,7 @@ class AllVacController extends GetxController {
     } finally {
       isLoading.value = false;
     }
-    print(vacancy0);
+    //  print(vacancy0);
     //print(vacancy0.map((item) => item.numbervac));
-
-    //getLocal();
   }
 }

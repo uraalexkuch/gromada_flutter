@@ -38,7 +38,7 @@ class ApiProviderHive {
       vacancy01 = await hiveService.getBoxes("vacancy");
       // print("Getting  ${vacancy.toList()}");
 
-      print("Getting vacbox ${vacancy01.length}");
+      print("Getting vacboxprovider ${vacancy01.length}");
 
       return vacancy.toList();
     } else {

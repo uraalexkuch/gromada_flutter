@@ -3,6 +3,7 @@ import 'package:gromada/Pages/Search/models/vac.dart';
 import 'package:gromada/Pages/services/VacDepository.dart';
 import 'package:gromada/local_datastore/hive_service.dart';
 import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 const grom55900 = [
   "1421510100, Донецька область, Волноваський район, Волноваха",
@@ -955,10 +956,15 @@ class ChoiceSearchController extends GetxController {
   RxBool isLoad = false.obs;
   late dynamic value;
   late List gromada = [].obs;
+
   final HiveService hiveService = HiveService();
   @override
   Future<void> onInit() async {
+    // Hive.registerAdapter(VacAdapter());
+    await Hive.initFlutter();
+    // Hive.registerAdapter(VacAdapter());
     await Hive.openBox("vacancy");
+
     value = Get.arguments;
     gromada = int.parse(value) == 50300
         ? grom50300
@@ -1058,8 +1064,8 @@ class ChoiceSearchController extends GetxController {
                                                                                                                                                                                         : int.parse(value) == 58500
                                                                                                                                                                                             ? grom58500
                                                                                                                                                                                             : [];
-    vacancy00 = await hiveService.getBoxes("vacancy");
-    print("Getting vacgrom ${vacancy00.length}");
+    // vacancy00 = await hiveService.getBoxes("vacancy");
+    // print("Getting vacgrom ${vacancy00.length}");
     //  vacancy00.length == 0 ?
     fetchVac();
     //: getLocal();
@@ -1077,6 +1083,8 @@ class ChoiceSearchController extends GetxController {
   }*/
 
   void fetchVac() async {
+    vacancy00 = await hiveService.getBoxes("vacancy");
+    print("Getting vacgrom ${vacancy00.length}");
     try {
       if (vacancy00.length != 0) {
         vacancy0 = await hiveService.getBoxes("vacancy");
