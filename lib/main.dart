@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:computer/computer.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -39,7 +38,6 @@ import 'package:workmanager/workmanager.dart';
 import 'Controllers/choice_search_controller.dart';
 import 'Pages/Search/models/vac.dart';
 import 'Pages/StartPage.dart';
-import 'Pages/services/VacDepositorHive.dart';
 import 'Pages/services/VacDepository.dart';
 import 'generated/l10n.dart';
 
@@ -50,14 +48,8 @@ void callbackDispatcher() async {
     switch (task) {
       case httpSync:
         controller.saveLocal();
-        //vacancy00 = await VacRepository.getAllVac();
-        //parseInBackground();
+
         await computer.compute(VacRepository.getAllVac);
-        //await computer.turnOff();
-        //  print(
-        //    "Native called background task: ${await computer.compute(VacRepositoryHive.getAllVacHive)}");
-        //final a = await computer.compute(VacRepositoryHive.getAllVacHive);
-        // print("Native called background task: ${a}");
         // await computer.turnOff();
 
         break;
@@ -77,26 +69,6 @@ void callbackDispatcher() async {
 
     return Future.value(true);
   });
-}
-
-Future<List<Vac>> parseInBackground() async {
-  // List vacancy00 = [];
-  //List vacancy01 = [];
-  print('compute start');
-  // await Hive.initFlutter();
-  //Hive.registerAdapter(VacAdapter());
-  //await Hive.openBox("vacancy");
-  //final HiveService hiveService = HiveService();
-
-// vacancy00 = VacRepository.getAllVac() ;
-  //vacancy00 = await VacRepository.getAllVac();
-  //hiveService.addBoxes(vacancy00, "vacancy");
-  //vacancy01 = await hiveService.getBoxes("vacancy");
-  //print('compute ${vacancy01.length}');
-  // compute spawns an isolate, runs a callback on that isolate, and returns a Future with the result
-  return compute(
-      VacRepositoryHive.getAllVacHive as FutureOr<List<Vac>> Function(Null),
-      null);
 }
 
 Future _showNotificationWithDefaultSound(flip) async {
