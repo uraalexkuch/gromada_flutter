@@ -8,6 +8,7 @@ import 'package:spring/spring.dart';
 class ChoiceRayon extends StatelessWidget {
   final SpringController springController =
       SpringController(initialAnim: Motion.play);
+
   Widget build(BuildContext context) {
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return SafeArea(
