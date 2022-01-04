@@ -29,13 +29,19 @@ class ChartsAdapter extends TypeAdapter<Charts> {
       bezrabnavch: fields[9] as dynamic,
       bezrabprofor: fields[10] as dynamic,
       allpraz: fields[11] as dynamic,
+      maintown: fields[12] as dynamic,
+      counttown: fields[13] as dynamic,
+      sgromada: fields[14] as dynamic,
+      people: fields[15] as dynamic,
+      mapgromada: fields[16] as dynamic,
+      economic: fields[17] as dynamic,
     );
   }
 
   @override
   void write(BinaryWriter writer, Charts obj) {
     writer
-      ..writeByte(12)
+      ..writeByte(18)
       ..writeByte(0)
       ..write(obj.gromada)
       ..writeByte(1)
@@ -59,7 +65,19 @@ class ChartsAdapter extends TypeAdapter<Charts> {
       ..writeByte(10)
       ..write(obj.bezrabprofor)
       ..writeByte(11)
-      ..write(obj.allpraz);
+      ..write(obj.allpraz)
+      ..writeByte(12)
+      ..write(obj.maintown)
+      ..writeByte(13)
+      ..write(obj.counttown)
+      ..writeByte(14)
+      ..write(obj.sgromada)
+      ..writeByte(15)
+      ..write(obj.people)
+      ..writeByte(16)
+      ..write(obj.mapgromada)
+      ..writeByte(17)
+      ..write(obj.economic);
   }
 
   @override

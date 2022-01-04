@@ -230,20 +230,20 @@ class S {
     );
   }
 
-  /// `Кількість рад, що об\'єдналися`
+  /// `Кількість \n нас. пунктів`
   String get labour2 {
     return Intl.message(
-      'Кількість рад, що об\\\'єдналися',
+      'Кількість \n нас. пунктів',
       name: 'labour2',
       desc: '',
       args: [],
     );
   }
 
-  /// `Площа  громади`
+  /// `Площа \n громади`
   String get labour3 {
     return Intl.message(
-      'Площа  громади',
+      'Площа \n громади',
       name: 'labour3',
       desc: '',
       args: [],
@@ -260,10 +260,10 @@ class S {
     );
   }
 
-  /// `Міське населення`
+  /// `Переглянути карту громади`
   String get labour5 {
     return Intl.message(
-      'Міське населення',
+      'Переглянути карту громади',
       name: 'labour5',
       desc: '',
       args: [],
@@ -350,10 +350,10 @@ class S {
     );
   }
 
-  /// `Отримали роботу`
+  /// `Отримали \n  роботу`
   String get labour14 {
     return Intl.message(
-      'Отримали роботу',
+      'Отримали \n  роботу',
       name: 'labour14',
       desc: '',
       args: [],

@@ -249,16 +249,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Кількість   вакансій"),
         "labour13": MessageLookupByLibrary.simpleMessage(
             "ЗА  СПРИЯННЯ  СЛУЖБИ  ЗАЙНЯТОСТІ"),
-        "labour14": MessageLookupByLibrary.simpleMessage("Отримали роботу"),
+        "labour14": MessageLookupByLibrary.simpleMessage("Отримали \n  роботу"),
         "labour15": MessageLookupByLibrary.simpleMessage("Проходили навчання"),
         "labour16":
             MessageLookupByLibrary.simpleMessage("Участь у гром./тим. роботах"),
-        "labour2": MessageLookupByLibrary.simpleMessage(
-            "Кількість рад, що об\\\'єдналися"),
-        "labour3": MessageLookupByLibrary.simpleMessage("Площа  громади"),
+        "labour2":
+            MessageLookupByLibrary.simpleMessage("Кількість \n нас. пунктів"),
+        "labour3": MessageLookupByLibrary.simpleMessage("Площа \n громади"),
         "labour4": MessageLookupByLibrary.simpleMessage(
             "Чисельність населення громади"),
-        "labour5": MessageLookupByLibrary.simpleMessage("Міське населення"),
+        "labour5":
+            MessageLookupByLibrary.simpleMessage("Переглянути карту громади"),
         "labour6": MessageLookupByLibrary.simpleMessage("Сільське населення"),
         "labour7": MessageLookupByLibrary.simpleMessage(
             "Кількість підприємств,\n юридичні особи"),
