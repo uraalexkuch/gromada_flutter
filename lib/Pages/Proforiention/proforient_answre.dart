@@ -24,7 +24,7 @@ const List content3 = [
   ("      Діджиталізація забезпечить здатність ефективно та безпечно використовувати сучасні цифрові технології в роботі та навчанні, в професійному та особистісному розвитку."),
   ('ПЛАТФОРМA «Дія. Цифрова освіта»'),
   ('https://osvita.diia.gov.ua/'),
-  ("image/diya.mp4"),
+  ("image/diya.webm"),
 ];
 
 class ProforienAnswer extends StatefulWidget {

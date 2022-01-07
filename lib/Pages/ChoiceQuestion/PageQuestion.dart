@@ -23,7 +23,7 @@ class _PageQuestionState extends State<PageQuestion> {
   @override
   void initState() {
     flickManager = FlickManager(
-      videoPlayerController: VideoPlayerController.asset("image/intronew.mp4"),
+      videoPlayerController: VideoPlayerController.asset("image/intronew.webm"),
     );
     FlickDisplayManager(flickManager: flickManager);
     super.initState();

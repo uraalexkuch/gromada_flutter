@@ -42,9 +42,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Залишок днів\\n(в розрахунку за місяць),грн"),
         "calc15": MessageLookupByLibrary.simpleMessage("Вкажіть розмір з/п"),
         "calc2": MessageLookupByLibrary.simpleMessage(
-            " Розрахунок необхідний, якщо Ви протягом року,  що передував реєстрації в  \" +\n                                          \"службі зайнятості,  мали страховий стаж не менше 6 місяців\n"),
+            " Розрахунок необхідний, якщо Ви протягом року,  що передував реєстрації в \nслужбі зайнятості,  мали страховий стаж не менше 6 місяців\n"),
         "calc3": MessageLookupByLibrary.simpleMessage(
-            "\n\" +\n                                          \"ВСІ ДАНІ ДОВІДКОВІ\n\"\n                                              \" ТА НЕ Є ПІДСТАВОЮ ДЛЯ НАРАХУВАННЯ ДОПОМОГИ ПО БЕЗРОБІТТЮ!"),
+            "\nВСІ ДАНІ ДОВІДКОВІ\n ТА НЕ Є ПІДСТАВОЮ ДЛЯ НАРАХУВАННЯ ДОПОМОГИ ПО БЕЗРОБІТТЮ!"),
         "calc4": MessageLookupByLibrary.simpleMessage("п.1. Оберіть стаж"),
         "calc5": MessageLookupByLibrary.simpleMessage("до 2- років"),
         "calc6": MessageLookupByLibrary.simpleMessage("від 2-х до 6 років"),
