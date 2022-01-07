@@ -308,7 +308,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           onPressed: () {
                                             Get.toNamed('/choicegromad/web',
                                                 arguments: controller
-                                                    .bezrab0[0].mapgromada);
+                                                    .bezrab[0].mapgromada);
                                           },
                                           //height: 6.h,
                                           child: Column(children: [
