@@ -324,7 +324,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pasport_title":
             MessageLookupByLibrary.simpleMessage("Картка роботодавця"),
         "profnavch": MessageLookupByLibrary.simpleMessage(
-            "     Якщо Ви бажаєте отримати гідну роботу та досягти успіху – скористайтеся можливістю пройти професійне навчання шляхом:\' +\n                          \'\\n\' +\n                          \'\\n\' +\n                          \"•\tпрофесійної підготовки\" +\n                          \'\\n\' +\n                          \"•\tперепідготовки\" +\n                          \'\\n\' +\n                          \"•\tпідвищення кваліфікації"),
+            "     Якщо Ви бажаєте отримати гідну роботу та досягти успіху – скористайтеся можливістю пройти професійне навчання шляхом:\n•\tпрофесійної підготовки\n•\tперепідготовки\n•\tпідвищення кваліфікації"),
         "proforient":
             MessageLookupByLibrary.simpleMessage("ПЛАНУЙ МАЙБУТНЄ ЗАРАЗ"),
         "proforient1": MessageLookupByLibrary.simpleMessage(
