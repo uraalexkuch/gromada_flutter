@@ -95,7 +95,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 child: Padding(
                                                   padding:
                                                       const EdgeInsets.only(
-                                                          top: 8.0, bottom: 0),
+                                                          top: 5.0, bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour1,
                                                     style: TextStyle(
@@ -149,7 +149,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 child: Padding(
                                                   padding:
                                                       const EdgeInsets.only(
-                                                          top: 8.0, bottom: 0),
+                                                          top: 5.0, bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour2,
                                                     style: TextStyle(
@@ -203,7 +203,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 child: Padding(
                                                   padding:
                                                       const EdgeInsets.only(
-                                                          top: 8.0, bottom: 0),
+                                                          top: 5.0, bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour3,
                                                     style: TextStyle(
@@ -242,9 +242,8 @@ class _LabourMarketState extends State<LabourMarket> {
                                       ],
                                     ),
                                   ),
-                                  Divider(),
                                   Padding(
-                                    padding: const EdgeInsets.only(bottom: 8.0),
+                                    padding: const EdgeInsets.only(bottom: 5.0),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceAround,
@@ -263,11 +262,14 @@ class _LabourMarketState extends State<LabourMarket> {
                                           child: Column(
                                             children: [
                                               Container(
-                                                height: 6.h,
+                                                height: 5.h,
                                                 child: Padding(
                                                   padding:
                                                       const EdgeInsets.only(
-                                                          top: 8.0, bottom: 0),
+                                                          top: 8.0,
+                                                          left: 8.0,
+                                                          right: 8.0,
+                                                          bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour4,
                                                     style: TextStyle(
@@ -345,120 +347,123 @@ class _LabourMarketState extends State<LabourMarket> {
                                       ],
                                     ),
                                   ),
-                                  Divider(),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          border: Border.all(
-                                              color: HexColor('#FFD947'),
-                                              width: 3),
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(25)),
-                                          color: HexColor("#005BAA"),
-                                        ),
-                                        height: 10.h,
-                                        width: 42.w,
-                                        child: Column(
-                                          children: [
-                                            Container(
-                                              height: 6.h,
-                                              child: Padding(
-                                                padding: const EdgeInsets.only(
-                                                    top: 8.0, bottom: 0),
-                                                child: Text(
-                                                  S.of(context).labour7,
-                                                  style: TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      color:
-                                                          HexColor('#FFFFFF'),
-                                                      fontSize: 15.sp,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  textAlign: TextAlign.center,
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                                color: HexColor('#FFD947'),
+                                                width: 3),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(25)),
+                                            color: HexColor("#005BAA"),
+                                          ),
+                                          height: 10.h,
+                                          width: 42.w,
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: 6.h,
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          top: 8.0, bottom: 0),
+                                                  child: Text(
+                                                    S.of(context).labour7,
+                                                    style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        color:
+                                                            HexColor('#FFFFFF'),
+                                                        fontSize: 15.sp,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                    textAlign: TextAlign.center,
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                            Container(
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(5.0),
-                                                child: Text(
-                                                  '${controller.bezrab[0].uridcompany}',
-                                                  style: TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      color:
-                                                          HexColor('#FFD947'),
-                                                      fontSize: 15.sp,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  textAlign: TextAlign.center,
+                                              Container(
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(5.0),
+                                                  child: Text(
+                                                    '${controller.bezrab[0].uridcompany}',
+                                                    style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        color:
+                                                            HexColor('#FFD947'),
+                                                        fontSize: 15.sp,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                    textAlign: TextAlign.center,
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                          ],
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                      Container(
-                                        height: 10.h,
-                                        width: 42.w,
-                                        decoration: BoxDecoration(
-                                          border: Border.all(
-                                              color: HexColor('#FFD947'),
-                                              width: 3),
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(25)),
-                                          color: HexColor("#005BAA"),
-                                        ),
-                                        child: Column(
-                                          children: [
-                                            Container(
-                                              height: 6.h,
-                                              child: Padding(
-                                                padding: const EdgeInsets.only(
-                                                    top: 8.0, bottom: 0),
-                                                child: Text(
-                                                  S.of(context).labour8,
-                                                  style: TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      color:
-                                                          HexColor('#FFFFFF'),
-                                                      fontSize: 15.sp,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  textAlign: TextAlign.center,
+                                        Container(
+                                          height: 10.h,
+                                          width: 42.w,
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                                color: HexColor('#FFD947'),
+                                                width: 3),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(25)),
+                                            color: HexColor("#005BAA"),
+                                          ),
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: 6.h,
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          top: 8.0, bottom: 0),
+                                                  child: Text(
+                                                    S.of(context).labour8,
+                                                    style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        color:
+                                                            HexColor('#FFFFFF'),
+                                                        fontSize: 15.sp,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                    textAlign: TextAlign.center,
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                            Container(
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(5.0),
-                                                child: Text(
-                                                  '${controller.bezrab[0].fop} ',
-                                                  style: TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      color:
-                                                          HexColor('#FFD947'),
-                                                      fontSize: 15.sp,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  textAlign: TextAlign.center,
+                                              Container(
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(5.0),
+                                                  child: Text(
+                                                    '${controller.bezrab[0].fop} ',
+                                                    style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        color:
+                                                            HexColor('#FFD947'),
+                                                        fontSize: 15.sp,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                    textAlign: TextAlign.center,
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                          ],
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
-                                  Divider(),
                                   Padding(
                                     padding: const EdgeInsets.all(5.0),
                                     child: Row(
@@ -639,6 +644,8 @@ class _LabourMarketState extends State<LabourMarket> {
                                                               const EdgeInsets
                                                                       .only(
                                                                   top: 8.0,
+                                                                  left: 8.0,
+                                                                  right: 8.0,
                                                                   bottom: 0),
                                                           child: Text(
                                                             S
@@ -715,7 +722,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           MainAxisAlignment.spaceAround,
                                       children: [
                                         Container(
-                                          height: 12.h,
+                                          height: 10.h,
                                           width: 30.w,
                                           decoration: BoxDecoration(
                                             border: Border.all(
@@ -728,7 +735,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           child: Column(
                                             children: [
                                               Container(
-                                                height: 7.h,
+                                                height: 6.h,
                                                 child: Padding(
                                                   padding:
                                                       const EdgeInsets.only(
@@ -769,7 +776,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           ),
                                         ),
                                         Container(
-                                          height: 12.h,
+                                          height: 10.h,
                                           width: 30.w,
                                           decoration: BoxDecoration(
                                             border: Border.all(
@@ -782,7 +789,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           child: Column(
                                             children: [
                                               Container(
-                                                height: 7.h,
+                                                height: 6.h,
                                                 child: Padding(
                                                   padding:
                                                       const EdgeInsets.only(
@@ -831,12 +838,12 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 Radius.circular(25)),
                                             color: HexColor("#005BAA"),
                                           ),
-                                          height: 12.h,
+                                          height: 10.h,
                                           width: 30.w,
                                           child: Column(
                                             children: [
                                               Container(
-                                                height: 7.h,
+                                                height: 6.h,
                                                 child: Padding(
                                                   padding:
                                                       const EdgeInsets.only(

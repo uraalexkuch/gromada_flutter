@@ -45,6 +45,7 @@ void main() async {
   await Hive.openBox("stat");
   await Hive.openBox("vachash");
   await Hive.openBox("stathash");
+
   runApp(MyApp());
 }
 

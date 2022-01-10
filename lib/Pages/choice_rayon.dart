@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gromada/Controllers/all_vac_controller.dart';
 import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -8,8 +9,9 @@ import 'package:spring/spring.dart';
 class ChoiceRayon extends StatelessWidget {
   final SpringController springController =
       SpringController(initialAnim: Motion.play);
-
+  AllVacController controller = AllVacController();
   Widget build(BuildContext context) {
+    controller.savehash();
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return SafeArea(
         child: Scaffold(
