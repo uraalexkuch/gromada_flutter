@@ -79,7 +79,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           MainAxisAlignment.spaceAround,
                                       children: [
                                         Container(
-                                          height: 10.h,
+                                          height: 11.h,
                                           width: 30.w,
                                           decoration: BoxDecoration(
                                             border: Border.all(
@@ -140,7 +140,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 Radius.circular(25)),
                                             color: HexColor("#005BAA"),
                                           ),
-                                          height: 10.h,
+                                          height: 11.h,
                                           width: 30.w,
                                           child: Column(
                                             children: [
@@ -186,7 +186,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           ),
                                         ),
                                         Container(
-                                          height: 10.h,
+                                          height: 11.h,
                                           width: 30.w,
                                           decoration: BoxDecoration(
                                             border: Border.all(
@@ -257,7 +257,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 Radius.circular(25)),
                                             color: HexColor("#005BAA"),
                                           ),
-                                          height: 10.h,
+                                          height: 11.h,
                                           width: 40.w,
                                           child: Column(
                                             children: [
@@ -362,7 +362,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 Radius.circular(25)),
                                             color: HexColor("#005BAA"),
                                           ),
-                                          height: 10.h,
+                                          height: 11.h,
                                           width: 42.w,
                                           child: Column(
                                             children: [
@@ -408,7 +408,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           ),
                                         ),
                                         Container(
-                                          height: 10.h,
+                                          height: 11.h,
                                           width: 42.w,
                                           decoration: BoxDecoration(
                                             border: Border.all(
@@ -479,7 +479,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 Radius.circular(25)),
                                             color: HexColor("#005BAA"),
                                           ),
-                                          height: 10.h,
+                                          height: 11.h,
                                           width: 88.w,
                                           child: Column(
                                             children: [
@@ -554,7 +554,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 SizedBox(width: 10.w),
                                                 Container(
                                                   width: 35.w,
-                                                  height: 10.h,
+                                                  height: 11.h,
                                                   decoration: BoxDecoration(
                                                     border: Border.all(
                                                         color:
@@ -623,7 +623,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 SizedBox(width: 10.w),
                                                 Container(
                                                   width: 35.w,
-                                                  height: 10.h,
+                                                  height: 11.h,
                                                   decoration: BoxDecoration(
                                                     border: Border.all(
                                                         color:
@@ -722,7 +722,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           MainAxisAlignment.spaceAround,
                                       children: [
                                         Container(
-                                          height: 10.h,
+                                          height: 11.h,
                                           width: 30.w,
                                           decoration: BoxDecoration(
                                             border: Border.all(
@@ -776,7 +776,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           ),
                                         ),
                                         Container(
-                                          height: 10.h,
+                                          height: 11.h,
                                           width: 30.w,
                                           decoration: BoxDecoration(
                                             border: Border.all(
@@ -838,7 +838,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 Radius.circular(25)),
                                             color: HexColor("#005BAA"),
                                           ),
-                                          height: 10.h,
+                                          height: 11.h,
                                           width: 30.w,
                                           child: Column(
                                             children: [
