@@ -121,9 +121,9 @@ class _ProforienAnswerState extends State<ProforienAnswer> {
                                       left: 5.0, right: 5.0, bottom: 5.0),
                                   shape: RoundedRectangleBorder(
                                       side: BorderSide(
-                                          color: HexColor('#FFD947'), width: 5),
+                                          color: HexColor('#FFD947'), width: 3),
                                       borderRadius: BorderRadius.all(
-                                          Radius.circular(25))),
+                                          Radius.circular(14))),
                                   elevation: 20,
                                   child: Padding(
                                     padding: const EdgeInsets.all(15.0),
@@ -165,7 +165,7 @@ class _ProforienAnswerState extends State<ProforienAnswer> {
                                     padding: const EdgeInsets.all(15),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(
-                                          Radius.circular(35.0)),
+                                          Radius.circular(14.0)),
                                       side: BorderSide(
                                           color: HexColor('#FFD947'), width: 3),
                                     ),

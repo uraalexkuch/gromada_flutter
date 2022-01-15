@@ -36,9 +36,8 @@ class _IndexPageState extends State<IndexPage> {
           () => !controller.isLoading.value
               ? Column(children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: buildTextField(),
-                  ),
+                      padding: const EdgeInsets.all(8.0),
+                      child: buildTextField()),
                   Expanded(
                     child: Container(
                         decoration: BoxDecoration(
@@ -58,7 +57,7 @@ class _IndexPageState extends State<IndexPage> {
     return TextField(
       decoration: InputDecoration(
           border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(25.0))),
+              borderRadius: BorderRadius.all(Radius.circular(14.0))),
           prefixIcon: Icon(Icons.search),
           hintText: S.of(context).search),
       onChanged: (value) {
@@ -84,8 +83,8 @@ class _IndexPageState extends State<IndexPage> {
             child: Card(
                 margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
                 shape: RoundedRectangleBorder(
-                    side: BorderSide(color: HexColor('#FFD947'), width: 5),
-                    borderRadius: BorderRadius.all(Radius.circular(25))),
+                    side: BorderSide(color: HexColor('#FFD947'), width: 3),
+                    borderRadius: BorderRadius.all(Radius.circular(14))),
                 elevation: 20,
                 child: GestureDetector(
                   onTap: () {
@@ -171,8 +170,8 @@ class _IndexPageState extends State<IndexPage> {
         return Card(
             margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
             shape: RoundedRectangleBorder(
-                side: BorderSide(color: HexColor('#FFD947'), width: 5),
-                borderRadius: BorderRadius.all(Radius.circular(25))),
+                side: BorderSide(color: HexColor('#FFD947'), width: 3),
+                borderRadius: BorderRadius.all(Radius.circular(14))),
             elevation: 20,
             child: GestureDetector(
               onTap: () {

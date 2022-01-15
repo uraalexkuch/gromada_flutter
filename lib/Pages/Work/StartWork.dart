@@ -49,7 +49,7 @@ class StartWork extends StatelessWidget {
                               side: BorderSide(
                                   color: HexColor('#FFD947'), width: 3),
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(25))),
+                                  BorderRadius.all(Radius.circular(14))),
                           elevation: 20,
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
@@ -97,7 +97,7 @@ class StartWork extends StatelessWidget {
                                         padding: const EdgeInsets.all(15),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(35.0)),
+                                              Radius.circular(14)),
                                           side: BorderSide(
                                               color: HexColor('#FFD947'),
                                               width: 3),
@@ -132,7 +132,7 @@ class StartWork extends StatelessWidget {
                                         padding: const EdgeInsets.all(15),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(35.0)),
+                                              Radius.circular(14)),
                                           side: BorderSide(
                                               color: HexColor('#FFD947'),
                                               width: 3),
@@ -168,7 +168,7 @@ class StartWork extends StatelessWidget {
                                         padding: const EdgeInsets.all(15),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(35.0)),
+                                              Radius.circular(14)),
                                           side: BorderSide(
                                               color: HexColor('#FFD947'),
                                               width: 3),
@@ -202,7 +202,7 @@ class StartWork extends StatelessWidget {
                                         padding: const EdgeInsets.all(15),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(35.0)),
+                                              Radius.circular(14)),
                                           side: BorderSide(
                                               color: HexColor('#FFD947'),
                                               width: 3),

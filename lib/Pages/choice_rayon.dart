@@ -96,7 +96,7 @@ class ChoiceRayon extends StatelessWidget {
                                   right: 5),
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
+                                    BorderRadius.all(Radius.circular(14.0)),
                                 color: HexColor("#005BAA"),
                                 border: Border.all(
                                     color: HexColor('#FFD947'),
@@ -166,7 +166,7 @@ class ChoiceRayon extends StatelessWidget {
                                   right: 5),
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
+                                    BorderRadius.all(Radius.circular(14.0)),
                                 color: HexColor("#005BAA"),
                                 border: Border.all(
                                     color: HexColor('#FFD947'),
@@ -237,7 +237,7 @@ class ChoiceRayon extends StatelessWidget {
                                   right: 5),
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
+                                    BorderRadius.all(Radius.circular(14.0)),
                                 color: HexColor("#005BAA"),
                                 border: Border.all(
                                     color: HexColor('#FFD947'),
@@ -307,7 +307,7 @@ class ChoiceRayon extends StatelessWidget {
                                   right: 5),
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
+                                    BorderRadius.all(Radius.circular(14.0)),
                                 color: HexColor("#005BAA"),
                                 border: Border.all(
                                     color: HexColor('#FFD947'),
@@ -383,7 +383,7 @@ class ChoiceRayon extends StatelessWidget {
                                   right: 5),
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
+                                    BorderRadius.all(Radius.circular(14.0)),
                                 color: HexColor("#005BAA"),
                                 border: Border.all(
                                     color: HexColor('#FFD947'),

@@ -49,7 +49,7 @@ class _ProforienAnswerState extends State<ProfNavchAnswer> {
                   margin: EdgeInsets.only(left: 5.0, right: 5.0, bottom: 5.0),
                   shape: RoundedRectangleBorder(
                       side: BorderSide(color: HexColor('#FFD947'), width: 3),
-                      borderRadius: BorderRadius.all(Radius.circular(25))),
+                      borderRadius: BorderRadius.all(Radius.circular(14))),
                   elevation: 20,
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
@@ -73,7 +73,7 @@ class _ProforienAnswerState extends State<ProfNavchAnswer> {
                   margin: EdgeInsets.only(left: 5.0, right: 5.0, bottom: 5.0),
                   shape: RoundedRectangleBorder(
                       side: BorderSide(color: HexColor('#FFD947'), width: 3),
-                      borderRadius: BorderRadius.all(Radius.circular(25))),
+                      borderRadius: BorderRadius.all(Radius.circular(14))),
                   elevation: 20,
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),

@@ -117,6 +117,12 @@ class AllVacController extends GetxController {
     Get.snackbar(
       "Онлайн помічник", // title
       "База вакансій оновлено!", // message
+
+      messageText: Text(
+        "База вакансій оновлено!",
+        style:
+            TextStyle(fontWeight: FontWeight.bold, color: HexColor('#005BAA')),
+      ),
       icon: Icon(Icons.alarm),
       shouldIconPulse: true,
       colorText: HexColor('#005BAA'),

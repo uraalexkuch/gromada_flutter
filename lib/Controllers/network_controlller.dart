@@ -25,6 +25,12 @@ class NetworkController extends GetxController {
           Get.snackbar(
             "Онлайн помічник", // title
             "Є з'єдання з інтернетом! Всі функції додатку працюють!", // message
+
+            messageText: Text(
+              "Є з'єдання з інтернетом! Всі функції додатку працюють!",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold, color: HexColor('#005BAA')),
+            ),
             icon: Icon(Icons.alarm),
             shouldIconPulse: true,
             colorText: HexColor('#005BAA'),
@@ -40,6 +46,11 @@ class NetworkController extends GetxController {
           Get.snackbar(
             "Онлайн помічник", // title
             "Відсутнє з'єднання з інтернетом! Функціонал частково обмежений!", // message
+            messageText: Text(
+              "Відсутнє з'єднання з інтернетом! Функціонал частково обмежений!",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold, color: HexColor('#ffffff')),
+            ),
             icon: Icon(Icons.alarm),
             shouldIconPulse: true,
             colorText: HexColor('#ffffff'),

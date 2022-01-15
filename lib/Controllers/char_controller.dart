@@ -56,7 +56,13 @@ class ChartController extends GetxController {
     hiveService.addBoxes(stat, "stat");
     Get.snackbar(
       "Онлайн помічник", // title
-      "Інформація щодо громади оновлено!", // message
+      "Інформація щодо громади оновлено!",
+      // message
+      messageText: Text(
+        "Інформація щодо громади оновлено!",
+        style:
+            TextStyle(fontWeight: FontWeight.bold, color: HexColor('#005BAA')),
+      ),
       icon: Icon(Icons.alarm),
       shouldIconPulse: true,
       colorText: HexColor('#005BAA'),

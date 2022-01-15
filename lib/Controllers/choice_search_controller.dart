@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -1098,7 +1100,13 @@ class ChoiceSearchController extends GetxController {
       if (vacancy.length == 0) {
         Get.snackbar(
           "Онлайн помічник", // title
-          "На жаль,на даний час вакансії  по Вашій громаді відсутні", // message
+          "На жаль,на даний час вакансії  по Вашій громаді відсутні",
+          // message
+          messageText: Text(
+            "На жаль,на даний час вакансії  по Вашій громаді відсутні",
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: HexColor('#005BAA')),
+          ),
           icon: Icon(Icons.alarm),
           shouldIconPulse: true,
           colorText: HexColor('#005BAA'),

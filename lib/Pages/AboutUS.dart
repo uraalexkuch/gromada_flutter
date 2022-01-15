@@ -88,7 +88,7 @@ class AboutUS extends StatelessWidget {
                               border: Border.all(
                                   color: HexColor('#FFD947'), width: 3),
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(25)),
+                                  BorderRadius.all(Radius.circular(14)),
                               color: HexColor("#FFFFFF"),
                             ),
                             child: Text(
@@ -118,7 +118,7 @@ class AboutUS extends StatelessWidget {
                                       padding: const EdgeInsets.all(15),
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
-                                            Radius.circular(35.0)),
+                                            Radius.circular(14.0)),
                                         side: BorderSide(
                                             color: HexColor('#FFD947'),
                                             width: 3),

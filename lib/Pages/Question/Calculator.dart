@@ -120,7 +120,7 @@ class _CalculatorState extends State<Calculator> {
                                   border: Border.all(
                                       color: HexColor('#FFD947'), width: 3),
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(25)),
+                                      BorderRadius.all(Radius.circular(14)),
                                   color: HexColor("#FFFFFF"),
                                 ),
                                 height: 6.h,
@@ -221,7 +221,7 @@ class _CalculatorState extends State<Calculator> {
                                     border: Border.all(
                                         color: HexColor('#FFD947'), width: 3),
                                     borderRadius:
-                                        BorderRadius.all(Radius.circular(25)),
+                                        BorderRadius.all(Radius.circular(14)),
                                     color: HexColor("#FFFFFF"),
                                   ),
                                   height: 6.h,
@@ -252,7 +252,7 @@ class _CalculatorState extends State<Calculator> {
                                     border: Border.all(
                                         color: HexColor('#FFD947'), width: 3),
                                     borderRadius:
-                                        BorderRadius.all(Radius.circular(25)),
+                                        BorderRadius.all(Radius.circular(14)),
                                     color: HexColor("#FFFFFF"),
                                   ),
                                   height: 12.h,
@@ -276,7 +276,7 @@ class _CalculatorState extends State<Calculator> {
                                               color: HexColor('#FFD947'),
                                               width: 3),
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(25)),
+                                              Radius.circular(14)),
                                           color: HexColor("#005BAA"),
                                         ),
                                         height: 6.h,
@@ -314,7 +314,7 @@ class _CalculatorState extends State<Calculator> {
                                     border: Border.all(
                                         color: HexColor('#FFD947'), width: 3),
                                     borderRadius:
-                                        BorderRadius.all(Radius.circular(25)),
+                                        BorderRadius.all(Radius.circular(14)),
                                     color: HexColor("#FFFFFF"),
                                   ),
                                   height: 11.h,
@@ -338,7 +338,7 @@ class _CalculatorState extends State<Calculator> {
                                               color: HexColor('#FFD947'),
                                               width: 3),
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(25)),
+                                              Radius.circular(14)),
                                           color: HexColor("#005BAA"),
                                         ),
                                         height: 5.h,
@@ -376,7 +376,7 @@ class _CalculatorState extends State<Calculator> {
                                     border: Border.all(
                                         color: HexColor('#FFD947'), width: 3),
                                     borderRadius:
-                                        BorderRadius.all(Radius.circular(25)),
+                                        BorderRadius.all(Radius.circular(14)),
                                     color: HexColor("#FFFFFF"),
                                   ),
                                   height: 11.h,
@@ -400,7 +400,7 @@ class _CalculatorState extends State<Calculator> {
                                               color: HexColor('#FFD947'),
                                               width: 3),
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(25)),
+                                              Radius.circular(14)),
                                           color: HexColor("#005BAA"),
                                         ),
                                         height: 5.h,

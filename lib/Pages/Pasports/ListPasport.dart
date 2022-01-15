@@ -92,8 +92,8 @@ class _ListPasportState extends State<ListPasport> {
           child: Card(
               margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
               shape: RoundedRectangleBorder(
-                  side: BorderSide(color: HexColor('#FFD947'), width: 5),
-                  borderRadius: BorderRadius.all(Radius.circular(25))),
+                  side: BorderSide(color: HexColor('#FFD947'), width: 3),
+                  borderRadius: BorderRadius.all(Radius.circular(14))),
               elevation: 20,
               child: GestureDetector(
                 onTap: () {
@@ -153,7 +153,7 @@ class _ListPasportState extends State<ListPasport> {
               margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
               shape: RoundedRectangleBorder(
                   side: BorderSide(color: HexColor('#FFD947'), width: 5),
-                  borderRadius: BorderRadius.all(Radius.circular(25))),
+                  borderRadius: BorderRadius.all(Radius.circular(14))),
               elevation: 20,
               child: GestureDetector(
                 onTap: () {

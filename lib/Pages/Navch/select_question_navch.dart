@@ -80,7 +80,7 @@ class _SelectQuestionState extends State<SelectQuestionNavch> {
                                     padding: const EdgeInsets.all(15),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(
-                                          Radius.circular(35.0)),
+                                          Radius.circular(14.0)),
                                       side: BorderSide(
                                           color: HexColor('#FFD947'), width: 3),
                                     ),
@@ -112,7 +112,7 @@ class _SelectQuestionState extends State<SelectQuestionNavch> {
                                     padding: const EdgeInsets.all(15),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(
-                                          Radius.circular(35.0)),
+                                          Radius.circular(14.0)),
                                       side: BorderSide(
                                           color: HexColor('#FFD947'), width: 3),
                                     ),

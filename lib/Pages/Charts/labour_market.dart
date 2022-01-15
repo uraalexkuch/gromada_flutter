@@ -86,7 +86,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           child: Column(
@@ -137,7 +137,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           height: 11.h,
@@ -193,7 +193,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           child: Column(
@@ -254,7 +254,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           height: 11.h,
@@ -335,7 +335,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           padding: const EdgeInsets.all(16),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25.0)),
+                                                Radius.circular(14.0)),
                                             side: BorderSide(
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
@@ -359,7 +359,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           height: 11.h,
@@ -415,7 +415,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           child: Column(
@@ -476,7 +476,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           height: 11.h,
@@ -563,7 +563,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                     borderRadius:
                                                         BorderRadius.all(
                                                             Radius.circular(
-                                                                25)),
+                                                                14)),
                                                     color: HexColor("#005BAA"),
                                                   ),
                                                   child: Column(
@@ -632,7 +632,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                     borderRadius:
                                                         BorderRadius.all(
                                                             Radius.circular(
-                                                                25)),
+                                                                14)),
                                                     color: HexColor("#005BAA"),
                                                   ),
                                                   child: Column(
@@ -729,7 +729,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           child: Column(
@@ -783,7 +783,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           child: Column(
@@ -835,7 +835,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           height: 11.h,

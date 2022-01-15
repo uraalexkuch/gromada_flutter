@@ -26,8 +26,8 @@ class VacDetail extends StatelessWidget {
                     margin: EdgeInsets.only(
                         left: 8.0, right: 8.0, bottom: 5.0, top: 5.h),
                     shape: RoundedRectangleBorder(
-                        side: BorderSide(color: HexColor('#FFD947'), width: 5),
-                        borderRadius: BorderRadius.all(Radius.circular(25))),
+                        side: BorderSide(color: HexColor('#FFD947'), width: 3),
+                        borderRadius: BorderRadius.all(Radius.circular(14))),
                     elevation: 20,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
