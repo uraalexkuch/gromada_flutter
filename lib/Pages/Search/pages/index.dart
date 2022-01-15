@@ -57,7 +57,10 @@ class _IndexPageState extends State<IndexPage> {
   TextField buildTextField() {
     return TextField(
       decoration: InputDecoration(
-          icon: Icon(Icons.search), hintText: S.of(context).search),
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(25.0))),
+          prefixIcon: Icon(Icons.search),
+          hintText: S.of(context).search),
       onChanged: (value) {
         setState(() {
           filteredVac = controller.vacancy0
