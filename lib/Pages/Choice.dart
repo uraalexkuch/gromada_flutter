@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:awesome_select/awesome_select.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -9,10 +11,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 class Choice extends StatelessWidget {
   @override
   ChoiceController controller = ChoiceController();
-
-  get _searchTextEditingController => null;
-
-  get titleStyle => null;
+  bool? choiceDivider;
 
   Widget build(BuildContext context) {
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
@@ -68,64 +67,93 @@ class Choice extends StatelessWidget {
                     child: SingleChildScrollView(
                       child: SmartSelect.single(
                           title: (S.of(context).choice_gromad),
-                          //choiceActiveStyle: ,
-                          // showCheckmark:true,
-                          // choiceStyle:( titleStyle) ,
+                          choiceActiveStyle: S2ChoiceStyle(
+                            color: Colors.lightBlueAccent,
+                            titleStyle: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: Device.screenType.toString() ==
+                                      'ScreenType.tablet'
+                                  ? 18.sp
+                                  : 16.sp,
+                              color: Colors.lightGreen,
+                            ),
+                          ),
+                          //showCheckmark:true,
+                          choiceDivider: true,
+                          choiceStyle: S2ChoiceStyle(
+                            titleStyle: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: Device.screenType.toString() ==
+                                      'ScreenType.tablet'
+                                  ? 18.sp
+                                  : 16.sp,
+                              color: Colors.indigo,
+                            ),
+                            subtitleStyle: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: Device.screenType.toString() ==
+                                      'ScreenType.tablet'
+                                  ? 18.sp
+                                  : 16.sp,
+                              color: Colors.indigo,
+                            ),
+                            showCheckmark: true,
+                            //  highlightColor: Colors.deepPurple,
+                            // accentColor: Colors.lightGreen,
+                            color: Colors.lightBlueAccent,
+                          ),
                           //  choiceType: ,
+
                           selectedValue: controller.selected.value,
                           choiceItems: controller.listType,
                           onChange: (selectedValue) {
                             controller
                                 .setSelected(selectedValue.value.toString());
-                            print('info ${selectedValue.value}');
                           },
                           modalType: S2ModalType.popupDialog,
                           tileBuilder: (context, state) {
                             return Container(
-                                width: 90.w,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: HexColor('#FFD947'), width: 3),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(14)),
-                                  color: HexColor("#FFFFFF"),
-                                ),
-                                child: ListTileTheme(
-                                    textColor: Colors.black87,
-                                    tileColor: HexColor('#005BAA'),
-                                    selectedTileColor: HexColor('#005BAA'),
-                                    selectedColor: HexColor('#005BAA'),
-                                    style: ListTileStyle.drawer,
-                                    child: S2Tile.fromState(
-                                      state,
-                                      isTwoLine: true,
-                                      hideValue: true,
-                                      enabled: true,
-                                      selected: true,
-                                      leading: CircleAvatar(
-                                          radius:
-                                              Device.screenType.toString() ==
-                                                      'ScreenType.tablet'
-                                                  ? 45
-                                                  : 35,
-                                          backgroundColor: Colors.amber,
-                                          child: CircleAvatar(
-                                              radius: Device.screenType
-                                                          .toString() ==
-                                                      'ScreenType.tablet'
-                                                  ? 42
-                                                  : 32,
-                                              backgroundColor: Colors.white,
-                                              foregroundColor: Colors.amber,
-                                              child: Image.asset(
-                                                controller.sourse.toString(),
-                                              )
+                              width: 90.w,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: HexColor('#FFD947'), width: 3),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(14)),
+                                color: HexColor("#FFFFFF"),
+                              ),
+                              child: S2Tile.fromState(state,
+                                  title: Text(
+                                    S.of(context).choice_gromad,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: Device.screenType.toString() ==
+                                              'ScreenType.tablet'
+                                          ? 18.sp
+                                          : 16.sp,
+                                      color: Colors.indigo,
+                                    ),
+                                  ),
+                                  isTwoLine: true,
+                                  hideValue: true,
+                                  enabled: true,
+                                  selected: true,
+                                  leading: CircleAvatar(
+                                    radius: Device.screenType.toString() ==
+                                            'ScreenType.tablet'
+                                        ? 60
+                                        : 35,
+                                    backgroundColor: Colors.white,
+                                    foregroundColor: Colors.amber,
+                                    child: Image.asset(
+                                      controller.sourse.toString(),
+                                      height: 70,
+                                    ),
 
-                                              //NetworkImage(
-                                              //  'https://source.unsplash.com/xsGxhtAsfSA/100x100',
-                                              //),
-                                              )),
-                                    )));
+                                    //NetworkImage(
+                                    //  'https://source.unsplash.com/xsGxhtAsfSA/100x100',
+                                    //),
+                                  )),
+                            );
                           }),
                     )),
                 /*Padding(
