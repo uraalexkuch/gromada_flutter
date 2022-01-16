@@ -440,7 +440,7 @@ class PassportDetail extends StatelessWidget {
                                     softWrap: true,
                                   ))
                             ]),
-                            Row(children: [
+                            /*  Row(children: [
                               Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(
@@ -462,7 +462,7 @@ class PassportDetail extends StatelessWidget {
                                           softWrap: true,
                                         )),
                                   )),
-                            ]),
+                            ]),*/
                           ],
                         ),
                       ),
