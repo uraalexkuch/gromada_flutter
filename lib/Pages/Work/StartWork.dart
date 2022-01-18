@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gromada/Controllers/pasport_controlller.dart';
 import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class StartWork extends StatelessWidget {
+  PasportController controller = PasportController();
   @override
   Widget build(BuildContext context) {
     dynamic value = Get.arguments!;
+    controller.savehash();
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return SafeArea(
           child: Scaffold(
@@ -190,7 +193,8 @@ class StartWork extends StatelessWidget {
                                         elevation: 10.0,
                                         onPressed: () {
                                           Get.toNamed(
-                                              '/choicegromad/vacancy/pasport');
+                                              '/choicegromad/vacancy/pasport',
+                                              arguments: value);
                                         },
                                         child: Text(
                                             S.of(context).work_buttton_choice_3,

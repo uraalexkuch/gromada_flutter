@@ -8,7 +8,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 class AboutUS extends StatelessWidget {
   ChoiceContactController controller = ChoiceContactController();
   Widget build(BuildContext context) {
-    print(controller.listType[3].toString());
+    // print(controller.listType[3].toString());
     controller.onInit();
     return Scaffold(
         resizeToAvoidBottomInset: false,

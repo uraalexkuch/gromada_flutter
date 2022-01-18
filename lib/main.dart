@@ -32,6 +32,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'Controllers/choice_search_controller.dart';
+import 'Pages/Search/models/pasport.dart';
 import 'Pages/Search/models/vac.dart';
 import 'Pages/StartPage.dart';
 import 'generated/l10n.dart';
@@ -41,11 +42,13 @@ void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(VacAdapter());
   Hive.registerAdapter(ChartsAdapter());
+  Hive.registerAdapter(PassportAdapter());
   await Hive.openBox("vacancy");
   await Hive.openBox("stat");
   await Hive.openBox("vachash");
   await Hive.openBox("stathash");
-
+  await Hive.openBox("pasport");
+  await Hive.openBox("pasporthash");
   runApp(MyApp());
 }
 
