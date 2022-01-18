@@ -73,7 +73,7 @@ class _ListPasportState extends State<ListPasport> {
       ),
       onChanged: (value) {
         setState(() {
-          filteredPassport = controller.pasport
+          filteredPassport = controller.pasport0
               .where((item) =>
                   (item.namerobot.toLowerCase().contains(value.toLowerCase())))
               .toList();
@@ -84,7 +84,7 @@ class _ListPasportState extends State<ListPasport> {
 
   ListView buildListView() {
     return ListView.builder(
-      itemCount: controller.pasport.length,
+      itemCount: controller.pasport0.length,
       itemBuilder: (context, index) {
         //Vac vac = pasport[index];
         return Padding(
@@ -98,7 +98,7 @@ class _ListPasportState extends State<ListPasport> {
               child: GestureDetector(
                 onTap: () {
                   Get.toNamed('/choicegromad/vacancy/pasport/detail',
-                      arguments: controller.pasport[index]);
+                      arguments: controller.pasport0[index]);
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -123,7 +123,7 @@ class _ListPasportState extends State<ListPasport> {
                           Container(
                               width: 52.w,
                               child: Text(
-                                controller.pasport[index].namerobot,
+                                controller.pasport0[index].namerobot,
                                 style: TextStyle(
                                   color: Colors.indigo,
                                   fontWeight: FontWeight.bold,

@@ -295,7 +295,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ПРОФЕСІЙНЕ НАВЧАННЯ"),
         "pasport": MessageLookupByLibrary.simpleMessage("Номер вакансії:"),
         "pasport0":
-            MessageLookupByLibrary.simpleMessage("Основні вимоги до кандидата"),
+            MessageLookupByLibrary.simpleMessage("Основні дані роботодавця"),
         "pasport1":
             MessageLookupByLibrary.simpleMessage("Вид економічної діяльності"),
         "pasport10": MessageLookupByLibrary.simpleMessage("ПІБ керівника"),

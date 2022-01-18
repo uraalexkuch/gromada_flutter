@@ -6,37 +6,40 @@ part 'pasport.g.dart';
 class Passport {
   // Attributes
   @HiveField(0)
-  final place;
+  final gromada;
   @HiveField(1)
-  final namerobot;
+  final place;
   @HiveField(2)
-  final adressur;
+  final namerobot;
   @HiveField(3)
-  final adresreal;
+  final adressur;
   @HiveField(4)
-  final transport;
+  final adresreal;
   @HiveField(5)
-  final kved;
+  final transport;
   @HiveField(6)
-  final shtat;
+  final kved;
   @HiveField(7)
-  final profesia;
+  final shtat;
   @HiveField(8)
-  final timework;
+  final profesia;
   @HiveField(9)
-  final house;
+  final timework;
   @HiveField(10)
-  final nameboss;
+  final house;
   @HiveField(11)
-  final telhr;
+  final nameboss;
   @HiveField(12)
-  final big;
+  final telhr;
   @HiveField(13)
+  final big;
+  @HiveField(14)
   final telrec;
   // final map;
   // Constructor
 
   Passport({
+    required this.gromada,
     required this.place,
     required this.namerobot,
     required this.adressur,
@@ -57,6 +60,7 @@ class Passport {
   // convert Json to an car object object
   factory Passport.fromJson(Map<String, dynamic> json) {
     return Passport(
+      gromada: json["громада"].toString(),
       place: json["Назва міста"].toString(),
       namerobot: json["Роботодавець (назва)"].toString(),
       adressur: json["Юридична адреса ПОУ"].toString(),

@@ -9,7 +9,7 @@ class PassportDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(value.map);
+    print(value);
     return new Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: new AppBar(title: new Text(S.of(context).pasport_title)),

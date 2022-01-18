@@ -152,11 +152,11 @@ class PasportController extends GetxController {
         print("Getting data from API");
       }
       pasport.forEach((item) {
-        print(item);
         for (int i = 0; i < rayon.length; i++)
-          if (item == rayon[i]) {
+          if (item.gromada == rayon[i]) {
             pasport0.add(item);
-            print(item);
+            print(rayon[i]);
+            print(rayon[i]);
           }
       });
     } finally {
