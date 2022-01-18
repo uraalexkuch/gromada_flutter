@@ -116,7 +116,7 @@ class _ProforienAnswerState extends State<NavchAnswer> {
         margin: new EdgeInsets.only(bottom: 7.h),
         child: SpeedDial(
             elevation: 10.sp,
-            buttonSize: 30.0.sp,
+            buttonSize: const Size(30.0, 30.0),
             label: Text(
               "Посилання",
               style: TextStyle(

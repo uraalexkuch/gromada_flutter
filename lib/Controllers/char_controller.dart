@@ -81,7 +81,7 @@ class ChartController extends GetxController {
       // print("Getting  ${await hiveService.getBoxes("stat")}");
       // print("Getting2  ${(await ChartsRepository.getAllCharts()).toList()}");
       bezrab0 = await hiveService.getBoxes("stat");
-      print(bezrab0.map((item) => [
+      /* print(bezrab0.map((item) => [
             item.gromada,
             item.maintown,
             item.counttown,
@@ -92,7 +92,7 @@ class ChartController extends GetxController {
           ]));
       print(
         bezrab0[0],
-      );
+      );*/
       print("Getting data from HiveCharts");
     } else {
       bezrab0 = await ChartsRepository.getAllCharts();
