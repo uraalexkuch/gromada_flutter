@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:gromada/Controllers/choice_controller.dart';
 import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:lottie/lottie.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class Choice extends StatelessWidget {
@@ -156,84 +157,21 @@ class Choice extends StatelessWidget {
                             );
                           }),
                     )),
-                /*Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: HexColor('#FFD947'), width: 3),
-                      borderRadius: BorderRadius.all(Radius.circular(14)),
-                      color: HexColor("#FFFFFF"),
-                    ),
-                    height: 6.h,
-                    width: 90.w,
-                    /*child: Obx(() => DropdownButtonHideUnderline(
-                          child: Padding(
-                            padding: const EdgeInsets.only(
-                                left: 8.0, right: 8.0, top: 3, bottom: 0),
-                            child: DropdownButton<String>(
-                              dropdownColor: HexColor("#ffffff"),
-
-                              isExpanded: true,
-                              elevation: 16,
-                              autofocus: true,
-                              isDense: true,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(14)),
-                              alignment: AlignmentDirectional.centerStart,
-                              //value: chosenValue,
-                              //elevation: 5,
-                              style: TextStyle(
-                                  decoration: TextDecoration.none,
-                                  color: HexColor('#005BAA'),
-                                  fontSize: 16.sp,
-                                  fontWeight: FontWeight.bold),
-                              value: controller.selected.value,
-                              items: controller.listType.map((map) {
-                                return DropdownMenuItem(
-                                  // enabled: true,
-                                  child: Container(
-                                    margin: const EdgeInsets.only(left: 16.0),
-                                    width: 100.w,
-                                    child: SingleChildScrollView(
-                                      child: Column(
-                                        children: [
-                                          Text(map['name'].toString()),
-                                          Divider()
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  value: map['value'],
-                                );
-                              }).toList(),
-
-                              hint: Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 50.0, bottom: 0.0),
-                                child: Text(
-                                  S.of(context).choice_gromad,
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 16.sp,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ),
-                              onChanged: (newValue) {
-                                controller.setSelected(newValue);
-                              },
-                            ),
-                          ),
-                        )),*/
-                  ),
-                ),*/
+                SizedBox(
+                  height: 10.h,
+                ),
+                Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 20.h,
+                      child: Lottie.asset(
+                          'image/93863-3d-loading-cube-animation.json'),
+                    )),
 
                 SizedBox(
                   height: 10.h,
                 ),
 
-                /*SizedBox(
-                    height: 25.h,
-                  ),*/
                 // Container(height: 5.h, child: Center(child: CallButton())),
               ]),
             ),

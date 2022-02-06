@@ -10,7 +10,7 @@ import 'package:gromada/Pages/Callcenter/call_center.dart';
 import 'package:gromada/Pages/Charts/labour_market.dart';
 import 'package:gromada/Pages/Choice.dart';
 import 'package:gromada/Pages/ChoiceQuestion/PageQuestion.dart';
-import 'package:gromada/Pages/ChoiceQuestion/WebView.dart';
+import 'package:gromada/Pages/ChoiceQuestion/WebViewTrue.dart';
 import 'package:gromada/Pages/ChoiceSearch/ChoiceSearch.dart';
 import 'package:gromada/Pages/Navch/navch_answre.dart';
 import 'package:gromada/Pages/Navch/select_question_navch.dart';
