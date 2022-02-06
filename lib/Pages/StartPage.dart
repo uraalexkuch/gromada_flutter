@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gromada/Controllers/network_controlller.dart';
 import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -8,8 +9,11 @@ import 'package:spring/spring.dart';
 class StartPage extends StatelessWidget {
   final SpringController springController = SpringController();
 
+  NetworkController controller = NetworkController();
   @override
   Widget build(BuildContext context) {
+    controller.onInit();
+
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return SafeArea(
         child: Container(

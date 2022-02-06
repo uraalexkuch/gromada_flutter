@@ -42,9 +42,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Залишок днів\\n(в розрахунку за місяць),грн"),
         "calc15": MessageLookupByLibrary.simpleMessage("Вкажіть розмір з/п"),
         "calc2": MessageLookupByLibrary.simpleMessage(
-            " Розрахунок необхідний, якщо Ви протягом року,  що передував реєстрації в  \" +\n                                          \"службі зайнятості,  мали страховий стаж не менше 6 місяців\n"),
+            " Розрахунок необхідний, якщо Ви протягом року,  що передував реєстрації в \nслужбі зайнятості,  мали страховий стаж не менше 6 місяців\n"),
         "calc3": MessageLookupByLibrary.simpleMessage(
-            "\n\" +\n                                          \"ВСІ ДАНІ ДОВІДКОВІ\n\"\n                                              \" ТА НЕ Є ПІДСТАВОЮ ДЛЯ НАРАХУВАННЯ ДОПОМОГИ ПО БЕЗРОБІТТЮ!"),
+            "\nВСІ ДАНІ ДОВІДКОВІ\n ТА НЕ Є ПІДСТАВОЮ ДЛЯ НАРАХУВАННЯ ДОПОМОГИ ПО БЕЗРОБІТТЮ!"),
         "calc4": MessageLookupByLibrary.simpleMessage("п.1. Оберіть стаж"),
         "calc5": MessageLookupByLibrary.simpleMessage("до 2- років"),
         "calc6": MessageLookupByLibrary.simpleMessage("від 2-х до 6 років"),
@@ -103,7 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "center_name561": MessageLookupByLibrary.simpleMessage(
             "Нікольський районний центр зайнятості"),
         "center_name569": MessageLookupByLibrary.simpleMessage(
-            "Мар\\\'їнський районний центр зайнятості"),
+            "Мар\'їнський районний центр зайнятості"),
         "center_name573": MessageLookupByLibrary.simpleMessage(
             "Мангушський районний центр зайнятості"),
         "center_name585": MessageLookupByLibrary.simpleMessage(
@@ -249,16 +249,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Кількість   вакансій"),
         "labour13": MessageLookupByLibrary.simpleMessage(
             "ЗА  СПРИЯННЯ  СЛУЖБИ  ЗАЙНЯТОСТІ"),
-        "labour14": MessageLookupByLibrary.simpleMessage("Отримали роботу"),
+        "labour14": MessageLookupByLibrary.simpleMessage("Отримали \n  роботу"),
         "labour15": MessageLookupByLibrary.simpleMessage("Проходили навчання"),
         "labour16":
             MessageLookupByLibrary.simpleMessage("Участь у гром./тим. роботах"),
-        "labour2": MessageLookupByLibrary.simpleMessage(
-            "Кількість рад, що об\\\'єдналися"),
-        "labour3": MessageLookupByLibrary.simpleMessage("Площа  громади"),
+        "labour2":
+            MessageLookupByLibrary.simpleMessage("Кількість \n нас. пунктів"),
+        "labour3": MessageLookupByLibrary.simpleMessage("Площа \n громади"),
         "labour4": MessageLookupByLibrary.simpleMessage(
             "Чисельність населення громади"),
-        "labour5": MessageLookupByLibrary.simpleMessage("Міське населення"),
+        "labour5":
+            MessageLookupByLibrary.simpleMessage("Переглянути карту громади"),
         "labour6": MessageLookupByLibrary.simpleMessage("Сільське населення"),
         "labour7": MessageLookupByLibrary.simpleMessage(
             "Кількість підприємств,\n юридичні особи"),
@@ -294,7 +295,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ПРОФЕСІЙНЕ НАВЧАННЯ"),
         "pasport": MessageLookupByLibrary.simpleMessage("Номер вакансії:"),
         "pasport0":
-            MessageLookupByLibrary.simpleMessage("Основні вимоги до кандидата"),
+            MessageLookupByLibrary.simpleMessage("Основні дані роботодавця"),
         "pasport1":
             MessageLookupByLibrary.simpleMessage("Вид економічної діяльності"),
         "pasport10": MessageLookupByLibrary.simpleMessage("ПІБ керівника"),
@@ -323,7 +324,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pasport_title":
             MessageLookupByLibrary.simpleMessage("Картка роботодавця"),
         "profnavch": MessageLookupByLibrary.simpleMessage(
-            "     Якщо Ви бажаєте отримати гідну роботу та досягти успіху – скористайтеся можливістю пройти професійне навчання шляхом:\' +\n                          \'\\n\' +\n                          \'\\n\' +\n                          \"•\tпрофесійної підготовки\" +\n                          \'\\n\' +\n                          \"•\tперепідготовки\" +\n                          \'\\n\' +\n                          \"•\tпідвищення кваліфікації"),
+            "     Якщо Ви бажаєте отримати гідну роботу та досягти успіху – скористайтеся можливістю пройти професійне навчання шляхом:\n•\tпрофесійної підготовки\n•\tперепідготовки\n•\tпідвищення кваліфікації"),
         "proforient":
             MessageLookupByLibrary.simpleMessage("ПЛАНУЙ МАЙБУТНЄ ЗАРАЗ"),
         "proforient1": MessageLookupByLibrary.simpleMessage(

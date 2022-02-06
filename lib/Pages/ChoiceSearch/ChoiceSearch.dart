@@ -83,7 +83,7 @@ class _ChoiceSearchState extends State<ChoiceSearch> {
                 margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
                 shape: RoundedRectangleBorder(
                     side: BorderSide(color: HexColor('#FFD947'), width: 5),
-                    borderRadius: BorderRadius.all(Radius.circular(25))),
+                    borderRadius: BorderRadius.all(Radius.circular(14))),
                 elevation: 20,
                 child: GestureDetector(
                   onTap: () {

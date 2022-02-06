@@ -52,7 +52,7 @@ class Vac {
     required this.salaryvac,
     required this.tel,
   });
-  Map<String, dynamic> toMap() {
+  /* Map<String, dynamic> toMap() {
     return {
       'numbervac': numbervac,
       'dateregvac': dateregvac,
@@ -93,7 +93,7 @@ class Vac {
       tel: json["Телефон (для вакансій на сайті) / Оперативні вакансії"]
           .toString(),
     );
-  }
+  }*/
 
   Map<String, dynamic> toJson() => {
         'numbervac': numbervac,

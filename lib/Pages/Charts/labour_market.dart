@@ -66,7 +66,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                         style: TextStyle(
                                             decoration: TextDecoration.none,
                                             color: HexColor('#FFFFFF'),
-                                            fontSize: 16.sp,
+                                            fontSize: 15.sp,
                                             fontWeight: FontWeight.bold),
                                         textAlign: TextAlign.center,
                                       ),
@@ -86,7 +86,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           child: Column(
@@ -94,7 +94,8 @@ class _LabourMarketState extends State<LabourMarket> {
                                               Container(
                                                 child: Padding(
                                                   padding:
-                                                      const EdgeInsets.all(5.0),
+                                                      const EdgeInsets.only(
+                                                          top: 5.0, bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour1,
                                                     style: TextStyle(
@@ -102,7 +103,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFFFFF'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -114,13 +115,13 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    '${controller.gromada[6]}',
+                                                    '${controller.bezrab[0].maintown}',
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFD947'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -136,7 +137,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           height: 11.h,
@@ -147,7 +148,8 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 height: 6.h,
                                                 child: Padding(
                                                   padding:
-                                                      const EdgeInsets.all(5.0),
+                                                      const EdgeInsets.only(
+                                                          top: 5.0, bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour2,
                                                     style: TextStyle(
@@ -155,7 +157,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFFFFF'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -167,13 +169,13 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    '${controller.gromada[1]}',
+                                                    '${controller.bezrab[0].counttown}',
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFD947'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -191,7 +193,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           child: Column(
@@ -200,7 +202,8 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 height: 6.h,
                                                 child: Padding(
                                                   padding:
-                                                      const EdgeInsets.all(5.0),
+                                                      const EdgeInsets.only(
+                                                          top: 5.0, bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour3,
                                                     style: TextStyle(
@@ -208,7 +211,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor("#FFFFFF"),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -220,13 +223,13 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    '${controller.gromada[2]}',
+                                                    '${controller.bezrab[0].sgromada}',
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFD947'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -239,9 +242,8 @@ class _LabourMarketState extends State<LabourMarket> {
                                       ],
                                     ),
                                   ),
-                                  Divider(),
                                   Padding(
-                                    padding: const EdgeInsets.only(bottom: 8.0),
+                                    padding: const EdgeInsets.only(bottom: 5.0),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceAround,
@@ -252,18 +254,22 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           height: 11.h,
-                                          width: 30.w,
+                                          width: 40.w,
                                           child: Column(
                                             children: [
                                               Container(
-                                                height: 6.h,
+                                                height: 5.h,
                                                 child: Padding(
                                                   padding:
-                                                      const EdgeInsets.all(5.0),
+                                                      const EdgeInsets.only(
+                                                          top: 8.0,
+                                                          left: 8.0,
+                                                          right: 8.0,
+                                                          bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour4,
                                                     style: TextStyle(
@@ -271,7 +277,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFFFFF'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -283,13 +289,115 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    '${controller.gromada[3]} осіб',
+                                                    '${controller.bezrab[0].people} осіб',
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFD947'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                    textAlign: TextAlign.center,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        RaisedButton(
+                                          //  color: HexColor("#005BAA"),
+                                          onPressed: () {
+                                            Get.toNamed('/choicegromad/web',
+                                                arguments: controller
+                                                    .bezrab[0].mapgromada);
+                                          },
+                                          //height: 6.h,
+                                          child: Column(children: [
+                                            Container(
+                                              height: 4.h,
+                                              width: 35.w,
+                                              child: Text(
+                                                S.of(context).labour5,
+                                                style: TextStyle(
+                                                    color: HexColor('#FFFFFF'),
+                                                    fontSize: 15.sp,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            ),
+                                            Icon(
+                                              Icons.search,
+                                              color: Colors.white,
+                                            ),
+                                          ]),
+                                          padding: const EdgeInsets.all(16),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(14.0)),
+                                            side: BorderSide(
+                                                color: HexColor('#FFD947'),
+                                                width: 3),
+                                          ),
+                                          color: HexColor("#005BAA"),
+                                          focusColor: HexColor('#FFD947'),
+                                          splashColor: HexColor('#FFD947'),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                                color: HexColor('#FFD947'),
+                                                width: 3),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(14)),
+                                            color: HexColor("#005BAA"),
+                                          ),
+                                          height: 11.h,
+                                          width: 42.w,
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: 6.h,
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          top: 8.0, bottom: 0),
+                                                  child: Text(
+                                                    S.of(context).labour7,
+                                                    style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        color:
+                                                            HexColor('#FFFFFF'),
+                                                        fontSize: 15.sp,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                    textAlign: TextAlign.center,
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(5.0),
+                                                  child: Text(
+                                                    '${controller.bezrab[0].uridcompany}',
+                                                    style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        color:
+                                                            HexColor('#FFD947'),
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -301,13 +409,13 @@ class _LabourMarketState extends State<LabourMarket> {
                                         ),
                                         Container(
                                           height: 11.h,
-                                          width: 30.w,
+                                          width: 42.w,
                                           decoration: BoxDecoration(
                                             border: Border.all(
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           child: Column(
@@ -316,15 +424,16 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 height: 6.h,
                                                 child: Padding(
                                                   padding:
-                                                      const EdgeInsets.all(5.0),
+                                                      const EdgeInsets.only(
+                                                          top: 8.0, bottom: 0),
                                                   child: Text(
-                                                    S.of(context).labour5,
+                                                    S.of(context).labour8,
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFFFFF'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -336,66 +445,13 @@ class _LabourMarketState extends State<LabourMarket> {
                                                   padding:
                                                       const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    '${controller.gromada[4]} осіб',
+                                                    '${controller.bezrab[0].fop} ',
                                                     style: TextStyle(
                                                         decoration:
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFD947'),
-                                                        fontSize: 16.sp,
-                                                        fontWeight:
-                                                            FontWeight.bold),
-                                                    textAlign: TextAlign.center,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: HexColor('#FFD947'),
-                                                width: 3),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
-                                            color: HexColor("#005BAA"),
-                                          ),
-                                          height: 11.h,
-                                          width: 30.w,
-                                          child: Column(
-                                            children: [
-                                              Container(
-                                                height: 6.h,
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(5.0),
-                                                  child: Text(
-                                                    S.of(context).labour6,
-                                                    style: TextStyle(
-                                                        decoration:
-                                                            TextDecoration.none,
-                                                        color:
-                                                            HexColor('#FFFFFF'),
-                                                        fontSize: 16.sp,
-                                                        fontWeight:
-                                                            FontWeight.bold),
-                                                    textAlign: TextAlign.center,
-                                                  ),
-                                                ),
-                                              ),
-                                              Container(
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(5.0),
-                                                  child: Text(
-                                                    '${controller.gromada[5]} осіб',
-                                                    style: TextStyle(
-                                                        decoration:
-                                                            TextDecoration.none,
-                                                        color:
-                                                            HexColor('#FFD947'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -408,120 +464,6 @@ class _LabourMarketState extends State<LabourMarket> {
                                       ],
                                     ),
                                   ),
-                                  Divider(),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          border: Border.all(
-                                              color: HexColor('#FFD947'),
-                                              width: 3),
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(25)),
-                                          color: HexColor("#005BAA"),
-                                        ),
-                                        height: 11.h,
-                                        width: 42.w,
-                                        child: Column(
-                                          children: [
-                                            Container(
-                                              height: 6.h,
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(5.0),
-                                                child: Text(
-                                                  S.of(context).labour7,
-                                                  style: TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      color:
-                                                          HexColor('#FFFFFF'),
-                                                      fontSize: 16.sp,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(5.0),
-                                                child: Text(
-                                                  '${controller.bezrab[0].uridcompany}',
-                                                  style: TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      color:
-                                                          HexColor('#FFD947'),
-                                                      fontSize: 16.sp,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Container(
-                                        height: 11.h,
-                                        width: 42.w,
-                                        decoration: BoxDecoration(
-                                          border: Border.all(
-                                              color: HexColor('#FFD947'),
-                                              width: 3),
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(25)),
-                                          color: HexColor("#005BAA"),
-                                        ),
-                                        child: Column(
-                                          children: [
-                                            Container(
-                                              height: 6.h,
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(5.0),
-                                                child: Text(
-                                                  S.of(context).labour8,
-                                                  style: TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      color:
-                                                          HexColor('#FFFFFF'),
-                                                      fontSize: 16.sp,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(5.0),
-                                                child: Text(
-                                                  '${controller.bezrab[0].fop} ',
-                                                  style: TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      color:
-                                                          HexColor('#FFD947'),
-                                                      fontSize: 16.sp,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Divider(),
                                   Padding(
                                     padding: const EdgeInsets.all(5.0),
                                     child: Row(
@@ -534,7 +476,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           height: 11.h,
@@ -545,7 +487,8 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 height: 4.h,
                                                 child: Padding(
                                                   padding:
-                                                      const EdgeInsets.all(5.0),
+                                                      const EdgeInsets.only(
+                                                          top: 8.0, bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour9,
                                                     style: TextStyle(
@@ -553,7 +496,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFFFFF'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -562,13 +505,13 @@ class _LabourMarketState extends State<LabourMarket> {
                                               ),
                                               Container(
                                                 child: Text(
-                                                  '${controller.gromada[7]}',
+                                                  '${controller.bezrab[0].economic}',
                                                   style: TextStyle(
                                                       decoration:
                                                           TextDecoration.none,
                                                       color:
                                                           HexColor('#FFD947'),
-                                                      fontSize: 16.sp,
+                                                      fontSize: 15.sp,
                                                       fontWeight:
                                                           FontWeight.bold),
                                                   textAlign: TextAlign.center,
@@ -590,7 +533,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                         style: TextStyle(
                                             decoration: TextDecoration.none,
                                             color: HexColor('#FFFFFF'),
-                                            fontSize: 16.sp,
+                                            fontSize: 15.sp,
                                             fontWeight: FontWeight.bold),
                                         textAlign: TextAlign.center,
                                       ),
@@ -620,7 +563,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                     borderRadius:
                                                         BorderRadius.all(
                                                             Radius.circular(
-                                                                25)),
+                                                                14)),
                                                     color: HexColor("#005BAA"),
                                                   ),
                                                   child: Column(
@@ -630,7 +573,9 @@ class _LabourMarketState extends State<LabourMarket> {
                                                         child: Padding(
                                                           padding:
                                                               const EdgeInsets
-                                                                  .all(5.0),
+                                                                      .only(
+                                                                  top: 8.0,
+                                                                  bottom: 0),
                                                           child: Text(
                                                             S
                                                                 .of(context)
@@ -641,7 +586,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                                         .none,
                                                                 color: HexColor(
                                                                     '#FFFFFF'),
-                                                                fontSize: 16.sp,
+                                                                fontSize: 15.sp,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .bold),
@@ -663,7 +608,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                                         .none,
                                                                 color: HexColor(
                                                                     '#FFD947'),
-                                                                fontSize: 16.sp,
+                                                                fontSize: 15.sp,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .bold),
@@ -687,7 +632,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                     borderRadius:
                                                         BorderRadius.all(
                                                             Radius.circular(
-                                                                25)),
+                                                                14)),
                                                     color: HexColor("#005BAA"),
                                                   ),
                                                   child: Column(
@@ -697,7 +642,11 @@ class _LabourMarketState extends State<LabourMarket> {
                                                         child: Padding(
                                                           padding:
                                                               const EdgeInsets
-                                                                  .all(5.0),
+                                                                      .only(
+                                                                  top: 8.0,
+                                                                  left: 8.0,
+                                                                  right: 8.0,
+                                                                  bottom: 0),
                                                           child: Text(
                                                             S
                                                                 .of(context)
@@ -708,7 +657,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                                         .none,
                                                                 color: HexColor(
                                                                     '#FFFFFF'),
-                                                                fontSize: 16.sp,
+                                                                fontSize: 15.sp,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .bold),
@@ -730,7 +679,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                                         .none,
                                                                 color: HexColor(
                                                                     '#FFD947'),
-                                                                fontSize: 16.sp,
+                                                                fontSize: 15.sp,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .bold),
@@ -757,7 +706,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                         style: TextStyle(
                                             decoration: TextDecoration.none,
                                             color: HexColor('#FFFFFF'),
-                                            fontSize: 16.sp,
+                                            fontSize: 15.sp,
                                             fontWeight: FontWeight.bold),
                                         textAlign: TextAlign.center,
                                       ),
@@ -773,23 +722,24 @@ class _LabourMarketState extends State<LabourMarket> {
                                           MainAxisAlignment.spaceAround,
                                       children: [
                                         Container(
-                                          height: 12.h,
+                                          height: 11.h,
                                           width: 30.w,
                                           decoration: BoxDecoration(
                                             border: Border.all(
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           child: Column(
                                             children: [
                                               Container(
-                                                height: 7.h,
+                                                height: 6.h,
                                                 child: Padding(
                                                   padding:
-                                                      const EdgeInsets.all(5.0),
+                                                      const EdgeInsets.only(
+                                                          top: 8.0, bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour14,
                                                     style: TextStyle(
@@ -797,7 +747,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFFFFF'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -815,7 +765,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFD947'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -826,23 +776,24 @@ class _LabourMarketState extends State<LabourMarket> {
                                           ),
                                         ),
                                         Container(
-                                          height: 12.h,
+                                          height: 11.h,
                                           width: 30.w,
                                           decoration: BoxDecoration(
                                             border: Border.all(
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
                                           child: Column(
                                             children: [
                                               Container(
-                                                height: 7.h,
+                                                height: 6.h,
                                                 child: Padding(
                                                   padding:
-                                                      const EdgeInsets.all(5.0),
+                                                      const EdgeInsets.only(
+                                                          top: 8.0, bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour15,
                                                     style: TextStyle(
@@ -850,7 +801,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFFFFF'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -868,7 +819,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFD947'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -884,20 +835,19 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 color: HexColor('#FFD947'),
                                                 width: 3),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
+                                                Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
-                                          height: 12.h,
+                                          height: 11.h,
                                           width: 30.w,
                                           child: Column(
                                             children: [
                                               Container(
-                                                height: 7.h,
+                                                height: 6.h,
                                                 child: Padding(
                                                   padding:
                                                       const EdgeInsets.only(
-                                                          left: 5.0,
-                                                          right: 5.0),
+                                                          top: 8.0, bottom: 0),
                                                   child: Text(
                                                     S.of(context).labour16,
                                                     style: TextStyle(
@@ -905,7 +855,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFFFFF'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,
@@ -923,7 +873,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                                             TextDecoration.none,
                                                         color:
                                                             HexColor('#FFD947'),
-                                                        fontSize: 16.sp,
+                                                        fontSize: 15.sp,
                                                         fontWeight:
                                                             FontWeight.bold),
                                                     textAlign: TextAlign.center,

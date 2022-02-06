@@ -1,4 +1,3 @@
-import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
@@ -85,7 +84,7 @@ class _ProforienAnswerState extends State<NavchAnswer> {
               margin: EdgeInsets.only(left: 5.0, right: 5.0, bottom: 5.0),
               shape: RoundedRectangleBorder(
                   side: BorderSide(color: HexColor('#FFD947'), width: 3),
-                  borderRadius: BorderRadius.all(Radius.circular(25))),
+                  borderRadius: BorderRadius.all(Radius.circular(14))),
               elevation: 20,
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
@@ -117,7 +116,7 @@ class _ProforienAnswerState extends State<NavchAnswer> {
         margin: new EdgeInsets.only(bottom: 7.h),
         child: SpeedDial(
             elevation: 10.sp,
-            buttonSize: 30.0.sp,
+            buttonSize: const Size(30.0, 30.0),
             label: Text(
               "Посилання",
               style: TextStyle(

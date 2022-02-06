@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:gromada/Controllers/all_vac_controller.dart';
 import 'package:gromada/Pages/Load/loading.dart';
 import 'package:gromada/generated/l10n.dart';
-import 'package:gromada/local_datastore/hive_service.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -16,7 +15,7 @@ class IndexPage extends StatefulWidget {
 
 class _IndexPageState extends State<IndexPage> {
   List filteredVac = <Vac>[];
-  final HiveService hiveService = HiveService();
+  //final HiveService hiveService = HiveService();
   AllVacController controller = AllVacController();
 
   @override
@@ -36,9 +35,8 @@ class _IndexPageState extends State<IndexPage> {
           () => !controller.isLoading.value
               ? Column(children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: buildTextField(),
-                  ),
+                      padding: const EdgeInsets.all(8.0),
+                      child: buildTextField()),
                   Expanded(
                     child: Container(
                         decoration: BoxDecoration(
@@ -57,7 +55,10 @@ class _IndexPageState extends State<IndexPage> {
   TextField buildTextField() {
     return TextField(
       decoration: InputDecoration(
-          icon: Icon(Icons.search), hintText: S.of(context).search),
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(14.0))),
+          prefixIcon: Icon(Icons.search),
+          hintText: S.of(context).search),
       onChanged: (value) {
         setState(() {
           filteredVac = controller.vacancy0
@@ -81,8 +82,8 @@ class _IndexPageState extends State<IndexPage> {
             child: Card(
                 margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
                 shape: RoundedRectangleBorder(
-                    side: BorderSide(color: HexColor('#FFD947'), width: 5),
-                    borderRadius: BorderRadius.all(Radius.circular(25))),
+                    side: BorderSide(color: HexColor('#FFD947'), width: 3),
+                    borderRadius: BorderRadius.all(Radius.circular(14))),
                 elevation: 20,
                 child: GestureDetector(
                   onTap: () {
@@ -168,8 +169,8 @@ class _IndexPageState extends State<IndexPage> {
         return Card(
             margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
             shape: RoundedRectangleBorder(
-                side: BorderSide(color: HexColor('#FFD947'), width: 5),
-                borderRadius: BorderRadius.all(Radius.circular(25))),
+                side: BorderSide(color: HexColor('#FFD947'), width: 3),
+                borderRadius: BorderRadius.all(Radius.circular(14))),
             elevation: 20,
             child: GestureDetector(
               onTap: () {

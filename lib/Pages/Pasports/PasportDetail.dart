@@ -9,7 +9,7 @@ class PassportDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(value.map);
+    print(value);
     return new Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: new AppBar(title: new Text(S.of(context).pasport_title)),
@@ -40,7 +40,7 @@ class PassportDetail extends StatelessWidget {
                         left: 8.0, right: 8.0, bottom: 5.0, top: 5.h),
                     shape: RoundedRectangleBorder(
                         side: BorderSide(color: HexColor('#FFD947'), width: 5),
-                        borderRadius: BorderRadius.all(Radius.circular(25))),
+                        borderRadius: BorderRadius.all(Radius.circular(14))),
                     elevation: 20,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -440,7 +440,7 @@ class PassportDetail extends StatelessWidget {
                                     softWrap: true,
                                   ))
                             ]),
-                            Row(children: [
+                            /*  Row(children: [
                               Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(
@@ -462,7 +462,7 @@ class PassportDetail extends StatelessWidget {
                                           softWrap: true,
                                         )),
                                   )),
-                            ]),
+                            ]),*/
                           ],
                         ),
                       ),

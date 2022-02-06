@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gromada/Controllers/pasport_controlller.dart';
 import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class StartWork extends StatelessWidget {
+  PasportController controller = PasportController();
   @override
   Widget build(BuildContext context) {
     dynamic value = Get.arguments!;
+    controller.savehash();
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return SafeArea(
           child: Scaffold(
@@ -49,7 +52,7 @@ class StartWork extends StatelessWidget {
                               side: BorderSide(
                                   color: HexColor('#FFD947'), width: 3),
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(25))),
+                                  BorderRadius.all(Radius.circular(14))),
                           elevation: 20,
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
@@ -97,7 +100,7 @@ class StartWork extends StatelessWidget {
                                         padding: const EdgeInsets.all(15),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(35.0)),
+                                              Radius.circular(14)),
                                           side: BorderSide(
                                               color: HexColor('#FFD947'),
                                               width: 3),
@@ -132,7 +135,7 @@ class StartWork extends StatelessWidget {
                                         padding: const EdgeInsets.all(15),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(35.0)),
+                                              Radius.circular(14)),
                                           side: BorderSide(
                                               color: HexColor('#FFD947'),
                                               width: 3),
@@ -168,7 +171,7 @@ class StartWork extends StatelessWidget {
                                         padding: const EdgeInsets.all(15),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(35.0)),
+                                              Radius.circular(14)),
                                           side: BorderSide(
                                               color: HexColor('#FFD947'),
                                               width: 3),
@@ -190,7 +193,8 @@ class StartWork extends StatelessWidget {
                                         elevation: 10.0,
                                         onPressed: () {
                                           Get.toNamed(
-                                              '/choicegromad/vacancy/pasport');
+                                              '/choicegromad/vacancy/pasport',
+                                              arguments: value);
                                         },
                                         child: Text(
                                             S.of(context).work_buttton_choice_3,
@@ -202,7 +206,7 @@ class StartWork extends StatelessWidget {
                                         padding: const EdgeInsets.all(15),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(35.0)),
+                                              Radius.circular(14)),
                                           side: BorderSide(
                                               color: HexColor('#FFD947'),
                                               width: 3),

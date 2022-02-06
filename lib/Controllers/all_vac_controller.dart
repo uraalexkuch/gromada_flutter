@@ -1,7 +1,10 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/Pages/Search/models/vac.dart';
+import 'package:gromada/Pages/services/ApiProviderVacHash.dart';
 import 'package:gromada/Pages/services/VacDepository.dart';
 import 'package:gromada/local_datastore/hive_service.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -15,7 +18,7 @@ const httpSync = "httpSync";
 class AllVacController extends GetxController {
   List vacancy = [].obs;
   List vacancy0 = [].obs;
-  List vacancy00 = [].obs;
+  List vacancy00 = [];
   List vacancy01 = [].obs;
   RxBool isLoading = true.obs;
   final HiveService hiveService = HiveService();
@@ -23,14 +26,8 @@ class AllVacController extends GetxController {
 
   @override
   Future<void> onInit() async {
-    // Hive.registerAdapter(VacAdapter());
-    // List vacancy00 = [];
     await Hive.initFlutter();
-
     await Hive.openBox("vacancy");
-    // final HiveService hiveService = HiveService();
-    // vacancy00 = await hiveService.getBoxes("vacancy");
-    //print("Getting loaclstore ${vacancy00.length}");
     gromada = int.parse(Get.arguments) == 55900 ||
             int.parse(Get.arguments) == 55901 ||
             int.parse(Get.arguments) == 55902 ||
@@ -89,14 +86,52 @@ class AllVacController extends GetxController {
     super.onInit();
   }
 
+  void savehash() async {
+    await Hive.initFlutter();
+    var box = await Hive.openBox("vachash");
+    String? vachash = box.get('hash').toString();
+    print('Getting main ${vachash}');
+    if (vachash != await ApiProviderVacHash.fetchHash()) {
+      String? vachash = (await ApiProviderVacHash.fetchHash());
+      box.put('hash', vachash);
+      saveLocal();
+      print('Getting hashmain ${box.get('hash').toString()}');
+    } else {
+      print('No update!');
+    }
+  }
+
   void saveLocal() async {
     await Hive.initFlutter();
-    Hive.registerAdapter(VacAdapter());
+    var box = await Hive.openBox("vachash");
+    String vachash = (await ApiProviderVacHash.fetchHash());
+    box.put('hash', vachash);
+    print('Getting hashsave ${box.get('hash').toString()}');
+    //print('Compare ${box.get('hash').toString().compareTo(vachash)}');
     await Hive.openBox("vacancy");
     final HiveService hiveService = HiveService();
     Hive.box('vacancy').clear();
     vacancy00 = (await VacRepository.getAllVac());
-    hiveService.addBoxes(vacancy00, "vacancy");
+    await hiveService.addBoxes(vacancy00, "vacancy");
+
+    Get.snackbar(
+      "Онлайн помічник", // title
+      "База вакансій оновлено!", // message
+
+      messageText: Text(
+        "База вакансій оновлено!",
+        style:
+            TextStyle(fontWeight: FontWeight.bold, color: HexColor('#005BAA')),
+      ),
+      icon: Icon(Icons.alarm),
+      shouldIconPulse: true,
+      colorText: HexColor('#005BAA'),
+      backgroundColor: Colors.amber,
+      barBlur: 20,
+
+      isDismissible: true,
+      duration: Duration(seconds: 3),
+    );
     print("Getting vac ${vacancy00.length}");
   }
 
@@ -110,13 +145,17 @@ class AllVacController extends GetxController {
   }
 
   fetchVac() async {
+    // String vachash = await ApiProviderHash.fetchHash();
+    //  print("Getting vachashin ${vachash}");
+
     vacancy00 = await hiveService.getBoxes("vacancy");
     print("Getting loaclstoreInfetch ${vacancy00.length}");
     try {
       if (vacancy00.length != 0) {
+        vacancy = [];
         vacancy = await hiveService.getBoxes("vacancy");
 
-        print("Getting data from Hive1");
+        print("Getting data from Hive1 ${vacancy.length}");
       } else {
         vacancy = (await VacRepository.getAllVac());
         //saveLocal();

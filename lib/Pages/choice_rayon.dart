@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gromada/Controllers/all_vac_controller.dart';
 import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -8,8 +9,9 @@ import 'package:spring/spring.dart';
 class ChoiceRayon extends StatelessWidget {
   final SpringController springController =
       SpringController(initialAnim: Motion.play);
-
+  AllVacController controller = AllVacController();
   Widget build(BuildContext context) {
+    controller.savehash();
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return SafeArea(
         child: Scaffold(
@@ -94,7 +96,7 @@ class ChoiceRayon extends StatelessWidget {
                                   right: 5),
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
+                                    BorderRadius.all(Radius.circular(14.0)),
                                 color: HexColor("#005BAA"),
                                 border: Border.all(
                                     color: HexColor('#FFD947'),
@@ -164,7 +166,7 @@ class ChoiceRayon extends StatelessWidget {
                                   right: 5),
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
+                                    BorderRadius.all(Radius.circular(14.0)),
                                 color: HexColor("#005BAA"),
                                 border: Border.all(
                                     color: HexColor('#FFD947'),
@@ -235,7 +237,7 @@ class ChoiceRayon extends StatelessWidget {
                                   right: 5),
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
+                                    BorderRadius.all(Radius.circular(14.0)),
                                 color: HexColor("#005BAA"),
                                 border: Border.all(
                                     color: HexColor('#FFD947'),
@@ -305,7 +307,7 @@ class ChoiceRayon extends StatelessWidget {
                                   right: 5),
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
+                                    BorderRadius.all(Radius.circular(14.0)),
                                 color: HexColor("#005BAA"),
                                 border: Border.all(
                                     color: HexColor('#FFD947'),
@@ -381,7 +383,7 @@ class ChoiceRayon extends StatelessWidget {
                                   right: 5),
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(35.0)),
+                                    BorderRadius.all(Radius.circular(14.0)),
                                 color: HexColor("#005BAA"),
                                 border: Border.all(
                                     color: HexColor('#FFD947'),

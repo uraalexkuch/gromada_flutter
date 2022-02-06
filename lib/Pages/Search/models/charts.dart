@@ -1,17 +1,46 @@
+import 'package:hive_flutter/hive_flutter.dart';
+
+part 'charts.g.dart';
+
+@HiveType(typeId: 2)
 class Charts {
   // Attributes
+  @HiveField(0)
   final gromada;
+  @HiveField(1)
   final vacancy;
+  @HiveField(2)
   final period;
+  @HiveField(3)
   final labourmarket;
+  @HiveField(4)
   final uridcompany;
+  @HiveField(5)
   final fop;
+  @HiveField(6)
   final minimum;
+  @HiveField(7)
   final gromadwork;
+  @HiveField(8)
   final temporarywork;
+  @HiveField(9)
   final bezrabnavch;
+  @HiveField(10)
   final bezrabprofor;
+  @HiveField(11)
   final allpraz;
+  @HiveField(12)
+  final maintown;
+  @HiveField(13)
+  final counttown;
+  @HiveField(14)
+  final sgromada;
+  @HiveField(15)
+  final people;
+  @HiveField(16)
+  final mapgromada;
+  @HiveField(17)
+  final economic;
 
   // Constructor
 
@@ -28,6 +57,12 @@ class Charts {
     required this.bezrabnavch,
     required this.bezrabprofor,
     required this.allpraz,
+    required this.maintown,
+    required this.counttown,
+    required this.sgromada,
+    required this.people,
+    required this.mapgromada,
+    required this.economic,
   });
 
   // convert Json to an car object object
@@ -49,6 +84,12 @@ class Charts {
               .toString(),
       bezrabprofor: json["Отримали профорієнтаційні послуги"].toString(),
       allpraz: json["Працевлаштовано, осіб"].toString(),
+      maintown: json["Центр  громади"].toString(),
+      counttown: json["Кількість  нас.пунктів"].toString(),
+      sgromada: json["Площа  громади"].toString(),
+      people: json["Чисельність населення громади"].toString(),
+      mapgromada: json["Карта громади"].toString(),
+      economic: json["Провідні галузі економіки"].toString(),
     );
   }
 }
