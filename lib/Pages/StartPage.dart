@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gromada/Controllers/network_controlller.dart';
 import 'package:gromada/generated/l10n.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:lottie/lottie.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:spring/spring.dart';
+
+import '../Controllers/network_controlller.dart';
 
 class StartPage extends StatelessWidget {
   final SpringController springController = SpringController();
@@ -37,7 +39,7 @@ class StartPage extends StatelessWidget {
             Container(
               height: 40.h,
               child: Padding(
-                  padding: const EdgeInsets.only(left: 30, right: 30, top: 100),
+                  padding: const EdgeInsets.only(left: 30, right: 30, top: 50),
                   child: Column(
                     children: [
                       Text(
@@ -61,7 +63,14 @@ class StartPage extends StatelessWidget {
                           color: HexColor('#FFFFFF'),
                         ),
                         softWrap: true,
-                      )
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: 20.h,
+                          child: Lottie.asset('image/39701-robot-bot-3d.json'),
+                        ),
+                      ),
                     ],
                   )),
             ),

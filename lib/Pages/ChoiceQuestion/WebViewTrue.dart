@@ -1,11 +1,11 @@
 import 'dart:async';
+import 'dart:io';
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gromada/Pages/Load/loading.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'package:webview_flutter/webview_flutter.dart';
-import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewTrue extends StatefulWidget {
   dynamic src = Get.arguments!;
@@ -14,13 +14,16 @@ class WebViewTrue extends StatefulWidget {
 }
 
 class _WebViewExampleState extends State<WebViewTrue> {
+  late WebViewController controller;
   final Completer<WebViewController> _controller =
       Completer<WebViewController>();
+
   bool isLoading = true;
 
   @override
   void initState() {
     super.initState();
+    if (Platform.isAndroid) WebView.platform = AndroidWebView();
     dynamic src = Get.arguments!;
     print(src);
   }
@@ -44,8 +47,8 @@ class _WebViewExampleState extends State<WebViewTrue> {
           WebView(
             initialUrl: src,
             javascriptMode: JavascriptMode.unrestricted,
-            onWebViewCreated: (WebViewController webViewController) {
-              _controller.complete(webViewController);
+            onWebViewCreated: (WebViewController c) {
+              _controller.future.then((value) => controller = value);
             },
             onProgress: (int progress) {
               print("WebView is loading (progress : $progress%)");

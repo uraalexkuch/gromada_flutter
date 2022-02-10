@@ -47,7 +47,7 @@ class ChoiceRayon extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      height: 10.h,
+                      height: 5.h,
                     ),
                     Text(
                       S.of(context).choice_rayon,
