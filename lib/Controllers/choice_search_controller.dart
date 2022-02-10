@@ -952,11 +952,8 @@ class ChoiceSearchController extends GetxController {
   final HiveService hiveService = HiveService();
   @override
   Future<void> onInit() async {
-    // Hive.registerAdapter(VacAdapter());
     await Hive.initFlutter();
-    // Hive.registerAdapter(VacAdapter());
     await Hive.openBox("vacancy");
-
     value = Get.arguments;
     gromada = int.parse(value) == 50300
         ? grom50300
@@ -1056,23 +1053,11 @@ class ChoiceSearchController extends GetxController {
                                                                                                                                                                                         : int.parse(value) == 58500
                                                                                                                                                                                             ? grom58500
                                                                                                                                                                                             : [];
-    // vacancy00 = await hiveService.getBoxes("vacancy");
-    // print("Getting vacgrom ${vacancy00.length}");
-    //  vacancy00.length == 0 ?
-    fetchVac();
-    //: getLocal();
-    // fetchVac();
+
+    //fetchVac();
 
     super.onInit();
   }
-
-  /* getLocal() async {
-    vacancy01 = await hiveService.getBoxes("vacancy");
-    vacancy01.length != null ? isLoading.value = false : isLoading.value = true;
-    print("Getting data from Hive01");
-    print("Getting vacancygrom ${vacancy01.length}");
-    fetchVac();
-  }*/
 
   void fetchVac() async {
     vacancy00 = await hiveService.getBoxes("vacancy");
@@ -1085,10 +1070,9 @@ class ChoiceSearchController extends GetxController {
         vacancy0 = (await VacRepository.getAllVac());
         print("Getting data from API");
       }
-      // vacancy0 = (await VacRepository.getAllVac());
+
       vacancy0.forEach((item) {
         print(item.placevac.substring(0, 10));
-
         for (int i = 0; i < gromada.length; i++)
           if (item.placevac.substring(0, 10) == gromada[i]) {
             vacancy.add(item);
@@ -1126,9 +1110,7 @@ class ChoiceSearchController extends GetxController {
             (item.posadavac.toLowerCase().contains(value.toLowerCase()) ||
                 item.salaryvac.toLowerCase().contains(value.toLowerCase())))
         .toList();
-    //  filteredVac.add( filteredVac0 );
-    // filteredVac.sort;
-    // filter();
+
     print(filteredVac);
     print(filteredVac.length);
 

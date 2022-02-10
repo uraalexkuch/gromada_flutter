@@ -80,7 +80,7 @@ class PasportController extends GetxController {
                         ? rayon03
                         : [];
     print(rayon);
-    fetchPasport();
+    // fetchPasport();
 
     super.onInit();
   }
@@ -144,11 +144,10 @@ class PasportController extends GetxController {
       if (pasport00.length != 0) {
         pasport = [];
         pasport = await hiveService.getBoxes("pasport");
-
         print("Getting data from Hivepasport ${pasport.length}");
       } else {
         pasport = (await PassportRepository.getAllPassport());
-        //saveLocal();
+
         print("Getting data from API");
       }
       pasport.forEach((item) {

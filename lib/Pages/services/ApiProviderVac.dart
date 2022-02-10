@@ -7,7 +7,7 @@ class ApiProvider {
   static const String url =
       'https://donocz.gov.ua/recruting/gromada/vac/vac.json';
   static Future<List<Vac>> fetchAll() async {
-    //String url = Uri.encodeFull("https://donocz.gov.ua/gromada/vac/vac.json");
+    //  String url = Uri.encodeFull("https://donocz.gov.ua/gromada/vac/vac.json");
 
     final response = await http.get(
       Uri.parse(url),
