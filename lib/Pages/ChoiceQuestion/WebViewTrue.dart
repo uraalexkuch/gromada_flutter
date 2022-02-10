@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,6 +23,7 @@ class _WebViewExampleState extends State<WebViewTrue> {
   @override
   void initState() {
     super.initState();
+    if (Platform.isAndroid) WebView.platform = AndroidWebView();
     dynamic src = Get.arguments!;
     print(src);
   }
@@ -47,7 +49,6 @@ class _WebViewExampleState extends State<WebViewTrue> {
             javascriptMode: JavascriptMode.unrestricted,
             onWebViewCreated: (WebViewController c) {
               _controller.future.then((value) => controller = value);
-              _controller.complete(c);
             },
             onProgress: (int progress) {
               print("WebView is loading (progress : $progress%)");
