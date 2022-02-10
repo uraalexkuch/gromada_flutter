@@ -34,160 +34,165 @@ class StartWork extends StatelessWidget {
                     ],
                   ),
                 ),
-                child: SingleChildScrollView(
-                  child: Padding(
-                    padding: Device.screenType.toString() == 'ScreenType.tablet'
-                        ? const EdgeInsets.all(32.0)
-                        : const EdgeInsets.all(8.0),
-                    child: Column(children: [
-                      SizedBox(
-                        height: 5.h,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Card(
-                          margin: EdgeInsets.only(
-                              left: 10.0, right: 10.0, bottom: 5.0),
-                          shape: RoundedRectangleBorder(
-                              side: BorderSide(
-                                  color: HexColor('#FFD947'), width: 3),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(14))),
-                          elevation: 20,
-                          child: Padding(
-                            padding: const EdgeInsets.all(15.0),
-                            child: Text(
-                              S.of(context).welcome_work,
-                              style: TextStyle(
-                                  decoration: TextDecoration.none,
-                                  color: HexColor('#005BAA'),
-                                  fontSize: 16.sp,
-                                  fontWeight: FontWeight.bold),
-                              textAlign: TextAlign.justify,
+                child: Padding(
+                  padding: Device.screenType.toString() == 'ScreenType.tablet'
+                      ? const EdgeInsets.all(32.0)
+                      : const EdgeInsets.all(8.0),
+                  child: SingleChildScrollView(
+                    physics: NeverScrollableScrollPhysics(),
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SizedBox(
+                              height: Device.screenType.toString() ==
+                                      'ScreenType.tablet'
+                                  ? 10.h
+                                  : 5.h),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Card(
+                              margin: EdgeInsets.only(
+                                  left: 10.0, right: 10.0, bottom: 5.0),
+                              shape: RoundedRectangleBorder(
+                                  side: BorderSide(
+                                      color: HexColor('#FFD947'), width: 3),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(14))),
+                              elevation: 20,
+                              child: Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Text(
+                                  S.of(context).welcome_work,
+                                  style: TextStyle(
+                                      decoration: TextDecoration.none,
+                                      color: HexColor('#005BAA'),
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ),
                             ),
                           ),
-                        ),
-                      ),
 
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          height: 100.h,
-                          width: 100.w,
-                          child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 16, right: 16, top: 16),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Container(
-                                      width: 100.w,
-                                      child: RaisedButton(
-                                        elevation: 10.0,
-                                        onPressed: () {
-                                          Get.toNamed('/choicegromad/web',
-                                              arguments:
-                                                  "https://www.dcz.gov.ua/userSearch/vacancy");
-                                        },
-                                        child: Text(
-                                            S.of(context).work_buttton_choice_0,
+                          Container(
+                            height: 100.h,
+                            width: 100.w,
+                            child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 16, right: 16, top: 16),
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: 100.w,
+                                        child: RaisedButton(
+                                          elevation: 10.0,
+                                          onPressed: () {
+                                            Get.toNamed('/choicegromad/web',
+                                                arguments:
+                                                    "https://www.dcz.gov.ua/userSearch/vacancy");
+                                          },
+                                          child: Text(
+                                              S
+                                                  .of(context)
+                                                  .work_buttton_choice_0,
+                                              style: TextStyle(
+                                                  color: HexColor('#FFFFFF'),
+                                                  fontSize: 16.sp,
+                                                  fontWeight: FontWeight.bold),
+                                              textAlign: TextAlign.center),
+                                          padding: const EdgeInsets.all(15),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(14)),
+                                            side: BorderSide(
+                                                color: HexColor('#FFD947'),
+                                                width: 3),
+                                          ),
+                                          color: HexColor("#005BAA"),
+                                          focusColor: HexColor('#FFD947'),
+                                          splashColor: HexColor('#FFD947'),
+                                        ),
+                                      ),
+                                    ),
+                                    Spacer(
+                                      flex: 1,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: 100.w,
+                                        child: RaisedButton(
+                                          elevation: 10.0,
+                                          onPressed: () {
+                                            Get.toNamed(
+                                                '/choicegromad/vacancy/rayon',
+                                                arguments: value);
+                                          },
+                                          child: Text(
+                                              S
+                                                  .of(context)
+                                                  .work_buttton_choice_1,
+                                              style: TextStyle(
+                                                  color: HexColor('#FFFFFF'),
+                                                  fontSize: 16.sp,
+                                                  fontWeight: FontWeight.bold),
+                                              textAlign: TextAlign.center),
+                                          padding: const EdgeInsets.all(15),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(14)),
+                                            side: BorderSide(
+                                                color: HexColor('#FFD947'),
+                                                width: 3),
+                                          ),
+                                          color: HexColor("#005BAA"),
+                                          focusColor: HexColor('#FFD947'),
+                                          splashColor: HexColor('#FFD947'),
+                                        ),
+                                      ),
+                                    ),
+                                    Spacer(
+                                      flex: 1,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: 100.w,
+                                        child: RaisedButton(
+                                          elevation: 10.0,
+                                          onPressed: () {
+                                            Get.toNamed(
+                                                '/choicegromad/vacancy/gromada',
+                                                arguments: value);
+                                          },
+                                          child: Text(
+                                            S.of(context).work_buttton_choice_2,
                                             style: TextStyle(
                                                 color: HexColor('#FFFFFF'),
                                                 fontSize: 16.sp,
                                                 fontWeight: FontWeight.bold),
-                                            textAlign: TextAlign.center),
-                                        padding: const EdgeInsets.all(15),
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(14)),
-                                          side: BorderSide(
-                                              color: HexColor('#FFD947'),
-                                              width: 3),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          padding: const EdgeInsets.all(15),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(14)),
+                                            side: BorderSide(
+                                                color: HexColor('#FFD947'),
+                                                width: 3),
+                                          ),
+                                          color: HexColor("#005BAA"),
+                                          focusColor: HexColor('#FFD947'),
+                                          splashColor: HexColor('#FFD947'),
                                         ),
-                                        color: HexColor("#005BAA"),
-                                        focusColor: HexColor('#FFD947'),
-                                        splashColor: HexColor('#FFD947'),
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 5.h,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Container(
-                                      width: 100.w,
-                                      child: RaisedButton(
-                                        elevation: 10.0,
-                                        onPressed: () {
-                                          Get.toNamed(
-                                              '/choicegromad/vacancy/rayon',
-                                              arguments: value);
-                                        },
-                                        child: Text(
-                                            S.of(context).work_buttton_choice_1,
-                                            style: TextStyle(
-                                                color: HexColor('#FFFFFF'),
-                                                fontSize: 16.sp,
-                                                fontWeight: FontWeight.bold),
-                                            textAlign: TextAlign.center),
-                                        padding: const EdgeInsets.all(15),
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(14)),
-                                          side: BorderSide(
-                                              color: HexColor('#FFD947'),
-                                              width: 3),
-                                        ),
-                                        color: HexColor("#005BAA"),
-                                        focusColor: HexColor('#FFD947'),
-                                        splashColor: HexColor('#FFD947'),
-                                      ),
+                                    Spacer(
+                                      flex: 1,
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 5.h,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Container(
-                                      width: 100.w,
-                                      child: RaisedButton(
-                                        elevation: 10.0,
-                                        onPressed: () {
-                                          Get.toNamed(
-                                              '/choicegromad/vacancy/gromada',
-                                              arguments: value);
-                                        },
-                                        child: Text(
-                                          S.of(context).work_buttton_choice_2,
-                                          style: TextStyle(
-                                              color: HexColor('#FFFFFF'),
-                                              fontSize: 16.sp,
-                                              fontWeight: FontWeight.bold),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        padding: const EdgeInsets.all(15),
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(14)),
-                                          side: BorderSide(
-                                              color: HexColor('#FFD947'),
-                                              width: 3),
-                                        ),
-                                        color: HexColor("#005BAA"),
-                                        focusColor: HexColor('#FFD947'),
-                                        splashColor: HexColor('#FFD947'),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 5.h,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Container(
+                                    Container(
                                       width: 100.w,
                                       child: RaisedButton(
                                         elevation: 10.0,
@@ -216,19 +221,15 @@ class StartWork extends StatelessWidget {
                                         splashColor: HexColor('#FFD947'),
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 5.h,
-                                  ),
+                                    Spacer(
+                                      flex: 6,
+                                    ),
+                                  ],
+                                )),
+                          ),
 
-                                  ///Spacer(),
-                                ],
-                              )),
-                        ),
-                      ),
-
-                      // Container(height: 12.h, child: Center(child: CallButton())),
-                    ]),
+                          // Container(height: 12.h, child: Center(child: CallButton())),
+                        ]),
                   ),
                 ),
               )));

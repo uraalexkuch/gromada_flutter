@@ -96,10 +96,10 @@ class _IndexPageState extends State<IndexPage> {
                       child: Column(
                         children: [
                           Row(children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                  width: 28.w,
+                            Container(
+                                width: 28.w,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
                                   child: Text(
                                     S.of(context).vacancy_posad,
                                     style: TextStyle(
@@ -108,8 +108,8 @@ class _IndexPageState extends State<IndexPage> {
                                       fontSize: 16.sp,
                                     ),
                                     softWrap: true,
-                                  )),
-                            ),
+                                  ),
+                                )),
                             Container(
                                 width: 52.w,
                                 child: Text(
@@ -124,10 +124,10 @@ class _IndexPageState extends State<IndexPage> {
                           ]),
                           Divider(),
                           Row(children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                  width: 28.w,
+                            Container(
+                                width: 28.w,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
                                   child: Text(
                                     S.of(context).vacancy_salary,
                                     style: TextStyle(
@@ -136,8 +136,8 @@ class _IndexPageState extends State<IndexPage> {
                                       fontSize: 16.sp,
                                     ),
                                     softWrap: true,
-                                  )),
-                            ),
+                                  ),
+                                )),
                             Container(
                                 width: 47.w,
                                 child: Text(

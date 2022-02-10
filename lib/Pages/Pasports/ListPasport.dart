@@ -33,34 +33,36 @@ class _ListPasportState extends State<ListPasport> {
         body: SafeArea(
             child: Obx(
           () => !controller.isLoading.value
-              ? Column(children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: buildTextField(),
-                  ),
-                  Expanded(
-                    child: Container(
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            tileMode: TileMode.mirror,
-                            begin: Alignment(0.0, -0.3),
-                            end: Alignment(1.0, 0.1),
-                            colors: [
-                              Color(0xff100b63),
-                              Color(0xff2196f3),
-                            ],
-                            stops: [
-                              0,
-                              1,
-                            ],
-                          ),
-                        ),
-                        width: 100.w,
-                        child: filteredPassport.length != 0
-                            ? buildSearchView()
-                            : buildListView()),
-                  )
-                ])
+              ? Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: buildTextField(),
+                      ),
+                      Expanded(
+                        child: Container(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                tileMode: TileMode.mirror,
+                                begin: Alignment(0.0, -0.3),
+                                end: Alignment(1.0, 0.1),
+                                colors: [
+                                  Color(0xff100b63),
+                                  Color(0xff2196f3),
+                                ],
+                                stops: [
+                                  0,
+                                  1,
+                                ],
+                              ),
+                            ),
+                            width: 100.w,
+                            child: filteredPassport.length != 0
+                                ? buildSearchView()
+                                : buildListView()),
+                      )
+                    ])
               : Loading(),
         )));
   }
@@ -88,9 +90,11 @@ class _ListPasportState extends State<ListPasport> {
       itemBuilder: (context, index) {
         //Vac vac = pasport[index];
         return Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(5.0),
           child: Card(
-              margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
+              margin: Device.screenType.toString() == 'ScreenType.tablet'
+                  ? const EdgeInsets.only(left: 32.0, right: 32.0, bottom: 10.0)
+                  : const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 5.0),
               shape: RoundedRectangleBorder(
                   side: BorderSide(color: HexColor('#FFD947'), width: 3),
                   borderRadius: BorderRadius.all(Radius.circular(14))),
@@ -101,15 +105,16 @@ class _ListPasportState extends State<ListPasport> {
                       arguments: controller.pasport0[index]);
                 },
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(0.0),
                   child: Container(
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Row(children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                                width: 28.w,
+                          Container(
+                              width: 35.w,
+                              child: Padding(
+                                padding: const EdgeInsets.all(16.0),
                                 child: Text(
                                   S.of(context).pasport_list0,
                                   style: TextStyle(
@@ -118,21 +123,23 @@ class _ListPasportState extends State<ListPasport> {
                                     fontSize: 16.sp,
                                   ),
                                   softWrap: true,
-                                )),
-                          ),
+                                ),
+                              )),
                           Container(
                               width: 52.w,
-                              child: Text(
-                                controller.pasport0[index].namerobot,
-                                style: TextStyle(
-                                  color: Colors.indigo,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16.sp,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  controller.pasport0[index].namerobot,
+                                  style: TextStyle(
+                                    color: Colors.indigo,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16.sp,
+                                  ),
+                                  softWrap: true,
                                 ),
-                                softWrap: true,
                               )),
                         ]),
-                        Divider(),
                       ],
                     ),
                   ),
@@ -150,7 +157,7 @@ class _ListPasportState extends State<ListPasport> {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(
-              margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
+              margin: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 5.0),
               shape: RoundedRectangleBorder(
                   side: BorderSide(color: HexColor('#FFD947'), width: 5),
                   borderRadius: BorderRadius.all(Radius.circular(14))),
@@ -161,13 +168,13 @@ class _ListPasportState extends State<ListPasport> {
                       arguments: filteredPassport[index]);
                 },
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(0.0),
                   child: Container(
                     child: Column(
                       children: [
                         Row(children: [
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(0.0),
                             child: Container(
                                 width: 28.w,
                                 child: Text(

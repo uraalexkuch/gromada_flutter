@@ -37,7 +37,7 @@ class StartPage extends StatelessWidget {
           ),
           child: Column(children: [
             Container(
-              height: 40.h,
+              height: 43.h,
               child: Padding(
                   padding: const EdgeInsets.only(left: 30, right: 30, top: 50),
                   child: Column(

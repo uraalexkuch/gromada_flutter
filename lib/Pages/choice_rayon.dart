@@ -44,6 +44,7 @@ class ChoiceRayon extends StatelessWidget {
                     : const EdgeInsets.all(8.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
@@ -61,7 +62,10 @@ class ChoiceRayon extends StatelessWidget {
                       softWrap: true,
                     ),
                     SizedBox(
-                      height: 10.h,
+                      height:
+                          Device.screenType.toString() == 'ScreenType.tablet'
+                              ? 10.h
+                              : 5.h,
                     ),
                     Spring.slide(
                       springController: springController, //optional
@@ -135,7 +139,9 @@ class ChoiceRayon extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Spacer(),
+                    Spacer(
+                      flex: 1,
+                    ),
                     Spring.slide(
                       springController: springController, //optional
                       slideType: SlideType.slide_in_left, //required
@@ -346,7 +352,9 @@ class ChoiceRayon extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Spacer(),
+                    Spacer(
+                      flex: 1,
+                    ),
                     Spring.slide(
                       springController: springController, //optional
                       slideType: SlideType.slide_in_bottom, //required
@@ -423,7 +431,10 @@ class ChoiceRayon extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 15.h,
+                      height:
+                          Device.screenType.toString() == 'ScreenType.tablet'
+                              ? 15.h
+                              : 5.h,
                     ),
                   ],
                 ),

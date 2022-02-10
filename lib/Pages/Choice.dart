@@ -99,12 +99,8 @@ class Choice extends StatelessWidget {
                               color: Colors.indigo,
                             ),
                             showCheckmark: true,
-                            //  highlightColor: Colors.deepPurple,
-                            // accentColor: Colors.lightGreen,
                             color: Colors.lightBlueAccent,
                           ),
-                          //  choiceType: ,
-
                           selectedValue: controller.selected.value,
                           choiceItems: controller.listType,
                           onChange: (selectedValue) {
@@ -149,10 +145,6 @@ class Choice extends StatelessWidget {
                                       controller.sourse.toString(),
                                       height: 70,
                                     ),
-
-                                    //NetworkImage(
-                                    //  'https://source.unsplash.com/xsGxhtAsfSA/100x100',
-                                    //),
                                   )),
                             );
                           }),

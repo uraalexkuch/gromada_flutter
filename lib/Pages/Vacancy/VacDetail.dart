@@ -66,21 +66,22 @@ class VacDetail extends StatelessWidget {
                             Divider(),
                             Row(children: [
                               Container(
-                                  width: 90.w,
-                                  decoration: BoxDecoration(
-                                    color: HexColor("#005BAA"),
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      S.of(context).vac_detail_vumog,
-                                      style: TextStyle(
-                                        color: HexColor('#FFD947'),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.sp,
-                                      ),
-                                      softWrap: true,
+                                width: 89.w,
+                                decoration: BoxDecoration(
+                                  color: HexColor("#005BAA"),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    S.of(context).vac_detail_vumog,
+                                    style: TextStyle(
+                                      color: HexColor('#FFD947'),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16.sp,
                                     ),
-                                  )),
+                                    softWrap: true,
+                                  ),
+                                ),
+                              ),
                             ]),
                             Row(children: [
                               Padding(
@@ -226,7 +227,7 @@ class VacDetail extends StatelessWidget {
                             ]),
                             Row(children: [
                               Container(
-                                  width: 90.w,
+                                  width: 89.w,
                                   decoration: BoxDecoration(
                                     color: HexColor("#005BAA"),
                                   ),

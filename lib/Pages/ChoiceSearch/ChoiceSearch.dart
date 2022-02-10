@@ -80,84 +80,88 @@ class _ChoiceSearchState extends State<ChoiceSearch> {
         return Padding(
             padding: const EdgeInsets.all(8.0),
             child: Card(
-                margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(color: HexColor('#FFD947'), width: 5),
-                    borderRadius: BorderRadius.all(Radius.circular(14))),
-                elevation: 20,
-                child: GestureDetector(
-                  onTap: () {
-                    Get.toNamed('/choicegromad/vacancy/detail',
-                        arguments: controller.vacancy[index]);
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      child: Column(
-                        children: [
-                          Row(children: [
-                            Padding(
+              margin: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
+              shape: RoundedRectangleBorder(
+                  side: BorderSide(color: HexColor('#FFD947'), width: 5),
+                  borderRadius: BorderRadius.all(Radius.circular(14))),
+              elevation: 20,
+              child: GestureDetector(
+                onTap: () {
+                  Get.toNamed('/choicegromad/vacancy/detail',
+                      arguments: controller.vacancy[index]);
+                },
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Row(children: [
+                        Container(
+                            width: 28.w,
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 16.0, bottom: 8, top: 8),
+                              child: Text(
+                                S.of(context).vacancy_posad,
+                                style: TextStyle(
+                                  color: Colors.indigo,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16.sp,
+                                ),
+                                softWrap: true,
+                              ),
+                            )),
+                        Container(
+                            width: 52.w,
+                            child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                  width: 28.w,
-                                  child: Text(
-                                    S.of(context).vacancy_posad,
-                                    style: TextStyle(
-                                      color: Colors.indigo,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.sp,
-                                    ),
-                                    softWrap: true,
-                                  )),
-                            ),
-                            Container(
-                                width: 52.w,
-                                child: Text(
-                                  posadavac(controller.vacancy[index], index),
-                                  style: TextStyle(
-                                    color: Colors.indigo,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16.sp,
-                                  ),
-                                  softWrap: true,
-                                )),
-                          ]),
-                          Divider(),
-                          Row(children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                  width: 28.w,
-                                  child: Text(
-                                    S.of(context).vac_detail_salary,
-                                    style: TextStyle(
-                                      color: Colors.indigo,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.sp,
-                                    ),
-                                    softWrap: true,
-                                  )),
-                            ),
-                            Container(
-                                width: 47.w,
-                                child: Text(
-                                  salaryvac(controller.vacancy[index], index),
-                                  style: TextStyle(
-                                    color: Colors.indigo,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16.sp,
-                                  ),
-                                  softWrap: true,
-                                )),
-                            Container(
-                                width: 5.w,
-                                child: Icon(Icons.arrow_forward_rounded)),
-                          ]),
-                        ],
-                      ),
-                    ),
+                              child: Text(
+                                posadavac(controller.vacancy[index], index),
+                                style: TextStyle(
+                                  color: Colors.indigo,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16.sp,
+                                ),
+                                softWrap: true,
+                              ),
+                            )),
+                      ]),
+                      Divider(),
+                      Row(children: [
+                        Container(
+                            width: 28.w,
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 16.0, bottom: 8, top: 8),
+                              child: Text(
+                                S.of(context).vac_detail_salary,
+                                style: TextStyle(
+                                  color: Colors.indigo,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16.sp,
+                                ),
+                                softWrap: true,
+                              ),
+                            )),
+                        Container(
+                            width: 47.w,
+                            child: Text(
+                              salaryvac(controller.vacancy[index], index),
+                              style: TextStyle(
+                                color: Colors.indigo,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16.sp,
+                              ),
+                              softWrap: true,
+                            )),
+                        Container(
+                            width: 5.w,
+                            child: Icon(Icons.arrow_forward_rounded)),
+                      ]),
+                    ],
                   ),
-                ))
+                ),
+              ),
+            )
             //buildCard(controller.vacancy[index], index),
             );
       },

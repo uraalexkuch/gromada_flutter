@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flick_video_player/flick_video_player.dart';
+import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 /// Default portrait controls.
@@ -30,9 +30,11 @@ class FlickControls extends StatelessWidget {
                   child: FlickAutoHideChild(
                     showIfVideoNotInitialized: false,
                     child: FlickPlayToggle(
-                      size: 30,
+                      size: Device.screenType.toString() == 'ScreenType.tablet'
+                          ? 30
+                          : 15,
                       color: Colors.black,
-                      padding: EdgeInsets.all(12),
+                      padding: EdgeInsets.all(6),
                       decoration: BoxDecoration(
                         color: Colors.white70,
                         borderRadius: BorderRadius.circular(40),
@@ -50,8 +52,8 @@ class FlickControls extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                SizedBox(
-                  height: 140,
+                Spacer(
+                  flex: 1,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

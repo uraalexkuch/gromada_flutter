@@ -128,42 +128,27 @@ class AllVacController extends GetxController {
       colorText: HexColor('#005BAA'),
       backgroundColor: Colors.amber,
       barBlur: 20,
-
       isDismissible: true,
       duration: Duration(seconds: 3),
     );
     print("Getting vac ${vacancy00.length}");
   }
 
-  getLocal() async {
-    vacancy01 == null;
-    vacancy01 = await hiveService.getBoxes("vacancy");
-    vacancy01.length != null ? isLoading.value = false : isLoading.value = true;
-    print("Getting data from Hive");
-    print("Getting vacancy from Hive ${vacancy01.length}");
-    // fetchVac();
-  }
-
   fetchVac() async {
-    // String vachash = await ApiProviderHash.fetchHash();
-    //  print("Getting vachashin ${vachash}");
-
     vacancy00 = await hiveService.getBoxes("vacancy");
     print("Getting loaclstoreInfetch ${vacancy00.length}");
     try {
       if (vacancy00.length != 0) {
         vacancy = [];
         vacancy = await hiveService.getBoxes("vacancy");
-
         print("Getting data from Hive1 ${vacancy.length}");
       } else {
         vacancy = (await VacRepository.getAllVac());
-        //saveLocal();
+
         print("Getting data from API");
       }
       vacancy.forEach((item) {
         for (int i = 0; i < gromada.length; i++)
-          // print(gromada.length);
           if (item.numbervac.substring(1, 4) == gromada[i]) {
             vacancy0.add(item);
           }
@@ -171,7 +156,5 @@ class AllVacController extends GetxController {
     } finally {
       isLoading.value = false;
     }
-    //  print(vacancy0);
-    //print(vacancy0.map((item) => item.numbervac));
   }
 }
