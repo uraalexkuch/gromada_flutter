@@ -262,7 +262,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           child: Column(
                                             children: [
                                               Container(
-                                                height: 5.h,
+                                                height: 6.h,
                                                 child: Padding(
                                                   padding:
                                                       const EdgeInsets.only(
@@ -317,7 +317,7 @@ class _LabourMarketState extends State<LabourMarket> {
                                           //height: 6.h,
                                           child: Column(children: [
                                             Container(
-                                              height: 4.h,
+                                              height: 5.h,
                                               width: 35.w,
                                               child: Text(
                                                 S.of(context).labour5,

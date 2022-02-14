@@ -37,85 +37,100 @@ class VacDetail extends StatelessWidget {
                             Row(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: const EdgeInsets.all(0.0),
                                   child: Container(
                                       width: 30.w,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          S.of(context).vac_detail_number,
+                                          style: TextStyle(
+                                            color: Colors.indigo,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16.sp,
+                                          ),
+                                          softWrap: true,
+                                        ),
+                                      )),
+                                ),
+                                Container(
+                                    width: 54.w,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
                                       child: Text(
-                                        S.of(context).vac_detail_number,
+                                        ' ${value.numbervac}',
                                         style: TextStyle(
                                           color: Colors.indigo,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16.sp,
                                         ),
                                         softWrap: true,
-                                      )),
-                                ),
-                                Container(
-                                    width: 54.w,
-                                    child: Text(
-                                      ' ${value.numbervac}',
-                                      style: TextStyle(
-                                        color: Colors.indigo,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.sp,
                                       ),
-                                      softWrap: true,
                                     ))
                               ],
                             ),
                             Divider(),
                             Row(children: [
                               Container(
-                                width: 89.w,
+                                width: 84.w,
                                 decoration: BoxDecoration(
                                   color: HexColor("#005BAA"),
                                 ),
                                 child: Center(
-                                  child: Text(
-                                    S.of(context).vac_detail_vumog,
-                                    style: TextStyle(
-                                      color: HexColor('#FFD947'),
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.sp,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      S.of(context).vac_detail_vumog,
+                                      style: TextStyle(
+                                        color: HexColor('#FFD947'),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.sp,
+                                      ),
+                                      softWrap: true,
                                     ),
-                                    softWrap: true,
                                   ),
                                 ),
                               ),
                             ]),
                             Row(children: [
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(0.0),
                                 child: Container(
                                     width: 30.w,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        S.of(context).vac_detail_posad,
+                                        style: TextStyle(
+                                          color: Colors.indigo,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.sp,
+                                        ),
+                                        softWrap: true,
+                                      ),
+                                    )),
+                              ),
+                              Container(
+                                  width: 54.w,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Text(
-                                      S.of(context).vac_detail_posad,
+                                      ' ${value.posadavac}',
                                       style: TextStyle(
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16.sp,
                                       ),
                                       softWrap: true,
-                                    )),
-                              ),
-                              Container(
-                                  width: 54.w,
-                                  child: Text(
-                                    ' ${value.posadavac}',
-                                    style: TextStyle(
-                                      color: Colors.indigo,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.sp,
                                     ),
-                                    softWrap: true,
                                   ))
                             ]),
                             Divider(),
                             Row(children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                    width: 30.w,
+                              Container(
+                                  width: 30.w,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       S.of(context).vac_detail_osvit,
                                       style: TextStyle(
@@ -124,27 +139,30 @@ class VacDetail extends StatelessWidget {
                                         fontSize: 16.sp,
                                       ),
                                       softWrap: true,
-                                    )),
-                              ),
+                                    ),
+                                  )),
                               Container(
                                   width: 54.w,
-                                  child: Text(
-                                    ' ${value.osvitavac}',
-                                    style: TextStyle(
-                                      color: Colors.indigo,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.sp,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      ' ${value.osvitavac}',
+                                      style: TextStyle(
+                                        color: Colors.indigo,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.sp,
+                                      ),
+                                      softWrap: true,
                                     ),
-                                    softWrap: true,
                                   ))
                             ]),
                             Divider(),
                             (value.specvac != '')
                                 ? Row(children: [
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Container(
-                                          width: 30.w,
+                                    Container(
+                                        width: 30.w,
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
                                           child: Text(
                                             S.of(context).vac_detail_spec,
                                             style: TextStyle(
@@ -153,18 +171,21 @@ class VacDetail extends StatelessWidget {
                                               fontSize: 16.sp,
                                             ),
                                             softWrap: true,
-                                          )),
-                                    ),
+                                          ),
+                                        )),
                                     Container(
                                         width: 54.w,
-                                        child: Text(
-                                          ' ${value.specvac}',
-                                          style: TextStyle(
-                                            color: Colors.indigo,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16.sp,
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(
+                                            ' ${value.specvac}',
+                                            style: TextStyle(
+                                              color: Colors.indigo,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16.sp,
+                                            ),
+                                            softWrap: true,
                                           ),
-                                          softWrap: true,
                                         ))
                                   ])
                                 : SizedBox(
@@ -187,22 +208,25 @@ class VacDetail extends StatelessWidget {
                                     )),
                               ),
                               Container(
-                                  width: 54.w,
-                                  child: Text(
-                                    ' ${value.taskvac}',
-                                    style: TextStyle(
-                                      color: Colors.indigo,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.sp,
+                                  width: 50.w,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      ' ${value.taskvac}',
+                                      style: TextStyle(
+                                        color: Colors.indigo,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.sp,
+                                      ),
+                                      softWrap: true,
                                     ),
-                                    softWrap: true,
                                   ))
                             ]),
                             Row(children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                    width: 30.w,
+                              Container(
+                                  width: 30.w,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       S.of(context).vac_detail_placework,
                                       style: TextStyle(
@@ -211,8 +235,8 @@ class VacDetail extends StatelessWidget {
                                         fontSize: 16.sp,
                                       ),
                                       softWrap: true,
-                                    )),
-                              ),
+                                    ),
+                                  )),
                               Container(
                                   width: 54.w,
                                   child: Text(
@@ -227,7 +251,7 @@ class VacDetail extends StatelessWidget {
                             ]),
                             Row(children: [
                               Container(
-                                  width: 89.w,
+                                  width: 84.w,
                                   decoration: BoxDecoration(
                                     color: HexColor("#005BAA"),
                                   ),
@@ -244,10 +268,10 @@ class VacDetail extends StatelessWidget {
                                   )),
                             ]),
                             Row(children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                    width: 30.w,
+                              Container(
+                                  width: 30.w,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       S.of(context).vac_detail_operating_modes,
                                       style: TextStyle(
@@ -256,8 +280,8 @@ class VacDetail extends StatelessWidget {
                                         fontSize: 16.sp,
                                       ),
                                       softWrap: true,
-                                    )),
-                              ),
+                                    ),
+                                  )),
                               Container(
                                   width: 54.w,
                                   child: Text(
@@ -271,10 +295,10 @@ class VacDetail extends StatelessWidget {
                                   ))
                             ]),
                             Row(children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                    width: 30.w,
+                              Container(
+                                  width: 30.w,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       S.of(context).vac_detail_characteristics,
                                       style: TextStyle(
@@ -283,25 +307,28 @@ class VacDetail extends StatelessWidget {
                                         fontSize: 16.sp,
                                       ),
                                       softWrap: true,
-                                    )),
-                              ),
+                                    ),
+                                  )),
                               Container(
                                   width: 54.w,
-                                  child: Text(
-                                    ' ${value.characteristicsvac}',
-                                    style: TextStyle(
-                                      color: Colors.indigo,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.sp,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      ' ${value.characteristicsvac}',
+                                      style: TextStyle(
+                                        color: Colors.indigo,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.sp,
+                                      ),
+                                      softWrap: true,
                                     ),
-                                    softWrap: true,
                                   ))
                             ]),
                             Row(children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                    width: 30.w,
+                              Container(
+                                  width: 30.w,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       S.of(context).vac_detail_conditions,
                                       style: TextStyle(
@@ -310,25 +337,28 @@ class VacDetail extends StatelessWidget {
                                         fontSize: 16.sp,
                                       ),
                                       softWrap: true,
-                                    )),
-                              ),
+                                    ),
+                                  )),
                               Container(
                                   width: 54.w,
-                                  child: Text(
-                                    ' ${value.conditionsvac}',
-                                    style: TextStyle(
-                                      color: Colors.indigo,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.sp,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      ' ${value.conditionsvac}',
+                                      style: TextStyle(
+                                        color: Colors.indigo,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.sp,
+                                      ),
+                                      softWrap: true,
                                     ),
-                                    softWrap: true,
                                   ))
                             ]),
                             Row(children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                    width: 30.w,
+                              Container(
+                                  width: 30.w,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       S.of(context).vac_detail_salary,
                                       style: TextStyle(
@@ -337,8 +367,8 @@ class VacDetail extends StatelessWidget {
                                         fontSize: 16.sp,
                                       ),
                                       softWrap: true,
-                                    )),
-                              ),
+                                    ),
+                                  )),
                               Container(
                                   width: 54.w,
                                   child: Text(
@@ -353,10 +383,10 @@ class VacDetail extends StatelessWidget {
                             ]),
                             Row(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                      width: 30.w,
+                                Container(
+                                    width: 30.w,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
                                       child: Text(
                                         S.of(context).vac_detail_tel,
                                         style: TextStyle(
@@ -365,18 +395,21 @@ class VacDetail extends StatelessWidget {
                                           fontSize: 16.sp,
                                         ),
                                         softWrap: true,
-                                      )),
-                                ),
+                                      ),
+                                    )),
                                 Container(
                                     width: 54.w,
-                                    child: Text(
-                                      ' ${value.tel}',
-                                      style: TextStyle(
-                                        color: Colors.indigo,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.sp,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        ' ${value.tel}',
+                                        style: TextStyle(
+                                          color: Colors.indigo,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.sp,
+                                        ),
+                                        softWrap: true,
                                       ),
-                                      softWrap: true,
                                     ))
                               ],
                             ),

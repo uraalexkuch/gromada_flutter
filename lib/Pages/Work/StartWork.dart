@@ -116,9 +116,11 @@ class StartWork extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Spacer(
-                                      flex: 1,
-                                    ),
+                                    SizedBox(
+                                        height: Device.screenType.toString() ==
+                                                'ScreenType.tablet'
+                                            ? 10.h
+                                            : 5.h),
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Container(
@@ -153,9 +155,11 @@ class StartWork extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Spacer(
-                                      flex: 1,
-                                    ),
+                                    SizedBox(
+                                        height: Device.screenType.toString() ==
+                                                'ScreenType.tablet'
+                                            ? 10.h
+                                            : 5.h),
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Container(
@@ -189,9 +193,11 @@ class StartWork extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Spacer(
-                                      flex: 1,
-                                    ),
+                                    SizedBox(
+                                        height: Device.screenType.toString() ==
+                                                'ScreenType.tablet'
+                                            ? 10.h
+                                            : 5.h),
                                     Container(
                                       width: 100.w,
                                       child: RaisedButton(
@@ -222,7 +228,7 @@ class StartWork extends StatelessWidget {
                                       ),
                                     ),
                                     Spacer(
-                                      flex: 6,
+                                      flex: 1,
                                     ),
                                   ],
                                 )),
