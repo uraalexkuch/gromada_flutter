@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gromada/Pages/services/ApiProviderPasportHash.dart';
@@ -112,11 +111,9 @@ class PasportController extends GetxController {
     Hive.box('pasport').clear();
     pasport00 = (await PassportRepository.getAllPassport());
     await hiveService.addBoxes(pasport00, "pasport");
-
     Get.snackbar(
       "Онлайн помічник", // title
       "База паспортів оновлено!", // message
-
       messageText: Text(
         "База паспортів оновлено!",
         style:

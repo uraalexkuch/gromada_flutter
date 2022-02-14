@@ -481,12 +481,12 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 Radius.circular(14)),
                                             color: HexColor("#005BAA"),
                                           ),
-                                          height: 11.h,
+                                          height: 15.h,
                                           width: 88.w,
                                           child: Column(
                                             children: [
                                               Container(
-                                                height: 4.h,
+                                                height: 5.h,
                                                 child: Padding(
                                                   padding:
                                                       const EdgeInsets.only(
@@ -506,17 +506,21 @@ class _LabourMarketState extends State<LabourMarket> {
                                                 ),
                                               ),
                                               Container(
-                                                child: Text(
-                                                  '${controller.bezrab[0].economic}',
-                                                  style: TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      color:
-                                                          HexColor('#FFD947'),
-                                                      fontSize: 15.sp,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  textAlign: TextAlign.center,
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(8.0),
+                                                  child: Text(
+                                                    '${controller.bezrab[0].economic}',
+                                                    style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        color:
+                                                            HexColor('#FFD947'),
+                                                        fontSize: 15.sp,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                    textAlign: TextAlign.center,
+                                                  ),
                                                 ),
                                               ),
                                             ],
