@@ -21,7 +21,7 @@ class VacDetail extends StatelessWidget {
                 child: new Center(
                     child: Column(children: <Widget>[
               Padding(
-                  padding: const EdgeInsets.all(0.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Card(
                     margin: EdgeInsets.only(
                         left: 8.0, right: 8.0, bottom: 5.0, top: 5.h),

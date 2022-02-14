@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gromada/Pages/services/ApiProviderPasportHash.dart';
@@ -80,7 +79,7 @@ class PasportController extends GetxController {
                         ? rayon03
                         : [];
     print(rayon);
-    fetchPasport();
+    // fetchPasport();
 
     super.onInit();
   }
